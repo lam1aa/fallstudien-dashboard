@@ -1,9 +1,64 @@
+:root {
+  --pal-indigo: #6C6FE0;
+  --pal-indigo-dark: #2d31d3;
+  --pal-coral: #F2996B;
+  --pal-coral-dark: #ec6925;
+  --pal-amber: #F0B95B;
+  --pal-amber-dark: #db9214;
+  --pal-slate: #5B6B8C;
+  --pal-slate-dark: #3d485e;
+}
+
 body {
   font-family: "Segoe UI", system-ui, sans-serif;
+  background-color: #f7f6fb !important;
+}
+
+/* ── Navbar ─────────────────────────────────────────────────────────────── */
+.bg-quadriga-navy {
+  background-color: var(--quadriga-navy) !important;
+}
+
+.navbar-brand {
+  color: var(--quadriga-navy) !important;
+  font-size: 2rem;
+}
+
+
+.kpi-card {
+  border: none;
+  border-radius: 12px;
+}
+
+
+.kpi-indigo { background: rgba(108, 111, 224, 0.4); }
+.kpi-coral  { background: rgba(242, 153, 107, 0.4); }
+.kpi-amber  { background: rgba(240, 185, 91, 0.4); }
+.kpi-slate  { background: rgba(91, 107, 140, 0.2); }
+
+.kpi-indigo .display-6 { color: var(--pal-indigo-dark); }
+.kpi-coral  .display-6 { color: var(--pal-coral-dark); }
+.kpi-amber  .display-6 { color: var(--pal-amber-dark); }
+.kpi-slate  .display-6 { color: var(--pal-slate-dark); }
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e2ec;
+  border-radius: 10px;
+}
+
+.card-header {
+  background-color: #f7f6fb;
+  border-bottom: 1px solid #e2e2ec;
 }
 
 .card .display-6 {
   font-weight: 600;
+  color: var(--quadriga-navy);
+}
+
+h2, h4 {
+  color: var(--quadriga-navy);
 }
 
 #workload-chart {
@@ -29,3 +84,4 @@ body {
   color: #fff;
   padding: 2px 5px;
 }
+

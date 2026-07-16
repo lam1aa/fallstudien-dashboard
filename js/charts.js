@@ -1,8 +1,40 @@
+// ── Shared color palette (vibrant dashboard scheme) ─────────────────────────
+const PALETTE = {
+  indigo: "#6C6FE0",
+  indigoDark: "#2d31d3",
+  indigoLight: "#d8d9f4",
+  coral: "#F2996B",
+  coralDark: "#ec6925",
+  amber: "#F0B95B",
+  amberDark: "#db9214",
+  slate: "#5B6B8C",
+  slateDark: "#3d485e",
+  categorical: ["#6C6FE0", "#F2996B", "#F0B95B", "#5B6B8C", "#2d31d3", "#ec6925", "#db9214", "#3d485e", "#d8d9f4"],
+};
+
+const BLOOM_COLORS = ["#abb0bc", "#6C6FE0", "#F0B95B", "#F2996B", "#ec6925"];
+
+const HEATMAP_SCALE_WARM = [
+  { from: 0, to: 0, color: "#f5f2ec", name: "0" },
+  { from: 1, to: 1, color: "#F0B95B" },
+  { from: 2, to: 2, color: "#F2996B" },
+  { from: 3, to: 99, color: "#ec6925" },
+];
+
+const HEATMAP_SCALE_COOL = [
+  { from: 0, to: 0, color: "#f5f2ec", name: "0" },
+  { from: 1, to: 4, color: "#a5a6f0", name: "1–4" },
+  { from: 5, to: 7, color: "#6C6FE0", name: "5–7" },
+  { from: 8, to: 10, color: "#494dbd", name: "8–10" },
+  { from: 11, to: 99, color: "#494c96", name: "11+ Lernziele" },
+];
+
 function formatMinutesWithHours(minutes) {
   const hours = (minutes / 60).toFixed(1).replace(/\.0$/, "");
   return `${minutes} (${hours} h)`;
 }
 
+// ── Feature 2: Workload stacked bar ─────────────────────────────────────────
 export function renderWorkloadChart(categories, series) {
   const options = {
     chart: {
@@ -14,9 +46,7 @@ export function renderWorkloadChart(categories, series) {
     plotOptions: {
       bar: { horizontal: false, borderRadius: 4 },
     },
-    xaxis: {
-      categories
-    },
+    xaxis: { categories },
     yaxis: {
       title: { text: "Zeitaufwand (Minuten)" },
       labels: {
@@ -31,20 +61,13 @@ export function renderWorkloadChart(categories, series) {
     legend: { show: false },
     series,
     dataLabels: { enabled: false },
-    colors: [
-      "#0d6efd", "#6610f2", "#6f42c1", "#d63384",
-      "#fd7e14", "#ffc107", "#198754", "#20c997", "#0dcaf0",
-    ],
+    colors: PALETTE.categorical,
   };
-
   const chart = new ApexCharts(document.querySelector("#workload-chart"), options);
   chart.render();
 }
 
-// ── Bloom palette (ordered low → high) ──────────────────────────────────────
-const BLOOM_COLORS = ["#adb5bd", "#74c0fc", "#51cf66", "#ff922b", "#f03e3e"];
-
-// ── Feature 3a, 3b: Bloom ───────────────────────────────────
+// ── Feature 3a, 3b: Bloom ────────────────────────────────────────────────────
 export function renderBloomPerCaseChart(categories, series) {
   const options = {
     chart: { type: "bar", height: 380, stacked: true, toolbar: { show: true } },
@@ -58,7 +81,10 @@ export function renderBloomPerCaseChart(categories, series) {
     tooltip: { shared: true, intersect: false },
   };
   if (window.bloomPerCaseInstance) window.bloomPerCaseInstance.destroy();
-  window.bloomPerCaseInstance = new ApexCharts(document.querySelector("#bloom-per-case-chart"), options);
+  window.bloomPerCaseInstance = new ApexCharts(
+    document.querySelector("#bloom-per-case-chart"),
+    options
+  );
   window.bloomPerCaseInstance.render();
 }
 
@@ -76,7 +102,10 @@ export function renderBloomGlobalChart(labels, values) {
     },
   };
   if (window.bloomGlobalInstance) window.bloomGlobalInstance.destroy();
-  window.bloomGlobalInstance = new ApexCharts(document.querySelector("#bloom-global-chart"), options);
+  window.bloomGlobalInstance = new ApexCharts(
+    document.querySelector("#bloom-global-chart"),
+    options
+  );
   window.bloomGlobalInstance.render();
 }
 
@@ -87,13 +116,19 @@ export function renderCompetencyChart(categories, values) {
     plotOptions: { bar: { horizontal: true, borderRadius: 3 } },
     xaxis: { title: { text: "Anzahl Lernziele" } },
     yaxis: { labels: { style: { fontSize: "12px" } } },
-    series: [{ name: "Lernziele", data: categories.map((cat, i) => ({ x: cat, y: values[i] })) }],
-    colors: ["#0d6efd"],
+    series: [
+      { name: "Lernziele", data: categories.map((cat, i) => ({ x: cat, y: values[i] })) },
+    ],
+    colors: [PALETTE.indigo],
     dataLabels: { enabled: true },
     grid: { xaxis: { lines: { show: true } } },
+    legend: { show: false },
   };
   if (window.competencyChartInstance) window.competencyChartInstance.destroy();
-  window.competencyChartInstance = new ApexCharts(document.querySelector("#competency-chart"), options);
+  window.competencyChartInstance = new ApexCharts(
+    document.querySelector("#competency-chart"),
+    options
+  );
   window.competencyChartInstance.render();
 }
 
@@ -105,16 +140,19 @@ export function renderDataFlowChart(categories, values) {
     xaxis: { categories, labels: { style: { fontSize: "11px" } } },
     yaxis: { title: { text: "Anzahl Lernziele" }, min: 0, forceNiceScale: true },
     series: [{ name: "Lernziele", data: values }],
-    colors: ["#0d6efd", "#6610f2", "#198754", "#fd7e14", "#dc3545"],
+    colors: PALETTE.categorical.slice(0, 5),
     dataLabels: { enabled: true },
     legend: { show: false },
   };
   if (window.dataflowChartInstance) window.dataflowChartInstance.destroy();
-  window.dataflowChartInstance = new ApexCharts(document.querySelector("#dataflow-chart"), options);
+  window.dataflowChartInstance = new ApexCharts(
+    document.querySelector("#dataflow-chart"),
+    options
+  );
   window.dataflowChartInstance.render();
 }
 
-// ── Feature 4c: Bloom × Chapter heatmap ─────────────────────────────────────
+// ── Feature 4c: Bloom × Chapter heatmap ──────────────────────────────────────
 export function renderBloomHeatmapChart(series) {
   const options = {
     chart: {
@@ -123,7 +161,7 @@ export function renderBloomHeatmapChart(series) {
       toolbar: { show: true },
     },
     dataLabels: { enabled: false },
-    colors: ["#f03e3e"],   // ApexCharts heatmap shades this automatically
+    colors: [PALETTE.orange],
     series,
     xaxis: { type: "category", labels: { rotate: -45, style: { fontSize: "10px" } } },
     yaxis: { labels: { style: { fontSize: "11px" } } },
@@ -131,19 +169,13 @@ export function renderBloomHeatmapChart(series) {
     plotOptions: {
       heatmap: {
         shadeIntensity: 0.6,
-        colorScale: {
-          ranges: [
-            { from: 0, to: 0, color: "#f8f9fa", name: "0" },
-            { from: 1, to: 1, color: "#ffd8a8" },
-            { from: 2, to: 2, color: "#ff922b" },
-            { from: 3, to: 99, color: "#e03131" },
-          ],
-        },
+        colorScale: { ranges: HEATMAP_SCALE_WARM },
       },
     },
   };
   new ApexCharts(document.querySelector("#bloom-heatmap-chart"), options).render();
 }
+
 const DATAFLOW_STAGE_ORDER = [
   "1 Planung",
   "2 Erhebung und Aufbereitung",
@@ -165,42 +197,38 @@ export function renderCompetencyDataFlowHeatmap(series) {
     xaxis: {
       type: "category",
       categories: DATAFLOW_STAGE_ORDER,
-      tickAmount: DATAFLOW_STAGE_ORDER.length,   // force one tick per category
+      tickAmount: DATAFLOW_STAGE_ORDER.length,
       labels: {
         rotate: -45,
-        hideOverlappingLabels: false,            // stop auto-hiding
+        hideOverlappingLabels: false,
         trim: false,
         style: { fontSize: "10px" },
       },
     },
     yaxis: { labels: { style: { fontSize: "11px" } } },
-    legend: {
-      show: false
+    legend: { show: false },
+    tooltip: {
+      y: {
+        formatter: (value) => `${value} Lernziele`,
+      },
     },
     plotOptions: {
       heatmap: {
-        shadeIntensity: 0.6,
-        colorScale: {
-          ranges: [
-            { from: 0, to: 0, color: "#f8f9fa", name: "Keine Lernziele" },
-            { from: 1, to: 2, color: "#a5d8ff", name: "1–2 Lernziele" },
-            { from: 3, to: 5, color: "#4dabf7", name: "3–5 Lernziele" },
-            { from: 6, to: 99, color: "#1864ab", name: "6+ Lernziele" },
-          ],
-        },
+        shadeIntensity: 0,
+        colorScale: { ranges: HEATMAP_SCALE_COOL },
       },
     },
   };
   new ApexCharts(document.querySelector("#competency-dataflow-heatmap"), options).render();
 }
 
+// ── Feature 7: type-group cards ──────────────────────────────────────────────
 function issueBadge(count) {
   if (count === null || count === undefined) return `<span class="badge bg-secondary">n/a</span>`;
   if (count === 0) return `<span class="badge bg-success">✅ 0</span>`;
   if (count <= 10) return `<span class="badge bg-warning text-dark">🟡 ${count}</span>`;
   return `<span class="badge bg-danger">🔴 ${count}</span>`;
 }
-
 
 function headerIssuesText(count) {
   if (count === null || count === undefined) {
@@ -217,41 +245,38 @@ function shortIndexLabel(fullLabel) {
 function doiBadge(doi) {
   if (!doi || doi.includes("TODO")) return "";
   const cleanDoi = doi.replace(/^https?:\/\/doi\.org\//i, "");
-  return `<a href="https://doi.org/${cleanDoi}" target="_blank" class="doi-badge">
-    <span class="doi-label">DOI</span><span class="doi-value">${cleanDoi}</span>
-  </a>`;
+  return `<a href="https://doi.org/${cleanDoi}" target="_blank" class="doi-badge"><span class="doi-label">DOI</span><span class="doi-value">${cleanDoi}</span></a>`;
 }
 
 function bookIcon(url) {
   if (!url) return "";
-  return `<a href="${url}" target="_blank" style="text-decoration:none;" title="Jupyter Book">📖</a>`;
+  return `<a href="${url}" target="_blank" style="text-decoration:none" title="Jupyter Book">📖</a>`;
 }
-
 
 export function renderTypeGroupCards(summaries) {
   const container = document.getElementById("type-group-cards");
   container.innerHTML = summaries
-    .map((group) => `
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-header d-flex justify-content-between align-items-center">
-            <span>${group.icon} <strong>${group.label}</strong></span>
-            ${headerIssuesText(group.totalOpenIssues)}
-          </div>
-          <ul class="list-group list-group-flush">
-            ${group.repos.map((r) => `
-              <li class="list-group-item d-flex justify-content-between align-items-center small">
-                <span>
-                  ${shortIndexLabel(r.label)} · v${r.version}
-                  ${bookIcon(r.bookUrl)}
-                  ${doiBadge(r.doi)}
-                </span>
-                ${issueBadge(r.openIssues)}
-              </li>
-            `).join("")}
-          </ul>
+    .map(
+      (group) => `
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <span>${group.icon} <strong>${group.label}</strong></span>
+          ${headerIssuesText(group.totalOpenIssues)}
         </div>
+        <ul class="list-group list-group-flush">
+          ${group.repos
+            .map(
+              (r) => `
+            <li class="list-group-item d-flex justify-content-between align-items-center small">
+              <span>${shortIndexLabel(r.label)} · v${r.version} ${bookIcon(r.bookUrl)} ${doiBadge(r.doi)}</span>
+              <span>${issueBadge(r.openIssues)}</span>
+            </li>`
+            )
+            .join("")}
+        </ul>
       </div>
-    `)
+    </div>`
+    )
     .join("");
 }
