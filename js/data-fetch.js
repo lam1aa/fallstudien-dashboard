@@ -37,27 +37,15 @@ function isMetadataComplete(meta) {
   return hasTopLevel && hasChapters;
 }
 
-export async function fetchOpenIssues(caseStudy) {
-  const { owner, repo } = caseStudy;
-  const url = `${GITHUB_API_BASE}/repos/${owner}/${repo}`;
-  try {
-    const res = await fetch(url);
-    if (!res.ok) return { ...caseStudy, openIssues: null };
-    const data = await res.json();
-    return { ...caseStudy, openIssues: data.open_issues_count };
-  } catch (err) {
-    return { ...caseStudy, openIssues: null };
-  }
+export async function fetchOpenIssuesMap() {
+  const res = await fetch("issues.json");
+  if (!res.ok) return {};
+  return res.json();
 }
 
 export async function fetchAllCaseStudies() {
   const list = await loadCaseStudyList();
   const metaResults = await Promise.all(list.map(fetchMetadataYml));
-  const withIssues = await Promise.all(
-    metaResults.map(async (cs) => {
-      const { openIssues } = await fetchOpenIssues(cs);
-      return { ...cs, openIssues };
-    })
-  );
-  return withIssues;
+  const issuesMap = await fetchOpenIssuesMap();
+  return metaResults.map((cs) => ({ ...cs, openIssues: issuesMap[cs.id] ?? null }));
 }
