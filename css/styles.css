@@ -1,0 +1,31 @@
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.card .display-6 {
+  font-weight: 600;
+}
+
+#workload-chart {
+  min-height: 400px;
+}
+
+.doi-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  border-radius: 3px;
+  overflow: hidden;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.doi-badge .doi-label {
+  background: #555;
+  color: #fff;
+  padding: 2px 5px;
+}
+.doi-badge .doi-value {
+  background: #007ec6;
+  color: #fff;
+  padding: 2px 5px;
+}

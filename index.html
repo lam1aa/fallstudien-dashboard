@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUADRIGA Fallstudien Dashboard</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light">
+
+  <nav class="navbar navbar-dark bg-dark mb-4">
+    <div class="container">
+      <span class="navbar-brand mb-0 h1">QUADRIGA Fallstudien Dashboard</span>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <div id="loading" class="alert alert-info">Lade Metadaten von GitHub…</div>
+    <div id="error" class="alert alert-danger d-none"></div>
+
+    <!-- FEATURE 1: Overview KPIs -->
+    <section id="kpi-section" class="mb-5">
+      <h2 class="h4 mb-3">Überblick</h2>
+      <div class="row g-3">
+        <div class="col-md-3 col-sm-6">
+          <div class="card text-center shadow-sm">
+            <div class="card-body">
+              <div class="display-6" id="kpi-total-cases">–</div>
+              <div class="text-muted">Fallstudien</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card text-center shadow-sm">
+            <div class="card-body">
+              <div class="display-6" id="kpi-total-chapters">–</div>
+              <div class="text-muted">Kapitel</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card text-center shadow-sm">
+            <div class="card-body">
+              <div class="display-6" id="kpi-total-objectives">–</div>
+              <div class="text-muted">Lernziele</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="card text-center shadow-sm border-warning">
+            <div class="card-body">
+              <div class="display-6" id="kpi-complete-ratio">–</div>
+              <div class="text-muted">Vollständige Metadaten</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE 2: Workload / time-required -->
+    <section id="workload-section" class="mb-5">
+      <h2 class="h4 mb-3">Workload je Fallstudie (Zeitaufwand pro Kapitel)</h2>
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div id="workload-chart"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FEATURE 3: Bloom's Taxonomy -->
+    <section id="bloom-section" class="mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <h4 class="mb-0">Blooms Lernzieltaxonomie</h4>
+        <select id="bloom-type-filter" class="form-select form-select-sm w-auto">
+          <option value="all">Alle Typen</option>
+          <option value="tabelle">Tabelle</option>
+          <option value="text">Text</option>
+          <option value="bild">Bewegtes Bild</option>
+        </select>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-lg-7">
+          <div class="card shadow-sm h-100">
+            <div class="card-header text-muted small">Blooms-Category je Fallstudie</div>
+            <div class="card-body">
+              <div id="bloom-per-case-chart"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="card shadow-sm h-100">
+            <div class="card-header text-muted small">Globale Blooms-Category</div>
+            <div class="card-body d-flex align-items-center justify-content-center">
+              <div id="bloom-global-chart" style="width:100%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE 4: Competency & Data-flow -->
+    <section id="competency-section" class="mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <h4 class="mb-0">Kompetenz- & Datenflussabdeckung</h4>
+        <select id="type-filter" class="form-select form-select-sm w-auto">
+          <option value="all">Alle Typen</option>
+          <option value="tabelle">Tabelle</option>
+          <option value="text">Text</option>
+          <option value="bild">Bewegtes Bild</option>
+        </select>
+      </div>
+      <div class="row g-3 mb-3">
+        <div class="col-lg-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-header text-muted small">Kompetenz-Abdeckung</div>
+            <div class="card-body">
+              <div id="competency-chart"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-header text-muted small">Datenfluss-Stufen</div>
+            <div class="card-body">
+              <div id="dataflow-chart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card shadow-sm mt-5">
+        <div class="card-header text-muted small">Competency × Data Flow (Alle Typen)</div>
+        <div class="card-body" style="overflow-x:auto">
+          <div id="competency-dataflow-heatmap"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fallstudie-section" class="mb-5">
+      <h4 class="mb-3">Fallstudien nach Typ</h4>
+      <div id="type-group-cards" class="row g-3 mb-4"></div>
+    </section>
+    
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.51.0/dist/apexcharts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

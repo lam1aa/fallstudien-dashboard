@@ -1,0 +1,14 @@
+[
+  { "id": "tabelle-01", "owner": "quadriga-dk", "repo": "Tabelle-Fallstudie-1", "metadataPath": "metadata.yml", "branch": "main" },
+  { "id": "tabelle-02", "owner": "quadriga-dk", "repo": "Tabelle-Fallstudie-2", "metadataPath": "metadata.yml", "branch": "main" },
+  { "id": "tabelle-03", "owner": "quadriga-dk", "repo": "Tabelle-Fallstudie-3", "metadataPath": "metadata.yml", "branch": "main" },
+  { "id": "tabelle-04", "owner": "quadriga-dk", "repo": "Tabelle-Fallstudie-4", "metadataPath": "metadata.yml", "branch": "main" },
+  { "id": "text-01", "owner": "quadriga-dk", "repo": "Text-Fallstudie-1", "metadataPath": "metadata.yml", "branch": "main" },
+  { "id": "text-02", "owner": "quadriga-dk", "repo": "Text-Fallstudie-2", "metadataPath": "metadata.yml", "branch": "main" },
+  { "id": "text-03", "owner": "quadriga-dk", "repo": "Text-Fallstudie-3", "metadataPath": "metadata.yml", "branch": "main" },
+  { "id": "text-04", "owner": "quadriga-dk", "repo": "Text-Fallstudie-4", "metadataPath": "metadata.yml", "branch": "main" },
+  { "id": "bild-01", "owner": "quadriga-dk", "repo": "Bewegtes-Bild-Fallstudie-1", "metadataPath": "metadata.yml", "branch": "main" },
+  { "id": "bild-02", "owner": "quadriga-dk", "repo": "Bewegtes-Bild-Fallstudie-2", "metadataPath": "metadata.yml", "branch": "main" },
+  { "id": "bild-03", "owner": "quadriga-dk", "repo": "Bewegtes-Bild-Fallstudie-3", "metadataPath": "metadata.yml", "branch": "main" },
+  { "id": "bild-04", "owner": "quadriga-dk", "repo": "Bewegtes-Bild-Fallstudie-4", "metadataPath": "metadata.yml", "branch": "main" }
+]
