@@ -99,6 +99,8 @@ const BLOOM_ORDER = [
   "3 Anwenden",
   "4 Analysieren",
   "5 Bewerten",
+  "6 Erschaffen",
+  "nicht anwendbar"
 ];
 
 // Normalise the raw blooms-category value to a canonical label

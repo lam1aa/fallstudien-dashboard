@@ -11,6 +11,7 @@ const CATEGORY_NUMBER_COLORS = {
   3: "#9fc796",
   4: "#f5c998",
   5: "#e89f7f",
+  6: "#e57b7f",
 };
 const CATEGORY_DEFAULT_COLOR = "#abb0bc";
 
@@ -29,6 +30,8 @@ const BLOOM_COLORS = [
   CATEGORY_NUMBER_COLORS[3],
   CATEGORY_NUMBER_COLORS[4],
   CATEGORY_NUMBER_COLORS[5],
+  CATEGORY_NUMBER_COLORS[6],
+  CATEGORY_DEFAULT_COLOR,
 ];
 
 const HEATMAP_SCALE_WARM = [
@@ -45,9 +48,9 @@ const HEATMAP_SCALE_COOL = [
   { from: 11, to: 99, color: "#494c96", name: "11+ Lernziele" },
 ];
 
-function formatMinutesWithHours(minutes) {
+function formatToHours(minutes) {
   const hours = (minutes / 60).toFixed(1).replace(/\.0$/, "");
-  return `${minutes} (${hours} h)`;
+  return `${hours} h`;
 }
 
 // ── Workload two-tone palette generator ─────────────────────────────────────
@@ -62,14 +65,29 @@ function buildWorkloadColors(count) {
 export function renderWorkloadChart(categories, series) {
   const options = {
     chart: { type: "bar", height: 420, stacked: true, toolbar: { show: true } },
-    plotOptions: { bar: { horizontal: false, borderRadius: 4 } },
+    plotOptions: { 
+      bar: { 
+        horizontal: false, 
+        borderRadius: 4,
+        dataLabels: {
+          total: {
+            enabled: true,
+            formatter: function(val) {
+              return formatToHours(val);
+            },
+            style: { color: "#373d3f", fontSize: "12px", fontWeight: 600 }
+          }
+        }
+      } 
+    },
     xaxis: { categories },
     yaxis: {
-      title: { text: "Zeitaufwand (Minuten)" },
-      labels: { formatter: (value) => formatMinutesWithHours(Math.round(value)) },
+      title: { text: "Zeitaufwand (Stunden)" },
+      labels: { formatter: (value) => formatToHours(Math.round(value)) },
     },
     tooltip: {
-      y: { formatter: (value) => formatMinutesWithHours(Math.round(value)) },
+      shared: false, intersect: true,
+      y: { formatter: (value) => formatToHours(Math.round(value)) },
     },
     legend: { show: false },
     series,
@@ -84,14 +102,25 @@ export function renderWorkloadChart(categories, series) {
 export function renderBloomPerCaseChart(categories, series) {
   const options = {
     chart: { type: "bar", height: 380, stacked: true, toolbar: { show: true } },
-    plotOptions: { bar: { horizontal: false, borderRadius: 3 } },
+    plotOptions: {
+      bar: {
+        horizontal: false,
+        borderRadius: 3,
+        dataLabels: {
+          total: {
+            enabled: true,
+            style: { color: "#373d3f", fontSize: "12px", fontWeight: 600 }
+          }
+        }
+      }
+    },
     xaxis: { categories },
     yaxis: { title: { text: "Anzahl Lernziele" }, min: 0, forceNiceScale: true },
     legend: { position: "bottom" },
     colors: BLOOM_COLORS,
     series,
-    dataLabels: { enabled: false },
-    tooltip: { shared: true, intersect: false },
+    dataLabels: { enabled: false }, // Hides labels inside segments
+    tooltip: { shared: false, intersect: true },
   };
   if (window.bloomPerCaseInstance) window.bloomPerCaseInstance.destroy();
   window.bloomPerCaseInstance = new ApexCharts(
@@ -107,12 +136,26 @@ export function renderBloomGlobalChart(labels, values) {
     labels,
     series: values,
     colors: BLOOM_COLORS,
-    legend: { position: "bottom" },
-    plotOptions: { pie: { donut: { size: "55%" } } },
+    legend: {
+      show: true,
+      position: "right",
+      offsetY: 10,
+      formatter: function (seriesName, opts) {
+        const count = opts.w.globals.series[opts.seriesIndex];
+        return `${seriesName} (${count})`;
+      },
+      itemMargin: { vertical: 8 },
+      markers: { width: 12, height: 12, radius: 12 }
+    },
+    plotOptions: { 
+      pie: { donut: { size: "55%" } }
+    },
     dataLabels: {
+      enabled: true,
       formatter: (val, opts) =>
         `${opts.w.globals.series[opts.seriesIndex]} (${Math.round(val)}%)`,
     },
+    stroke: { width: 1, colors: ["#fff"] }
   };
   if (window.bloomGlobalInstance) window.bloomGlobalInstance.destroy();
   window.bloomGlobalInstance = new ApexCharts(
