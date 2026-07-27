@@ -60,24 +60,22 @@ body {
 
 /* ── Modern Single-Line KPI Cards ───────────────────────────────────────── */
 .kpi-card {
-  border: none;
+  background-color: #ffffff;
+  border: 1px solid #e5e9f0;
   border-radius: 8px;
   padding: 1.1rem 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100px;
-  transition: transform 0.15s ease;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .kpi-card:hover {
   transform: translateY(-2px);
+  box-shadow: 0 .25rem .5rem rgba(0,0,0,.15);
 }
-
-.kpi-card-blue   { background-color: var(--card-bg-blue); }
-.kpi-card-purple { background-color: var(--card-bg-purple); }
-.kpi-card-green  { background-color: var(--card-bg-green); }
-.kpi-card-yellow { background-color: var(--card-bg-yellow); }
 
 .kpi-title {
   font-size: 0.85rem;
