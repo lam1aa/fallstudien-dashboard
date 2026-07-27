@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,64 +9,124 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
-  <nav class="navbar shadow-sm mb-4">
+  <nav class="navbar navbar-expand-lg">
     <div class="container d-flex justify-content-between align-items-center">
-      <div class="d-flex align-items-center">
-        <img src="QUADRIGALogo.png" alt="QUADRIGA Logo" height="56" class="me-3">
-        <span class="navbar-brand mb-0">QUADRIGA Dashboard</span>
-      </div>
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="QUADRIGALogo1.png" alt="QUADRIGA Logo" height="62">
+      </a>
+      <ul class="navbar-nav flex-row gap-2">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Page2</a>
+        </li>
+      </ul>
     </div>
   </nav>
 
   <main class="container">
 
+    <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+      <div>
+        <h2 class="mb-1 fw-bold">Dashboard</h2>
+        <p class="text-secondary mb-0 small">
+          Die auf dieser Seite dargestellten Daten werden dynamisch aus den Metadatendateien der Fallstudien erzeugt.
+          <br>
+          Unvollständige Metadaten können zu Abweichungen in den angezeigten Werten führen.
+        </p>
+      </div>
+      <div class="mt-2 mt-md-0">
+        <span class="metadata-pill">
+          Metadaten: <strong id="header-metadata-count">...</strong>
+        </span>
+      </div>
+    </div>
+
     <div id="loading" class="alert alert-info">Lade Metadaten von GitHub…</div>
     <div id="error" class="alert alert-danger d-none"></div>
 
-    <!-- FEATURE 1: Overview KPIs -->
+    <!-- Overview KPIs -->
     <section id="kpi-section" class="mb-5">
-      <div class="row g-3">
-        <div class="col-md-3 col-sm-6">
-          <div class="card text-center shadow-sm">
+      <div class="row g-3 flex-nowrap overflow-auto pb-2">
+        <div class="col">
+          <div class="kpi-card kpi-card-blue">
+            <div class="kpi-title">Fallstudien</div>
+            <div class="kpi-value" id="kpi-total-cases">–</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="kpi-card kpi-card-purple">
+            <div class="kpi-title">Kapitel</div>
+            <div class="kpi-value" id="kpi-total-chapters">–</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="kpi-card kpi-card-green">
+            <div class="kpi-title">Lernziele</div>
+            <div class="kpi-value" id="kpi-total-objectives">–</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="kpi-card kpi-card-yellow">
+            <div class="kpi-title">Wörter (Demo)</div>
+            <div class="kpi-value" id="kpi-total-words">12.450</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="kpi-card kpi-card-blue">
+            <div class="kpi-title">Bilder & Abbildungen (Demo)</div>
+            <div class="kpi-value" id="kpi-total-media">48</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Competency & Data-flow-->
+    <section id="competency-section" class="mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <h5 class="mb-3">Kompetenz- & Datenflussabdeckung</h5>
+        <div class="d-flex gap-2">
+          <span class="small text-muted align-self-center">Sortieren nach:</span>
+          <select id="sort-filter" class="form-select form-select-sm w-auto">
+            <option value="alpha">Framework-Struktur</option>
+            <option value="count">Anzahl Lernziele</option>
+          </select>
+          <select id="type-filter" class="form-select form-select-sm w-auto">
+            <option value="all">Alle Typen</option>
+            <option value="tabelle">Tabelle</option>
+            <option value="text">Text</option>
+            <option value="bild">Bewegtes Bild</option>
+          </select>
+        </div>
+      </div>
+      <div class="row g-3 mb-3">
+        <div class="col-lg-7">
+          <div class="card shadow-sm h-100">
+            <div class="card-header text-muted small">Datenfluss-Stufen</div>
             <div class="card-body">
-              <div class="display-6" id="kpi-total-cases">–</div>
-              <div class="text-muted">Fallstudien</div>
+              <div id="dataflow-chart"></div>
             </div>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="card text-center shadow-sm">
+        <div class="col-lg-5">
+          <div class="card shadow-sm h-100">
+            <div class="card-header text-muted small">Kompetenz-Abdeckung</div>
             <div class="card-body">
-              <div class="display-6" id="kpi-total-chapters">–</div>
-              <div class="text-muted">Kapitel</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="card text-center shadow-sm">
-            <div class="card-body">
-              <div class="display-6" id="kpi-total-objectives">–</div>
-              <div class="text-muted">Lernziele</div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="card text-center shadow-sm">
-            <div class="card-body">
-              <div class="display-6" id="kpi-complete-ratio">–</div>
-              <div class="text-muted">Metadaten verfügbar</div>
+              <div id="competency-chart"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FEATURE 3: Bloom's Taxonomy -->
+    <!-- Bloom's Taxonomy -->
     <section id="bloom-section" class="mb-5">
       <div class="d-flex justify-content-between align-items-center mb-2">
-        <h4 class="mb-0">Blooms Lernzieltaxonomie</h4>
+        <h5 class="mb-3">Blooms Lernzieltaxonomie</h5>
         <select id="bloom-type-filter" class="form-select form-select-sm w-auto">
           <option value="all">Alle Typen</option>
           <option value="tabelle">Tabelle</option>
@@ -94,40 +155,9 @@
       </div>
     </section>
 
-    <!-- FEATURE 4: Competency & Data-flow -->
-    <section id="competency-section" class="mb-5">
-      <div class="d-flex justify-content-between align-items-center mb-2">
-        <h4 class="mb-0">Kompetenz- & Datenflussabdeckung</h4>
-        <select id="type-filter" class="form-select form-select-sm w-auto">
-          <option value="all">Alle Typen</option>
-          <option value="tabelle">Tabelle</option>
-          <option value="text">Text</option>
-          <option value="bild">Bewegtes Bild</option>
-        </select>
-      </div>
-      <div class="row g-3 mb-3">
-        <div class="col-lg-7">
-          <div class="card shadow-sm h-100">
-            <div class="card-header text-muted small">Datenfluss-Stufen</div>
-            <div class="card-body">
-              <div id="dataflow-chart"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-5">
-          <div class="card shadow-sm h-100">
-            <div class="card-header text-muted small">Kompetenz-Abdeckung</div>
-            <div class="card-body">
-              <div id="competency-chart"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURE 2: Workload / time-required -->
+    <!-- Workload / time-required -->
     <section id="workload-section" class="mb-5">
-      <h4 class="mb-3">Workload je Fallstudie (Zeitaufwand pro Kapitel)</h4>
+      <h5 class="mb-3">Workload je Fallstudie (Zeitaufwand pro Kapitel)</h5>
       <div class="card shadow-sm">
         <div class="card-body">
           <div id="workload-chart"></div>
@@ -135,11 +165,12 @@
       </div>
     </section>
 
+    <!-- GitHub Open Issues-->
     <section id="fallstudie-section" class="mb-5">
-      <h4 class="mb-3">Alle Fallstudien</h4>
+      <h5 class="mb-3">Alle Fallstudien</h5>
       <div id="type-group-cards" class="row g-3 mb-4"></div>
     </section>
-    
+
 
 
 
@@ -155,4 +186,5 @@
 
   <script type="module" src="js/main.js"></script>
 </body>
+
 </html>

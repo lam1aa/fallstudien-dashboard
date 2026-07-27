@@ -6,8 +6,8 @@ import {
   buildBloomGlobalSeries,
   buildCompetencySeries,
   buildDataFlowSeries,
-  buildBloomHeatmapSeries,
-  buildCompetencyDataFlowMatrix,
+  // buildBloomHeatmapSeries,
+  // buildCompetencyDataFlowMatrix,
   buildTypeGroupSummaries
 } from "./aggregate.js";
 import {
@@ -16,8 +16,8 @@ import {
   renderBloomGlobalChart,
   renderCompetencyChart,
   renderDataFlowChart,
-  renderBloomHeatmapChart,
-  renderCompetencyDataFlowHeatmap,
+  // renderBloomHeatmapChart,
+  // renderCompetencyDataFlowHeatmap,
   renderTypeGroupCards
 } from "./charts.js";
 
@@ -29,11 +29,11 @@ function renderBloomCharts(caseStudies, type) {
   renderBloomGlobalChart(bgLabels, bgValues);
 }
 
-function renderFilteredCharts(caseStudies, type) {
-  const { categories: compCat, values: compVal } = buildCompetencySeries(caseStudies, type);
+function renderFilteredCharts(caseStudies, type, sortMode) {
+  const { categories: compCat, values: compVal } = buildCompetencySeries(caseStudies, type, sortMode);
   renderCompetencyChart(compCat, compVal);
 
-  const { categories: dfCat, values: dfVal } = buildDataFlowSeries(caseStudies, type);
+  const { categories: dfCat, values: dfVal } = buildDataFlowSeries(caseStudies, type, sortMode);
   renderDataFlowChart(dfCat, dfVal);
 }
 
@@ -49,7 +49,16 @@ async function init() {
     document.getElementById("kpi-total-cases").textContent      = kpis.totalCases;
     document.getElementById("kpi-total-chapters").textContent   = kpis.totalChapters;
     document.getElementById("kpi-total-objectives").textContent = kpis.totalObjectives;
-    document.getElementById("kpi-complete-ratio").textContent   = kpis.completeRatio;
+    
+    const completeRatioEl = document.getElementById("kpi-complete-ratio");
+    if (completeRatioEl) {
+      completeRatioEl.textContent = kpis.completeRatio;
+    }
+
+    const headerMetadataEl = document.getElementById("header-metadata-count");
+    if (headerMetadataEl) {
+      headerMetadataEl.textContent = kpis.completeRatio;
+    }
 
     // Feature 2
     const { categories: wCat, series: wSer } = buildWorkloadSeries(caseStudies);
@@ -61,19 +70,26 @@ async function init() {
       renderBloomCharts(caseStudies, e.target.value);
     });
 
-    // Feature 4a & 4b – competency & data-flow (filterable)
-    renderFilteredCharts(caseStudies, "all");
+    // Feature 4a & 4b – competency & data-flow (filterable & sortable)
+    const typeFilterEl = document.getElementById("type-filter");
+    const sortFilterEl = document.getElementById("sort-filter");
+    
+    renderFilteredCharts(caseStudies, typeFilterEl.value, sortFilterEl.value);
 
-    document.getElementById("type-filter").addEventListener("change", (e) => {
-      renderFilteredCharts(caseStudies, e.target.value);
+    typeFilterEl.addEventListener("change", () => {
+      renderFilteredCharts(caseStudies, typeFilterEl.value, sortFilterEl.value);
+    });
+    
+    sortFilterEl.addEventListener("change", () => {
+      renderFilteredCharts(caseStudies, typeFilterEl.value, sortFilterEl.value);
     });
 
     // Feature 4c – heatmap
-    const heatSeries = buildBloomHeatmapSeries(caseStudies);
-    renderBloomHeatmapChart(heatSeries);
+    // const heatSeries = buildBloomHeatmapSeries(caseStudies);
+    // renderBloomHeatmapChart(heatSeries);
 
-    const cdSeries = buildCompetencyDataFlowMatrix(caseStudies);
-    renderCompetencyDataFlowHeatmap(cdSeries);
+    // const cdSeries = buildCompetencyDataFlowMatrix(caseStudies);
+    // renderCompetencyDataFlowHeatmap(cdSeries);
 
     const groupSummaries = buildTypeGroupSummaries(caseStudies);
     renderTypeGroupCards(groupSummaries);

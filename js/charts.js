@@ -147,20 +147,13 @@ export function renderCompetencyChart(categories, values) {
 
 // ── Feature 4b: data-flow bar (sorted highest first) ─────────────────────────
 export function renderDataFlowChart(categories, values) {
-  const paired = categories
-    .map((cat, i) => ({ cat, val: values[i] }))
-    .sort((a, b) => b.val - a.val);
-
-  const sortedCategories = paired.map((p) => p.cat);
-  const sortedValues = paired.map((p) => p.val);
-
   const options = {
     chart: { type: "bar", height: 460, toolbar: { show: false } },
     plotOptions: { bar: { horizontal: false, borderRadius: 3, distributed: true } },
-    xaxis: { categories: sortedCategories, labels: { style: { fontSize: "11px" } } },
+    xaxis: { categories: categories, labels: { style: { fontSize: "11px" } } },
     yaxis: { title: { text: "Anzahl Lernziele" }, min: 0, forceNiceScale: true },
-    series: [{ name: "Lernziele", data: sortedValues }],
-    colors: sortedCategories.map(getColorForCategoryLabel),
+    series: [{ name: "Lernziele", data: values }],
+    colors: categories.map(getColorForCategoryLabel),
     dataLabels: { enabled: true },
     legend: { show: false },
   };
@@ -173,64 +166,64 @@ export function renderDataFlowChart(categories, values) {
 }
 
 // ── Feature 4c: Bloom × Chapter heatmap ──────────────────────────────────────
-export function renderBloomHeatmapChart(series) {
-  const options = {
-    chart: {
-      type: "heatmap",
-      height: Math.max(220, series[0]?.data.length * 14 + 80),
-      toolbar: { show: true },
-    },
-    dataLabels: { enabled: false },
-    colors: ["#ec6925"],
-    series,
-    xaxis: { type: "category", labels: { rotate: -45, style: { fontSize: "10px" } } },
-    yaxis: { labels: { style: { fontSize: "11px" } } },
-    legend: { position: "bottom" },
-    plotOptions: {
-      heatmap: { shadeIntensity: 0.6, colorScale: { ranges: HEATMAP_SCALE_WARM } },
-    },
-  };
-  new ApexCharts(document.querySelector("#bloom-heatmap-chart"), options).render();
-}
+// export function renderBloomHeatmapChart(series) {
+//   const options = {
+//     chart: {
+//       type: "heatmap",
+//       height: Math.max(220, series[0]?.data.length * 14 + 80),
+//       toolbar: { show: true },
+//     },
+//     dataLabels: { enabled: false },
+//     colors: ["#ec6925"],
+//     series,
+//     xaxis: { type: "category", labels: { rotate: -45, style: { fontSize: "10px" } } },
+//     yaxis: { labels: { style: { fontSize: "11px" } } },
+//     legend: { position: "bottom" },
+//     plotOptions: {
+//       heatmap: { shadeIntensity: 0.6, colorScale: { ranges: HEATMAP_SCALE_WARM } },
+//     },
+//   };
+//   new ApexCharts(document.querySelector("#bloom-heatmap-chart"), options).render();
+// }
 
-const DATAFLOW_STAGE_ORDER = [
-  "1 Planung",
-  "2 Erhebung und Aufbereitung",
-  "3 Management",
-  "4 Analyse",
-  "5 Publikation und Nachnutzung",
-  "übergreifend",
-];
+// const DATAFLOW_STAGE_ORDER = [
+//   "1 Planung",
+//   "2 Erhebung und Aufbereitung",
+//   "3 Management",
+//   "4 Analyse",
+//   "5 Publikation und Nachnutzung",
+//   "übergreifend",
+// ];
 
-export function renderCompetencyDataFlowHeatmap(series) {
-  const options = {
-    chart: {
-      type: "heatmap",
-      height: Math.max(300, series.length * 32 + 100),
-      toolbar: { show: true },
-    },
-    dataLabels: { enabled: true, style: { fontSize: "11px" } },
-    series,
-    xaxis: {
-      type: "category",
-      categories: DATAFLOW_STAGE_ORDER,
-      tickAmount: DATAFLOW_STAGE_ORDER.length,
-      labels: {
-        rotate: -45,
-        hideOverlappingLabels: false,
-        trim: false,
-        style: { fontSize: "10px" },
-      },
-    },
-    yaxis: { labels: { style: { fontSize: "11px" } } },
-    legend: { show: false },
-    tooltip: { y: { formatter: (value) => `${value} Lernziele` } },
-    plotOptions: {
-      heatmap: { shadeIntensity: 0, colorScale: { ranges: HEATMAP_SCALE_COOL } },
-    },
-  };
-  new ApexCharts(document.querySelector("#competency-dataflow-heatmap"), options).render();
-}
+// export function renderCompetencyDataFlowHeatmap(series) {
+//   const options = {
+//     chart: {
+//       type: "heatmap",
+//       height: Math.max(300, series.length * 32 + 100),
+//       toolbar: { show: true },
+//     },
+//     dataLabels: { enabled: true, style: { fontSize: "11px" } },
+//     series,
+//     xaxis: {
+//       type: "category",
+//       categories: DATAFLOW_STAGE_ORDER,
+//       tickAmount: DATAFLOW_STAGE_ORDER.length,
+//       labels: {
+//         rotate: -45,
+//         hideOverlappingLabels: false,
+//         trim: false,
+//         style: { fontSize: "10px" },
+//       },
+//     },
+//     yaxis: { labels: { style: { fontSize: "11px" } } },
+//     legend: { show: false },
+//     tooltip: { y: { formatter: (value) => `${value} Lernziele` } },
+//     plotOptions: {
+//       heatmap: { shadeIntensity: 0, colorScale: { ranges: HEATMAP_SCALE_COOL } },
+//     },
+//   };
+//   new ApexCharts(document.querySelector("#competency-dataflow-heatmap"), options).render();
+// }
 
 // ── Feature 7: type-group cards ──────────────────────────────────────────────
 function issueBadge(count) {

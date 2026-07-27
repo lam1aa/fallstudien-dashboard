@@ -150,116 +150,171 @@ function filterByType(caseStudies, type) {
   return group ? caseStudies.filter((cs) => group.match(cs.repo)) : caseStudies;
 }
 
-export function buildCompetencySeries(caseStudies, type = "all") {
+const COMPETENCY_ORDER = [
+  "Orientierungswissen",
+  "1.1 Identifikation",
+  "1.2 Qualitätssicherung",
+  "1.3 Ethik und Recht",
+  "2.1 Erhebung",
+  "2.2 Validierung",
+  "2.3 Aufbereitung",
+  "3.1 Organisation",
+  "3.2 Erschließung",
+  "4.1 Datenanalyse",
+  "4.2 Visualisierung",
+  "4.3 Interpretation",
+  "5.1 Aufbewahrung",
+  "5.2 Datenpublikation",
+  "5.3 Kommunikation"
+];
+
+const DATAFLOW_ORDER = [
+  "übergreifend",
+  "1 Planung",
+  "2 Erhebung und Aufbereitung",
+  "3 Management",
+  "4 Analyse",
+  "5 Publikation und Nachnutzung"
+];
+
+export function buildCompetencySeries(caseStudies, type = "all", sortMode = "alpha") {
   const complete = filterByType(caseStudies, type).filter((cs) => cs.status === "complete");
   const counts = {};
+  
+  // Initialize with 0 to ensure all labels are shown
+  COMPETENCY_ORDER.forEach(comp => counts[comp] = 0);
+
   complete.forEach((cs) => {
     allObjectives(cs).forEach((o) => {
       const raw = o["competency"];
       if (!raw || raw === "nicht anwendbar") return;
       const key = raw.trim();
-      counts[key] = (counts[key] || 0) + 1;
+      if (counts[key] !== undefined) {
+        counts[key]++;
+      }
     });
   });
-  const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+
+  const sorted = Object.entries(counts).sort((a, b) => {
+    if (sortMode === "count") {
+      return b[1] - a[1];
+    }
+    // "alpha" actually means logical/predefined order here
+    return COMPETENCY_ORDER.indexOf(a[0]) - COMPETENCY_ORDER.indexOf(b[0]);
+  });
+  
   return { categories: sorted.map(([k]) => k), values: sorted.map(([, v]) => v) };
 }
 
-export function buildDataFlowSeries(caseStudies, type = "all") {
+export function buildDataFlowSeries(caseStudies, type = "all", sortMode = "alpha") {
   const complete = filterByType(caseStudies, type).filter((cs) => cs.status === "complete");
   const counts = {};
+  
+  // Initialize with 0 to ensure all labels are shown
+  DATAFLOW_ORDER.forEach(df => counts[df] = 0);
+
   complete.forEach((cs) => {
     allObjectives(cs).forEach((o) => {
       const raw = o["data-flow"];
       if (!raw || raw === "nicht anwendbar") return;
       const key = raw.trim();
-      counts[key] = (counts[key] || 0) + 1;
+      if (counts[key] !== undefined) {
+        counts[key]++;
+      }
     });
   });
-  const sorted = Object.entries(counts).sort((a, b) => (parseInt(a[0]) || 99) - (parseInt(b[0]) || 99));
+
+  const sorted = Object.entries(counts).sort((a, b) => {
+    if (sortMode === "count") {
+      return b[1] - a[1];
+    }
+    // "alpha" actually means logical/predefined order here
+    return DATAFLOW_ORDER.indexOf(a[0]) - DATAFLOW_ORDER.indexOf(b[0]);
+  });
+  
   return { categories: sorted.map(([k]) => k), values: sorted.map(([, v]) => v) };
 }
 
 // ── Feature 4c: Bloom × Chapter heatmap ─────────────────────────────────────
-export function buildBloomHeatmapSeries(caseStudies) {
-  const complete = caseStudies.filter((cs) => cs.status === "complete");
-
-  // series: one per Bloom level; each data point = {x: chapterLabel, y: count}
-  const series = BLOOM_ORDER.map((level) => {
-    const data = [];
-    complete.forEach((cs) => {
-      const csLabel = getShortLabel(cs.repo);
-      (cs.metadata.chapters || []).forEach((ch, idx) => {
-        const label = `${csLabel} / K${idx + 1}`;
-        const count = (ch["learning-objectives"] || []).filter(
-          (o) => normaliseBloom(o["blooms-category"]) === level
-        ).length;
-        data.push({ x: label, y: count });
-      });
-    });
-    return { name: level, data };
-  });
-
-  return series;
-}
-
-const DATAFLOW_STAGE_ORDER = [
-  "1 Planung",
-  "2 Erhebung und Aufbereitung",
-  "3 Management",
-  "4 Analyse",
-  "5 Publikation und Nachnutzung",
-  "übergreifend",
-];
-
-function deriveDataFlowStage(competencyRaw) {
-  if (!competencyRaw || competencyRaw === "nicht anwendbar") return null;
-  const c = competencyRaw.trim();
-
-  if (c === "Orientierungswissen") return "übergreifend";
-  if (c.startsWith("1.")) return "1 Planung";
-  if (c.startsWith("2.")) return "2 Erhebung und Aufbereitung";
-  if (c.startsWith("3.")) return "3 Management";
-  if (c.startsWith("4.")) return "4 Analyse";
-  if (c.startsWith("5.")) return "5 Publikation und Nachnutzung";
-  return null;
-}
-
-// ── Feature 4d: Competency × Data-flow dependency heatmap ──────────────────
-export function buildCompetencyDataFlowMatrix(caseStudies) {
-  const complete = caseStudies.filter((cs) => cs.status === "complete");
-  const matrix = {}; // { competency: { stage: count } }
-
-  complete.forEach((cs) => {
-    allObjectives(cs).forEach((o) => {
-      const competency = o["competency"]?.trim();
-      if (!competency || competency === "nicht anwendbar") return;
-
-      const stage = deriveDataFlowStage(competency);
-      if (!stage) return;
-
-      if (!matrix[competency]) matrix[competency] = {};
-      matrix[competency][stage] = (matrix[competency][stage] || 0) + 1;
-    });
-  });
-
-  // Sort competencies by their stage order, then alphabetically within stage
-  const competencies = Object.keys(matrix).sort((a, b) => {
-    const stageA = DATAFLOW_STAGE_ORDER.indexOf(deriveDataFlowStage(a));
-    const stageB = DATAFLOW_STAGE_ORDER.indexOf(deriveDataFlowStage(b));
-    return stageA - stageB || a.localeCompare(b);
-  });
-
-  const series = competencies.map((comp) => ({
-    name: comp,
-    data: DATAFLOW_STAGE_ORDER.map((stage) => ({
-      x: stage,
-      y: matrix[comp][stage] || 0,
-    })),
-  }));
-
-  return series;
-}
+// export function buildBloomHeatmapSeries(caseStudies) {
+//   const complete = caseStudies.filter((cs) => cs.status === "complete");
+//
+//   // series: one per Bloom level; each data point = {x: chapterLabel, y: count}
+//   const series = BLOOM_ORDER.map((level) => {
+//     const data = [];
+//     complete.forEach((cs) => {
+//       const csLabel = getShortLabel(cs.repo);
+//       (cs.metadata.chapters || []).forEach((ch, idx) => {
+//         const label = `${csLabel} / K${idx + 1}`;
+//         const count = (ch["learning-objectives"] || []).filter(
+//           (o) => normaliseBloom(o["blooms-category"]) === level
+//         ).length;
+//         data.push({ x: label, y: count });
+//       });
+//     });
+//     return { name: level, data };
+//   });
+//
+//   return series;
+// }
+//
+// const DATAFLOW_STAGE_ORDER = [
+//   "1 Planung",
+//   "2 Erhebung und Aufbereitung",
+//   "3 Management",
+//   "4 Analyse",
+//   "5 Publikation und Nachnutzung",
+//   "übergreifend",
+// ];
+//
+// function deriveDataFlowStage(competencyRaw) {
+//   if (!competencyRaw || competencyRaw === "nicht anwendbar") return null;
+//   const c = competencyRaw.trim();
+//
+//   if (c === "Orientierungswissen") return "übergreifend";
+//   if (c.startsWith("1.")) return "1 Planung";
+//   if (c.startsWith("2.")) return "2 Erhebung und Aufbereitung";
+//   if (c.startsWith("3.")) return "3 Management";
+//   if (c.startsWith("4.")) return "4 Analyse";
+//   if (c.startsWith("5.")) return "5 Publikation und Nachnutzung";
+//   return null;
+// }
+//
+// // ── Feature 4d: Competency × Data-flow dependency heatmap ──────────────────
+// export function buildCompetencyDataFlowMatrix(caseStudies) {
+//   const complete = caseStudies.filter((cs) => cs.status === "complete");
+//   const matrix = {}; // { competency: { stage: count } }
+//
+//   complete.forEach((cs) => {
+//     allObjectives(cs).forEach((o) => {
+//       const competency = o["competency"]?.trim();
+//       if (!competency || competency === "nicht anwendbar") return;
+//
+//       const stage = deriveDataFlowStage(competency);
+//       if (!stage) return;
+//
+//       if (!matrix[competency]) matrix[competency] = {};
+//       matrix[competency][stage] = (matrix[competency][stage] || 0) + 1;
+//     });
+//   });
+//
+//   // Sort competencies by their stage order, then alphabetically within stage
+//   const competencies = Object.keys(matrix).sort((a, b) => {
+//     const stageA = DATAFLOW_STAGE_ORDER.indexOf(deriveDataFlowStage(a));
+//     const stageB = DATAFLOW_STAGE_ORDER.indexOf(deriveDataFlowStage(b));
+//     return stageA - stageB || a.localeCompare(b);
+//   });
+//
+//   const series = competencies.map((comp) => ({
+//     name: comp,
+//     data: DATAFLOW_STAGE_ORDER.map((stage) => ({
+//       x: stage,
+//       y: matrix[comp][stage] || 0,
+//     })),
+//   }));
+//
+//   return series;
+// }
 
 const TYPE_GROUPS = [
   { key: "tabelle", label: "Tabelle", icon: "📊", match: (repo) => /^Tabelle-/i.test(repo) },
