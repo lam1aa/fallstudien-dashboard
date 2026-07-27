@@ -177,8 +177,13 @@
   </main>
 
   <footer class="text-center py-3 mt-5 small text-muted" style="border-top: 1px solid var(--quadriga-border);">
-    © 2026 QUADRIGA Berlin-Brandenburgisches Datenkompetenzzentrum
+    © <span id="current-year">...</span> QUADRIGA Berlin-Brandenburgisches Datenkompetenzzentrum
   </footer>
+
+  
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.51.0/dist/apexcharts.min.js"></script>
