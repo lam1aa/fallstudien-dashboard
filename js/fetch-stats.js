@@ -49,34 +49,8 @@ async function main() {
       let chapterCounts = [];
 
       try {
-        // Fetch git tree to know extensions (.md or .ipynb)
-        const treeUrl = `https://api.github.com/repos/${owner}/${repo}/git/trees/${branch}?recursive=1`;
-        const treeRes = await fetch(treeUrl, {
-          headers: process.env.GH_TOKEN ? { Authorization: `token ${process.env.GH_TOKEN}` } : {}
-        });
-        if (!treeRes.ok) {
-          console.warn(`[WARN] Could not fetch git tree for ${repo}: ${treeRes.status}`);
-          results[cs.id] = { wordCount: 0, chapterCounts: [] };
-          continue;
-        }
-        const treeData = await treeRes.json();
-        
-        // Build a map of file paths without extension to their actual full path
-        const fileMap = {};
-        for (const item of treeData.tree) {
-          if (item.type === 'blob' && (item.path.endsWith('.md') || item.path.endsWith('.ipynb'))) {
-            // e.g. "Markdown/0_Intro.md" -> "Markdown/0_Intro"
-            const noExt = item.path.replace(/\.(md|ipynb)$/, '');
-            fileMap[noExt] = item.path;
-          }
-        }
-
         // Fetch _toc.yml
-        // Sometimes it's in the root, sometimes in Markdown/ or book/
-        let tocUrl;
-        if (fileMap['Markdown/_toc']) tocUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/Markdown/_toc.yml`;
-        else if (fileMap['_toc']) tocUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/_toc.yml`;
-        else tocUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/_toc.yml`;
+        let tocUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/_toc.yml`;
 
         let res = await fetch(tocUrl);
         if (!res.ok) {
@@ -106,33 +80,28 @@ async function main() {
           // Strip extension if it was explicitly provided in toc.yml
           const cleanDoc = doc.replace(/\.(md|ipynb)$/, '');
           
-          // Find actual path: it might be exact, or it might be relative (so we check if any path ends with it)
-          let actualPath = fileMap[cleanDoc];
-          if (!actualPath) {
-            // Try finding a file that ends with /cleanDoc
-            const matches = Object.keys(fileMap).filter(k => k.endsWith('/' + cleanDoc) || k === cleanDoc);
-            if (matches.length > 0) {
-              actualPath = fileMap[matches[0]];
-            }
+          let pageRes = null;
+          let pageUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${cleanDoc}.md`;
+          let isIpynb = false;
+          
+          pageRes = await fetch(pageUrl);
+          
+          if (!pageRes.ok) {
+            pageUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${cleanDoc}.ipynb`;
+            pageRes = await fetch(pageUrl);
+            isIpynb = true;
           }
 
-          if (!actualPath) {
+          if (!pageRes || !pageRes.ok) {
             console.warn(`  [WARN] Could not find source file for toc entry: ${doc}`);
             continue;
           }
 
-          const pageUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${actualPath}`;
           try {
-            const pageRes = await fetch(pageUrl);
-            if (!pageRes.ok) {
-              console.warn(`  [WARN] Failed to fetch ${actualPath}: ${pageRes.status}`);
-              continue;
-            }
-            
             let words = 0;
             const content = await pageRes.text();
 
-            if (actualPath.endsWith('.ipynb')) {
+            if (isIpynb) {
               const ipynb = JSON.parse(content);
               for (const cell of ipynb.cells || []) {
                 if (cell.cell_type === 'markdown' || cell.cell_type === 'code') {

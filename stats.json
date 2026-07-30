@@ -774,9 +774,45 @@
     ]
   },
   "text-02": {
-    "wordCount": 15641,
+    "wordCount": 31031,
     "openIssues": 36,
     "chapterCounts": [
+      {
+        "chapter": "front_page/intro",
+        "words": 385
+      },
+      {
+        "chapter": "präambel/einführung",
+        "words": 80
+      },
+      {
+        "chapter": "introduction/introduction_learning-outcomes",
+        "words": 145
+      },
+      {
+        "chapter": "introduction/introduction_requirements",
+        "words": 480
+      },
+      {
+        "chapter": "research_question/research-question_intro",
+        "words": 138
+      },
+      {
+        "chapter": "research_question/research-question_research-question",
+        "words": 341
+      },
+      {
+        "chapter": "research_question/research-question_operationalization",
+        "words": 764
+      },
+      {
+        "chapter": "research_question/research-question_summary",
+        "words": 107
+      },
+      {
+        "chapter": "research_question/research-question_assessment",
+        "words": 2293
+      },
       {
         "chapter": "corpus_collection/corpus-collection_intro",
         "words": 234
@@ -800,6 +836,50 @@
       {
         "chapter": "corpus_collection/corpus-collection_assessment",
         "words": 2281
+      },
+      {
+        "chapter": "html_intro/html-intro_intro",
+        "words": 205
+      },
+      {
+        "chapter": "html_intro/html-intro_text_as_digital_objects",
+        "words": 849
+      },
+      {
+        "chapter": "html_intro/html-intro_html-intro",
+        "words": 616
+      },
+      {
+        "chapter": "html_intro/html-intro_structural-analysis",
+        "words": 1424
+      },
+      {
+        "chapter": "html_intro/html-intro_summary",
+        "words": 159
+      },
+      {
+        "chapter": "html_intro/html-intro_assessment",
+        "words": 2089
+      },
+      {
+        "chapter": "scraping_intro/scraping_intro",
+        "words": 132
+      },
+      {
+        "chapter": "scraping_intro/scraping_http-intro",
+        "words": 565
+      },
+      {
+        "chapter": "scraping_intro/scraping_method-overview",
+        "words": 1339
+      },
+      {
+        "chapter": "scraping_intro/scraping_summary",
+        "words": 181
+      },
+      {
+        "chapter": "scraping_intro/scraping_assessment",
+        "words": 1639
       },
       {
         "chapter": "corpus_building/corpus-building_intro",
@@ -844,6 +924,38 @@
       {
         "chapter": "corpus_analysis/corpus-analysis_assessment",
         "words": 1964
+      },
+      {
+        "chapter": "reflection/reflection_reflection",
+        "words": 731
+      },
+      {
+        "chapter": "reflection/reflection_outlook",
+        "words": 244
+      },
+      {
+        "chapter": "epilog/toc",
+        "words": 13
+      },
+      {
+        "chapter": "epilog/fragen_feedback",
+        "words": 39
+      },
+      {
+        "chapter": "epilog/bibliography",
+        "words": 29
+      },
+      {
+        "chapter": "epilog/authors",
+        "words": 135
+      },
+      {
+        "chapter": "epilog/QUADRIGA",
+        "words": 237
+      },
+      {
+        "chapter": "epilog/impressum",
+        "words": 31
       }
     ]
   },
