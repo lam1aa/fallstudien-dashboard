@@ -1,15 +1,15 @@
 {
   "tabelle-01": {
-    "wordCount": 32047,
+    "wordCount": 0,
     "openIssues": 0,
     "chapterCounts": [
       {
         "chapter": "Markdown/0_Intro",
-        "words": 992
+        "words": 0
       },
       {
         "chapter": "Markdown/1_Einstieg",
-        "words": 16
+        "words": 0
       },
       {
         "chapter": "Markdown/1_1_lernziele",
