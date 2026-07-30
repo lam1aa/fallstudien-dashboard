@@ -1,4 +1,4 @@
-name: Update Issue Counts
+name: Update Stats
 on:
   schedule:
     - cron: "0 3 * * *"
