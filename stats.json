@@ -1,0 +1,1638 @@
+{
+  "tabelle-01": {
+    "wordCount": 32047,
+    "openIssues": 0,
+    "chapterCounts": [
+      {
+        "chapter": "Markdown/0_Intro",
+        "words": 992
+      },
+      {
+        "chapter": "Markdown/1_Einstieg",
+        "words": 16
+      },
+      {
+        "chapter": "Markdown/1_1_lernziele",
+        "words": 238
+      },
+      {
+        "chapter": "Markdown/1_2_technische_voraussetzungen",
+        "words": 694
+      },
+      {
+        "chapter": "Markdown/2_Datenbasis",
+        "words": 481
+      },
+      {
+        "chapter": "Markdown/3_Datennachnutzung",
+        "words": 257
+      },
+      {
+        "chapter": "Markdown/3_1_FairPrinzipien",
+        "words": 1032
+      },
+      {
+        "chapter": "Markdown/3_2_Übung_FAIR",
+        "words": 1436
+      },
+      {
+        "chapter": "Markdown/3_3_Resümee_FAIR",
+        "words": 441
+      },
+      {
+        "chapter": "Markdown/3_Assessment",
+        "words": 3140
+      },
+      {
+        "chapter": "Markdown/4_Qualitätsbewertung",
+        "words": 256
+      },
+      {
+        "chapter": "Markdown/4_1_Qualitätskriterien",
+        "words": 804
+      },
+      {
+        "chapter": "Markdown/4_2_XLSXundCSV",
+        "words": 461
+      },
+      {
+        "chapter": "Markdown/4_3_5-Sterne",
+        "words": 362
+      },
+      {
+        "chapter": "Markdown/4_4_Übung_5-Sterne",
+        "words": 246
+      },
+      {
+        "chapter": "Markdown/4_5_Resümee_Qualität",
+        "words": 555
+      },
+      {
+        "chapter": "Markdown/4_Assessment",
+        "words": 1974
+      },
+      {
+        "chapter": "Markdown/5_Identifikatoren",
+        "words": 235
+      },
+      {
+        "chapter": "Markdown/5_1_Datenzitierung",
+        "words": 309
+      },
+      {
+        "chapter": "Markdown/5_2_PID",
+        "words": 550
+      },
+      {
+        "chapter": "Markdown/5_3_Linked-Data",
+        "words": 390
+      },
+      {
+        "chapter": "Markdown/5_4_Übung_PID",
+        "words": 794
+      },
+      {
+        "chapter": "Markdown/5_5_Resümee_Identifikatoren",
+        "words": 324
+      },
+      {
+        "chapter": "Markdown/5_Assessment",
+        "words": 2002
+      },
+      {
+        "chapter": "Markdown/6_Datenaufbereitung1",
+        "words": 182
+      },
+      {
+        "chapter": "Markdown/6_1_Datenstruktur",
+        "words": 1022
+      },
+      {
+        "chapter": "Markdown/6_2_Übung_Arbeiten_CSV_in_R",
+        "words": 1710
+      },
+      {
+        "chapter": "Markdown/6_3_Übung_Auswertung_CSV_in_R",
+        "words": 1747
+      },
+      {
+        "chapter": "Markdown/6_4_Resümee_Datenaufbereitung1",
+        "words": 440
+      },
+      {
+        "chapter": "Markdown/6_Assessment",
+        "words": 1942
+      },
+      {
+        "chapter": "Markdown/7_Datenaufbereitung2",
+        "words": 213
+      },
+      {
+        "chapter": "Markdown/7_1_Übung_Reproduzierbarkeit",
+        "words": 2236
+      },
+      {
+        "chapter": "Markdown/7_2_Übung_Zeitreihe",
+        "words": 1655
+      },
+      {
+        "chapter": "Markdown/7_3_Resümee_Datenaufbereitung2",
+        "words": 483
+      },
+      {
+        "chapter": "Markdown/7_Assessment",
+        "words": 1116
+      },
+      {
+        "chapter": "Markdown/8_Zusammenfassung",
+        "words": 362
+      },
+      {
+        "chapter": "Markdown/9_Abschluss",
+        "words": 33
+      },
+      {
+        "chapter": "Markdown/9_1_fragen_und_feedback",
+        "words": 123
+      },
+      {
+        "chapter": "Markdown/9_2_literaturverzeichnis",
+        "words": 29
+      },
+      {
+        "chapter": "Markdown/9_2_2_materialien",
+        "words": 278
+      },
+      {
+        "chapter": "Markdown/9_3_authors",
+        "words": 283
+      },
+      {
+        "chapter": "Markdown/9_4_quadriga",
+        "words": 169
+      },
+      {
+        "chapter": "Markdown/9_5_impressum",
+        "words": 35
+      }
+    ]
+  },
+  "tabelle-02": {
+    "wordCount": 25882,
+    "openIssues": 0,
+    "chapterCounts": [
+      {
+        "chapter": "Titelseite",
+        "words": 900
+      },
+      {
+        "chapter": "einstieg/Einstieg",
+        "words": 69
+      },
+      {
+        "chapter": "einstieg/lernziele",
+        "words": 265
+      },
+      {
+        "chapter": "einstieg/technische_voraussetzungen",
+        "words": 214
+      },
+      {
+        "chapter": "semantic_web/Semantic_Web_Linked_Data",
+        "words": 249
+      },
+      {
+        "chapter": "semantic_web/Semantic_Web_Definition",
+        "words": 941
+      },
+      {
+        "chapter": "semantic_web/Semantic_Web_Layer_Cake",
+        "words": 451
+      },
+      {
+        "chapter": "semantic_web/Semantic_Web_Übung",
+        "words": 765
+      },
+      {
+        "chapter": "semantic_web/Semantic_Web_Resümee",
+        "words": 376
+      },
+      {
+        "chapter": "semantic_web/Semantic_Web_Assessment",
+        "words": 2666
+      },
+      {
+        "chapter": "dcat_ap/DCAT_AP_Metadatenstandard",
+        "words": 254
+      },
+      {
+        "chapter": "dcat_ap/DCAT_AP_Recap",
+        "words": 363
+      },
+      {
+        "chapter": "dcat_ap/Metadatenportale",
+        "words": 540
+      },
+      {
+        "chapter": "dcat_ap/DCAT_AP_Struktur",
+        "words": 1006
+      },
+      {
+        "chapter": "dcat_ap/DCAT_AP_Beispiel",
+        "words": 353
+      },
+      {
+        "chapter": "dcat_ap/DCAT_AP_Übung",
+        "words": 794
+      },
+      {
+        "chapter": "dcat_ap/DCAT_AP_Resümee",
+        "words": 522
+      },
+      {
+        "chapter": "dcat_ap/DCAT_AP_Assessment",
+        "words": 1742
+      },
+      {
+        "chapter": "metadatenqualität/Metadatenqualität",
+        "words": 260
+      },
+      {
+        "chapter": "metadatenqualität/Metadaten_Kontrolle",
+        "words": 411
+      },
+      {
+        "chapter": "metadatenqualität/Metadaten_Übung",
+        "words": 610
+      },
+      {
+        "chapter": "metadatenqualität/Metadaten_Resümee",
+        "words": 231
+      },
+      {
+        "chapter": "metadatenqualität/Metadaten_Assessment",
+        "words": 2289
+      },
+      {
+        "chapter": "sparql/SPARQL",
+        "words": 374
+      },
+      {
+        "chapter": "sparql/SPARQL_Grundlagen",
+        "words": 1703
+      },
+      {
+        "chapter": "sparql/SPARQL_Übung_1",
+        "words": 1302
+      },
+      {
+        "chapter": "sparql/SPARQL_Übung_2",
+        "words": 2262
+      },
+      {
+        "chapter": "sparql/SPARQL_Resümee",
+        "words": 277
+      },
+      {
+        "chapter": "sparql/SPARQL_Assessment",
+        "words": 2695
+      },
+      {
+        "chapter": "zusammenfassung",
+        "words": 382
+      },
+      {
+        "chapter": "abschluss/Abschluss",
+        "words": 9
+      },
+      {
+        "chapter": "abschluss/fragen_und_feedback",
+        "words": 74
+      },
+      {
+        "chapter": "abschluss/Literaturverzeichnis",
+        "words": 29
+      },
+      {
+        "chapter": "abschluss/authors",
+        "words": 221
+      },
+      {
+        "chapter": "abschluss/quadriga",
+        "words": 248
+      },
+      {
+        "chapter": "abschluss/impressum",
+        "words": 35
+      }
+    ]
+  },
+  "tabelle-03": {
+    "wordCount": 22491,
+    "openIssues": 23,
+    "chapterCounts": [
+      {
+        "chapter": "intro",
+        "words": 633
+      },
+      {
+        "chapter": "1_einstieg/1.0_einleitung",
+        "words": 25
+      },
+      {
+        "chapter": "1_einstieg/1.1_lernziele",
+        "words": 176
+      },
+      {
+        "chapter": "1_einstieg/1.2_technische-voraussetzungen",
+        "words": 564
+      },
+      {
+        "chapter": "operationalisierung/fragestellung-operationalisierung",
+        "words": 185
+      },
+      {
+        "chapter": "operationalisierung/fragestellung",
+        "words": 229
+      },
+      {
+        "chapter": "operationalisierung/operationalisierung",
+        "words": 248
+      },
+      {
+        "chapter": "operationalisierung/resümee",
+        "words": 101
+      },
+      {
+        "chapter": "datenbasis/3.0_datenbasis-intro",
+        "words": 195
+      },
+      {
+        "chapter": "datenbasis/datenbasis",
+        "words": 797
+      },
+      {
+        "chapter": "datenbasis/daten-vorbereitung",
+        "words": 1229
+      },
+      {
+        "chapter": "datenbasis/3.3_resumee",
+        "words": 241
+      },
+      {
+        "chapter": "4_dash-prep/4.0_intro",
+        "words": 217
+      },
+      {
+        "chapter": "4_dash-prep/4.1_dashboard",
+        "words": 899
+      },
+      {
+        "chapter": "4_dash-prep/4.2_tools",
+        "words": 1565
+      },
+      {
+        "chapter": "4_dash-prep/4.3_preparation",
+        "words": 484
+      },
+      {
+        "chapter": "4_dash-prep/4.4_resumee",
+        "words": 237
+      },
+      {
+        "chapter": "dashboard/Dashboard",
+        "words": 256
+      },
+      {
+        "chapter": "dashboard/Datenvisualisierung-Grundlagen",
+        "words": 984
+      },
+      {
+        "chapter": "dashboard/Übung_Startseite",
+        "words": 1079
+      },
+      {
+        "chapter": "dashboard/Übung_Karte",
+        "words": 2231
+      },
+      {
+        "chapter": "dashboard/Übung_Bewässerungsanalyse",
+        "words": 2541
+      },
+      {
+        "chapter": "dashboard/Übung_Zeitverlauf",
+        "words": 2011
+      },
+      {
+        "chapter": "dashboard/Übung_Baumstatistik",
+        "words": 3803
+      },
+      {
+        "chapter": "dashboard/resumee",
+        "words": 240
+      },
+      {
+        "chapter": "Zusammenfassung",
+        "words": 654
+      },
+      {
+        "chapter": "7_abschluss/7.0_einleitung",
+        "words": 34
+      },
+      {
+        "chapter": "7_abschluss/7.1_fragen-feedback",
+        "words": 74
+      },
+      {
+        "chapter": "7_abschluss/7.2_literaturverzeichnis",
+        "words": 72
+      },
+      {
+        "chapter": "7_abschluss/7.3_authors",
+        "words": 204
+      },
+      {
+        "chapter": "7_abschluss/7.4_quadriga",
+        "words": 248
+      },
+      {
+        "chapter": "7_abschluss/7.5_impressum",
+        "words": 35
+      }
+    ]
+  },
+  "tabelle-04": {
+    "wordCount": 9633,
+    "openIssues": 8,
+    "chapterCounts": [
+      {
+        "chapter": "Titelseite",
+        "words": 517
+      },
+      {
+        "chapter": "Kapitel1_Einstieg/einleitung",
+        "words": 88
+      },
+      {
+        "chapter": "Kapitel1_Einstieg/lernziele",
+        "words": 414
+      },
+      {
+        "chapter": "Kapitel1_Einstieg/technische_voraussetzungen",
+        "words": 125
+      },
+      {
+        "chapter": "Kapitel1_Einstieg/nachträglich-publizieren",
+        "words": 538
+      },
+      {
+        "chapter": "Kapitel2_Einarbeiten/einleitung",
+        "words": 324
+      },
+      {
+        "chapter": "Kapitel2_Einarbeiten/einordnung",
+        "words": 367
+      },
+      {
+        "chapter": "Kapitel2_Einarbeiten/qualitätsprüfung",
+        "words": 275
+      },
+      {
+        "chapter": "Kapitel2_Einarbeiten/vorgaben",
+        "words": 1839
+      },
+      {
+        "chapter": "Kapitel2_Einarbeiten/resumee",
+        "words": 15
+      },
+      {
+        "chapter": "Kapitel3_Datenmanagement/einleitung",
+        "words": 247
+      },
+      {
+        "chapter": "Kapitel3_Datenmanagement/organisation",
+        "words": 593
+      },
+      {
+        "chapter": "Kapitel3_Datenmanagement/erschliessung",
+        "words": 757
+      },
+      {
+        "chapter": "Kapitel3_Datenmanagement/resumee",
+        "words": 70
+      },
+      {
+        "chapter": "Kapitel4_Publikation/einleitung",
+        "words": 259
+      },
+      {
+        "chapter": "Kapitel4_Publikation/aufbewahrung",
+        "words": 2176
+      },
+      {
+        "chapter": "Kapitel4_Publikation/publikation",
+        "words": 340
+      },
+      {
+        "chapter": "Kapitel4_Publikation/kommunikation",
+        "words": 217
+      },
+      {
+        "chapter": "Kapitel4_Publikation/resumee",
+        "words": 15
+      },
+      {
+        "chapter": "Kapitel5_Abschluss/toc",
+        "words": 1
+      },
+      {
+        "chapter": "Kapitel5_Abschluss/fragen_und_feedback",
+        "words": 35
+      },
+      {
+        "chapter": "Kapitel5_Abschluss/literaturverzeichnis",
+        "words": 63
+      },
+      {
+        "chapter": "Kapitel5_Abschluss/authors",
+        "words": 79
+      },
+      {
+        "chapter": "Kapitel5_Abschluss/quadriga",
+        "words": 248
+      },
+      {
+        "chapter": "Kapitel5_Abschluss/impressum",
+        "words": 31
+      }
+    ]
+  },
+  "text-01": {
+    "wordCount": 39549,
+    "openIssues": 27,
+    "chapterCounts": [
+      {
+        "chapter": "front_page/intro",
+        "words": 393
+      },
+      {
+        "chapter": "einstieg/einführung",
+        "words": 72
+      },
+      {
+        "chapter": "introduction/learning-outcomes",
+        "words": 395
+      },
+      {
+        "chapter": "introduction/introduction_requirements",
+        "words": 377
+      },
+      {
+        "chapter": "research_question/research-question_intro",
+        "words": 139
+      },
+      {
+        "chapter": "research_question/research-question_research-question",
+        "words": 321
+      },
+      {
+        "chapter": "research_question/research-question_operationalization",
+        "words": 248
+      },
+      {
+        "chapter": "research_question/research-question_summary",
+        "words": 130
+      },
+      {
+        "chapter": "research_question/research-question_assessment",
+        "words": 871
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_intro",
+        "words": 272
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_corpora-as-research-objects",
+        "words": 470
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_text_as_digital_objects",
+        "words": 801
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_metadata",
+        "words": 527
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_building-our-corpus",
+        "words": 1078
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_summary",
+        "words": 117
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_assessment",
+        "words": 3063
+      },
+      {
+        "chapter": "ocr/ocr_intro",
+        "words": 176
+      },
+      {
+        "chapter": "ocr/ocr",
+        "words": 352
+      },
+      {
+        "chapter": "ocr/ocr_tesseract-installation",
+        "words": 623
+      },
+      {
+        "chapter": "ocr/ocr_jupyter_intro",
+        "words": 377
+      },
+      {
+        "chapter": "ocr/ocr_pytesseract_intro",
+        "words": 2175
+      },
+      {
+        "chapter": "ocr/ocr-quality",
+        "words": 401
+      },
+      {
+        "chapter": "ocr/ocr_ocr-quality",
+        "words": 583
+      },
+      {
+        "chapter": "ocr/ocr_summary",
+        "words": 147
+      },
+      {
+        "chapter": "ocr/ocr_assessment",
+        "words": 3016
+      },
+      {
+        "chapter": "ocr_post_correction/post-correcting_intro",
+        "words": 105
+      },
+      {
+        "chapter": "ocr_post_correction/post-correcting_ocr",
+        "words": 389
+      },
+      {
+        "chapter": "ocr_post_correction/post-correcting_correction",
+        "words": 868
+      },
+      {
+        "chapter": "ocr_post_correction/post-correcting_llm",
+        "words": 247
+      },
+      {
+        "chapter": "ocr_post_correction/post-correcting_summary",
+        "words": 73
+      },
+      {
+        "chapter": "ocr_post_correction/post-correcting_assessment",
+        "words": 2662
+      },
+      {
+        "chapter": "corpus_processing/corpus-processing_intro",
+        "words": 203
+      },
+      {
+        "chapter": "corpus_processing/corpus-processing_intro-to-nlp",
+        "words": 665
+      },
+      {
+        "chapter": "corpus_processing/corpus-processing_nlp-annotation",
+        "words": 2108
+      },
+      {
+        "chapter": "corpus_processing/corpus-processing_resumee",
+        "words": 92
+      },
+      {
+        "chapter": "corpus_processing/corpus-processing_assessment",
+        "words": 2776
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_intro",
+        "words": 279
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_analysis",
+        "words": 1739
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_diachronic-analysis",
+        "words": 2035
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_KWIC",
+        "words": 1313
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_resumee",
+        "words": 178
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_assessment",
+        "words": 5152
+      },
+      {
+        "chapter": "reflection/reflection_reflection",
+        "words": 555
+      },
+      {
+        "chapter": "reflection/reflection_LLM-post-correction",
+        "words": 389
+      },
+      {
+        "chapter": "abschluss/toc",
+        "words": 37
+      },
+      {
+        "chapter": "abschluss/fragen_und_feedback",
+        "words": 38
+      },
+      {
+        "chapter": "abschluss/literaturverzeichnis",
+        "words": 57
+      },
+      {
+        "chapter": "abschluss/authors",
+        "words": 172
+      },
+      {
+        "chapter": "abschluss/quadriga",
+        "words": 262
+      },
+      {
+        "chapter": "abschluss/impressum",
+        "words": 31
+      }
+    ]
+  },
+  "text-02": {
+    "wordCount": 15641,
+    "openIssues": 36,
+    "chapterCounts": [
+      {
+        "chapter": "corpus_collection/corpus-collection_intro",
+        "words": 234
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_corpora-as-research-objects",
+        "words": 503
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_metadata",
+        "words": 871
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_building-our-corpus",
+        "words": 477
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_summary",
+        "words": 120
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_assessment",
+        "words": 2281
+      },
+      {
+        "chapter": "corpus_building/corpus-building_intro",
+        "words": 133
+      },
+      {
+        "chapter": "corpus_building/corpus_building_mass_scraping_press-releases",
+        "words": 2952
+      },
+      {
+        "chapter": "corpus_building/corpus-building_summary",
+        "words": 156
+      },
+      {
+        "chapter": "corpus_building/corpus-building_assessment",
+        "words": 1843
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_intro",
+        "words": 161
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_text_complexity",
+        "words": 1104
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_analysis",
+        "words": 1169
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_visualisation-explanation",
+        "words": 220
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_visualization",
+        "words": 1292
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_resumee",
+        "words": 161
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_assessment",
+        "words": 1964
+      }
+    ]
+  },
+  "text-03": {
+    "wordCount": 48292,
+    "openIssues": 39,
+    "chapterCounts": [
+      {
+        "chapter": "front_page/intro",
+        "words": 372
+      },
+      {
+        "chapter": "introduction/einführung",
+        "words": 8
+      },
+      {
+        "chapter": "introduction/introduction_learning-outcomes",
+        "words": 298
+      },
+      {
+        "chapter": "introduction/introduction_requirements",
+        "words": 585
+      },
+      {
+        "chapter": "research_question/research-question_intro",
+        "words": 207
+      },
+      {
+        "chapter": "research_question/research-question_research-question",
+        "words": 276
+      },
+      {
+        "chapter": "research_question/research-question_operationalization",
+        "words": 570
+      },
+      {
+        "chapter": "research_question/research-question_summary",
+        "words": 136
+      },
+      {
+        "chapter": "research_question/research-question_assessment",
+        "words": 885
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_intro",
+        "words": 376
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_corpora-as-research-objects",
+        "words": 816
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_text_as_digital_objects",
+        "words": 956
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_metadata",
+        "words": 801
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_choosing-our-corpus-based-on-metadata",
+        "words": 2918
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_filtering-our-corpus",
+        "words": 3048
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_summary",
+        "words": 283
+      },
+      {
+        "chapter": "corpus_collection/corpus-collection_assessment",
+        "words": 3801
+      },
+      {
+        "chapter": "corpus_processing/corpus-processing_intro",
+        "words": 221
+      },
+      {
+        "chapter": "corpus_processing/corpus-processing_intro-to-nlp",
+        "words": 1515
+      },
+      {
+        "chapter": "corpus_processing/corpus-processing_nlp-annotation",
+        "words": 2808
+      },
+      {
+        "chapter": "corpus_processing/corpus-processing_resumee",
+        "words": 95
+      },
+      {
+        "chapter": "corpus_processing/corpus-processing_assessment",
+        "words": 3659
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_intro",
+        "words": 371
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_analysis",
+        "words": 2082
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_semantic-field-analysis",
+        "words": 3847
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_ngrams-intro",
+        "words": 481
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_syntactic-ngrams-intro",
+        "words": 615
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_syntactic-ngram",
+        "words": 6739
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_resumee",
+        "words": 340
+      },
+      {
+        "chapter": "corpus_analysis/corpus-analysis_assessment",
+        "words": 7633
+      },
+      {
+        "chapter": "reflection/reflection_reflection",
+        "words": 1074
+      },
+      {
+        "chapter": "epilog/toc",
+        "words": 5
+      },
+      {
+        "chapter": "epilog/fragen_und_feedback",
+        "words": 39
+      },
+      {
+        "chapter": "epilog/literaturverzeichnis",
+        "words": 29
+      },
+      {
+        "chapter": "epilog/authors",
+        "words": 135
+      },
+      {
+        "chapter": "epilog/quadriga",
+        "words": 237
+      },
+      {
+        "chapter": "epilog/impressum",
+        "words": 31
+      }
+    ]
+  },
+  "text-04": {
+    "wordCount": 0,
+    "chapterCounts": []
+  },
+  "bild-01": {
+    "wordCount": 33951,
+    "openIssues": 10,
+    "chapterCounts": [
+      {
+        "chapter": "intro",
+        "words": 892
+      },
+      {
+        "chapter": "Einstieg/toc",
+        "words": 1
+      },
+      {
+        "chapter": "Einstieg/Lernziele",
+        "words": 463
+      },
+      {
+        "chapter": "Einstieg/Technische Voraussetzungen.md",
+        "words": 557
+      },
+      {
+        "chapter": "Kapitel_I/toc",
+        "words": 6
+      },
+      {
+        "chapter": "Kapitel_I/Einführung_in_die_datengestützte_Filmanalyse",
+        "words": 757
+      },
+      {
+        "chapter": "Kapitel_I/weiterführende_Informationen",
+        "words": 950
+      },
+      {
+        "chapter": "Kapitel_I/Empirische_Methoden",
+        "words": 673
+      },
+      {
+        "chapter": "Kapitel_I/Untersuchungsgegenstand",
+        "words": 351
+      },
+      {
+        "chapter": "Kapitel_II/toc_A",
+        "words": 151
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_A",
+        "words": 346
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_A_UK-2",
+        "words": 807
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_A_UK-3",
+        "words": 852
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_A_UK-4",
+        "words": 377
+      },
+      {
+        "chapter": "Kapitel_II/Assessment_A",
+        "words": 1379
+      },
+      {
+        "chapter": "Kapitel_II/toc_B",
+        "words": 179
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_B",
+        "words": 408
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_B_UK-1",
+        "words": 1109
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_B_UK-2",
+        "words": 1512
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_B_UK-3",
+        "words": 292
+      },
+      {
+        "chapter": "Kapitel_II/Assessment_B",
+        "words": 2115
+      },
+      {
+        "chapter": "Kapitel_II/toc_C",
+        "words": 161
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_C",
+        "words": 1029
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_C_UK-1",
+        "words": 445
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_C_UK-2",
+        "words": 1172
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_C_UK-3",
+        "words": 123
+      },
+      {
+        "chapter": "Kapitel_II/Assessment_C",
+        "words": 1855
+      },
+      {
+        "chapter": "Kapitel_II/toc_D",
+        "words": 258
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_D",
+        "words": 468
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_D_UK-1",
+        "words": 961
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_D_UK-2",
+        "words": 1978
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_D_UK-3",
+        "words": 322
+      },
+      {
+        "chapter": "Kapitel_II/Assessment_D",
+        "words": 2240
+      },
+      {
+        "chapter": "Kapitel_II/toc_E",
+        "words": 162
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_E",
+        "words": 353
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_E_UK-1",
+        "words": 1021
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_E_UK-2",
+        "words": 1299
+      },
+      {
+        "chapter": "Kapitel_II/Aufgabe_E_UK-3",
+        "words": 204
+      },
+      {
+        "chapter": "Kapitel_II/Assessment_E",
+        "words": 1912
+      },
+      {
+        "chapter": "Kapitel_III/toc",
+        "words": 8
+      },
+      {
+        "chapter": "Kapitel_III/Reflexion_Resümee",
+        "words": 622
+      },
+      {
+        "chapter": "Kapitel_III/Ausblick",
+        "words": 507
+      },
+      {
+        "chapter": "Kapitel_III/Summatives_Assessment",
+        "words": 1971
+      },
+      {
+        "chapter": "Abschluss/toc",
+        "words": 1
+      },
+      {
+        "chapter": "Abschluss/Fragen und Feedback",
+        "words": 71
+      },
+      {
+        "chapter": "Abschluss/Bibliographie",
+        "words": 51
+      },
+      {
+        "chapter": "Abschluss/Nachgenutzte_Materialien",
+        "words": 177
+      },
+      {
+        "chapter": "Abschluss/Autor_innen",
+        "words": 116
+      },
+      {
+        "chapter": "Abschluss/QUADRIGA",
+        "words": 252
+      },
+      {
+        "chapter": "Abschluss/Impressum",
+        "words": 35
+      }
+    ]
+  },
+  "bild-02": {
+    "wordCount": 50732,
+    "openIssues": 4,
+    "chapterCounts": [
+      {
+        "chapter": "intro",
+        "words": 734
+      },
+      {
+        "chapter": "einstieg/toc.md",
+        "words": 56
+      },
+      {
+        "chapter": "einstieg/lernziele",
+        "words": 173
+      },
+      {
+        "chapter": "einstieg/technische_voraussetzungen",
+        "words": 91
+      },
+      {
+        "chapter": "einleitung/toc",
+        "words": 122
+      },
+      {
+        "chapter": "einleitung/digital_humanities",
+        "words": 452
+      },
+      {
+        "chapter": "einleitung/filmwissenschaft",
+        "words": 1347
+      },
+      {
+        "chapter": "einleitung/filmgeschichtsschreibung",
+        "words": 777
+      },
+      {
+        "chapter": "einleitung/assessment",
+        "words": 668
+      },
+      {
+        "chapter": "recherche/toc",
+        "words": 194
+      },
+      {
+        "chapter": "recherche/material",
+        "words": 3094
+      },
+      {
+        "chapter": "recherche/metadaten",
+        "words": 1329
+      },
+      {
+        "chapter": "recherche/operationalisierung",
+        "words": 1539
+      },
+      {
+        "chapter": "recherche/resumee_recherche",
+        "words": 382
+      },
+      {
+        "chapter": "recherche/assessment_recherche",
+        "words": 826
+      },
+      {
+        "chapter": "bereinigung/toc",
+        "words": 174
+      },
+      {
+        "chapter": "bereinigung/modell",
+        "words": 1606
+      },
+      {
+        "chapter": "bereinigung/datenquelle",
+        "words": 1954
+      },
+      {
+        "chapter": "bereinigung/openRefine/0_datenbereinigung",
+        "words": 978
+      },
+      {
+        "chapter": "bereinigung/openRefine/1_einführung",
+        "words": 684
+      },
+      {
+        "chapter": "bereinigung/openRefine/2_import",
+        "words": 1047
+      },
+      {
+        "chapter": "bereinigung/openRefine/3_sichtung",
+        "words": 1642
+      },
+      {
+        "chapter": "bereinigung/openRefine/4_spalten",
+        "words": 1833
+      },
+      {
+        "chapter": "bereinigung/openRefine/5_zellen",
+        "words": 92
+      },
+      {
+        "chapter": "bereinigung/openRefine/5.1_jahre",
+        "words": 3658
+      },
+      {
+        "chapter": "bereinigung/openRefine/5.2_titel",
+        "words": 1802
+      },
+      {
+        "chapter": "bereinigung/openRefine/6_export",
+        "words": 426
+      },
+      {
+        "chapter": "bereinigung/resumee_bereinigung",
+        "words": 313
+      },
+      {
+        "chapter": "bereinigung/assessment_bereinigung",
+        "words": 2155
+      },
+      {
+        "chapter": "auswertung/toc",
+        "words": 194
+      },
+      {
+        "chapter": "auswertung/visualisierung",
+        "words": 1555
+      },
+      {
+        "chapter": "auswertung/datenvisualisierung",
+        "words": 7397
+      },
+      {
+        "chapter": "auswertung/resumee_auswertung",
+        "words": 264
+      },
+      {
+        "chapter": "auswertung/assessment_auswertung",
+        "words": 1505
+      },
+      {
+        "chapter": "publikation/toc",
+        "words": 196
+      },
+      {
+        "chapter": "publikation/forschungsdaten",
+        "words": 1738
+      },
+      {
+        "chapter": "publikation/publikationsformen",
+        "words": 1038
+      },
+      {
+        "chapter": "publikation/problemfelder",
+        "words": 2663
+      },
+      {
+        "chapter": "publikation/resumee_publikation",
+        "words": 352
+      },
+      {
+        "chapter": "publikation/assessment_publikation",
+        "words": 1910
+      },
+      {
+        "chapter": "zusammenfassung/reflexion",
+        "words": 1186
+      },
+      {
+        "chapter": "abschluss/toc",
+        "words": 25
+      },
+      {
+        "chapter": "abschluss/fragen_und_feedback",
+        "words": 39
+      },
+      {
+        "chapter": "abschluss/literaturverzeichnis",
+        "words": 51
+      },
+      {
+        "chapter": "abschluss/authors",
+        "words": 184
+      },
+      {
+        "chapter": "abschluss/quadriga",
+        "words": 252
+      },
+      {
+        "chapter": "abschluss/impressum",
+        "words": 35
+      }
+    ]
+  },
+  "bild-03": {
+    "wordCount": 47574,
+    "openIssues": 3,
+    "chapterCounts": [
+      {
+        "chapter": "intro",
+        "words": 605
+      },
+      {
+        "chapter": "präambel/toc",
+        "words": 67
+      },
+      {
+        "chapter": "präambel/lernziele",
+        "words": 358
+      },
+      {
+        "chapter": "präambel/zielgruppe_voraussetzungen",
+        "words": 456
+      },
+      {
+        "chapter": "02_forschungsdaten_fdm/toc_02",
+        "words": 123
+      },
+      {
+        "chapter": "02_forschungsdaten_fdm/einführung_forschungsdaten",
+        "words": 400
+      },
+      {
+        "chapter": "02_forschungsdaten_fdm/teilprojektbeschreibung",
+        "words": 483
+      },
+      {
+        "chapter": "02_forschungsdaten_fdm/forschungsdaten",
+        "words": 434
+      },
+      {
+        "chapter": "02_forschungsdaten_fdm/forschungsdaten_fiwi",
+        "words": 677
+      },
+      {
+        "chapter": "02_forschungsdaten_fdm/erhebung_nachnutzung",
+        "words": 641
+      },
+      {
+        "chapter": "02_forschungsdaten_fdm/nachnutzung_ethik",
+        "words": 534
+      },
+      {
+        "chapter": "02_forschungsdaten_fdm/forschungsdatenmanagement",
+        "words": 631
+      },
+      {
+        "chapter": "02_forschungsdaten_fdm/datenmanagementplan",
+        "words": 597
+      },
+      {
+        "chapter": "02_forschungsdaten_fdm/best_practices_fiwi",
+        "words": 416
+      },
+      {
+        "chapter": "02_forschungsdaten_fdm/resümee_02",
+        "words": 289
+      },
+      {
+        "chapter": "02_forschungsdaten_fdm/selbsttest_wissen_02",
+        "words": 2839
+      },
+      {
+        "chapter": "03_metadaten/toc_03",
+        "words": 123
+      },
+      {
+        "chapter": "03_metadaten/einführung_metadaten",
+        "words": 710
+      },
+      {
+        "chapter": "03_metadaten/allgemeine_standards",
+        "words": 921
+      },
+      {
+        "chapter": "03_metadaten/metadaten_filmwissenschaft",
+        "words": 953
+      },
+      {
+        "chapter": "03_metadaten/diskriminierungssensible_metadaten",
+        "words": 1453
+      },
+      {
+        "chapter": "03_metadaten/resümee_03",
+        "words": 252
+      },
+      {
+        "chapter": "03_metadaten/selbsttest_wissen_03",
+        "words": 2797
+      },
+      {
+        "chapter": "04_einführung_publikation/toc_04",
+        "words": 139
+      },
+      {
+        "chapter": "04_einführung_publikation/strategien_perspektiven",
+        "words": 236
+      },
+      {
+        "chapter": "04_einführung_publikation/publikationswege_formate",
+        "words": 1678
+      },
+      {
+        "chapter": "04_einführung_publikation/ressourcen_entscheidungshilfen",
+        "words": 328
+      },
+      {
+        "chapter": "04_einführung_publikation/resümee_04",
+        "words": 186
+      },
+      {
+        "chapter": "04_einführung_publikation/selbsttest_wissen_04",
+        "words": 2876
+      },
+      {
+        "chapter": "05_aufbereitung_anreicherung/toc_05",
+        "words": 185
+      },
+      {
+        "chapter": "05_aufbereitung_anreicherung/informationen_datenset",
+        "words": 737
+      },
+      {
+        "chapter": "05_aufbereitung_anreicherung/moviebarcodes",
+        "words": 745
+      },
+      {
+        "chapter": "05_aufbereitung_anreicherung/systematische_aufbereitung",
+        "words": 2619
+      },
+      {
+        "chapter": "05_aufbereitung_anreicherung/formatierung_anpassung",
+        "words": 1233
+      },
+      {
+        "chapter": "05_aufbereitung_anreicherung/konvertierung_export",
+        "words": 4191
+      },
+      {
+        "chapter": "05_aufbereitung_anreicherung/bereinigung_dokumentation",
+        "words": 1707
+      },
+      {
+        "chapter": "05_aufbereitung_anreicherung/diskriminierungssensible_überprüfung",
+        "words": 1885
+      },
+      {
+        "chapter": "05_aufbereitung_anreicherung/resümee_05",
+        "words": 479
+      },
+      {
+        "chapter": "05_aufbereitung_anreicherung/selbsttest_wissen_05",
+        "words": 2421
+      },
+      {
+        "chapter": "06_publikation_repositorien/toc_06",
+        "words": 170
+      },
+      {
+        "chapter": "06_publikation_repositorien/versionierung_lizenzierung",
+        "words": 2307
+      },
+      {
+        "chapter": "06_publikation_repositorien/kuratierung_organisation",
+        "words": 1593
+      },
+      {
+        "chapter": "06_publikation_repositorien/dateninfrastrukturen",
+        "words": 2143
+      },
+      {
+        "chapter": "06_publikation_repositorien/resümee_06",
+        "words": 384
+      },
+      {
+        "chapter": "06_publikation_repositorien/selbststest_wissen_06",
+        "words": 2236
+      },
+      {
+        "chapter": "reflexion_resümee/toc",
+        "words": 21
+      },
+      {
+        "chapter": "reflexion_resümee/reflexion_zusammenfassung",
+        "words": 2
+      },
+      {
+        "chapter": "reflexion_resümee/ausblick_nachnutzung",
+        "words": 2
+      },
+      {
+        "chapter": "epilog/toc",
+        "words": 5
+      },
+      {
+        "chapter": "epilog/fragen_und_feedback",
+        "words": 9
+      },
+      {
+        "chapter": "epilog/literaturverzeichnis",
+        "words": 1
+      },
+      {
+        "chapter": "epilog/nachgenutzte_materialien",
+        "words": 2
+      },
+      {
+        "chapter": "epilog/autor_innen",
+        "words": 6
+      },
+      {
+        "chapter": "epilog/quadriga",
+        "words": 254
+      },
+      {
+        "chapter": "epilog/impressum",
+        "words": 35
+      }
+    ]
+  },
+  "bild-04": {
+    "wordCount": 0,
+    "chapterCounts": []
+  }
+}

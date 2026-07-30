@@ -61,41 +61,82 @@ function buildWorkloadColors(count) {
   );
 }
 
-// ── Feature 2: Workload stacked bar ─────────────────────────────────────────
 export function renderWorkloadChart(categories, series) {
   const options = {
-    chart: { type: "bar", height: 420, stacked: true, toolbar: { show: true } },
-    plotOptions: { 
-      bar: { 
-        horizontal: false, 
+    chart: { type: "line", height: 420, stacked: true, toolbar: { show: true } },
+    stroke: {
+      width: series.map(s => {
+        if (s.type === 'line') return 3;
+        return 0;
+      }),
+      curve: 'smooth'
+    },
+    fill: {
+      type: 'solid',
+      opacity: series.map(s => s.type === 'area' ? 0.2 : 1)
+    },
+    markers: {
+      size: series.map(s => s.type === 'line' ? 6 : 0),
+      strokeWidth: 0,
+      hover: { sizeOffset: 2 }
+    },
+    plotOptions: {
+      bar: {
+        horizontal: false,
         borderRadius: 4,
         dataLabels: {
           total: {
             enabled: true,
-            formatter: function(val) {
+            formatter: function (val) {
               return formatToHours(val);
             },
             style: { color: "#373d3f", fontSize: "12px", fontWeight: 600 }
           }
         }
-      } 
+      }
     },
     xaxis: { categories },
-    yaxis: {
-      title: { text: "Zeitaufwand (Stunden)" },
-      labels: { formatter: (value) => formatToHours(Math.round(value)) },
-    },
+    yaxis: series.map((s, index) => {
+      if (s.name === 'Wörter (Hintergrund)' || s.name === 'Wörter') {
+        return {
+          show: s.name === 'Wörter',
+          opposite: true,
+          title: { text: "Wörter", style: { color: "#36b9cc", fontWeight: 600 } },
+          labels: { formatter: (value) => Math.round(value).toLocaleString("de-DE"), style: { colors: "#36b9cc" } },
+        };
+      } else {
+        const firstColIndex = series.findIndex(col => col.type !== 'area' && col.type !== 'line');
+        return {
+          seriesName: series[firstColIndex].name,
+          show: index === firstColIndex,
+          title: { text: "Zeitaufwand (Stunden)", style: { color: PALETTE.indigo } },
+          labels: { formatter: (value) => formatToHours(Math.round(value)), style: { colors: PALETTE.indigo } },
+        };
+      }
+    }),
     tooltip: {
-      shared: false, intersect: true,
-      y: { formatter: (value) => formatToHours(Math.round(value)) },
+      shared: false,
+      intersect: true,
+      y: {
+        formatter: function (y, { seriesIndex, w }) {
+           if(typeof y !== "undefined") {
+            const sName = w.config.series[seriesIndex].name;
+            if(sName === 'Wörter' || sName === 'Wörter (Hintergrund)') return Math.round(y).toLocaleString("de-DE") + " Wörter";
+            return formatToHours(Math.round(y));
+          }
+          return y;
+        }
+      }
     },
     legend: { show: false },
     series,
     dataLabels: { enabled: false },
-    colors: buildWorkloadColors(series.length),
+    colors: ["#36b9cc"].concat(buildWorkloadColors(series.length - 2)).concat(["#36b9cc"]),
   };
-  const chart = new ApexCharts(document.querySelector("#workload-chart"), options);
-  chart.render();
+  // Ensure we clear previous instance if we re-render dynamically
+  if (window.workloadChartInstance) window.workloadChartInstance.destroy();
+  window.workloadChartInstance = new ApexCharts(document.querySelector("#workload-chart"), options);
+  window.workloadChartInstance.render();
 }
 
 // ── Feature 3a, 3b: Bloom ────────────────────────────────────────────────────
@@ -147,7 +188,7 @@ export function renderBloomGlobalChart(labels, values) {
       itemMargin: { vertical: 8 },
       markers: { width: 12, height: 12, radius: 12 }
     },
-    plotOptions: { 
+    plotOptions: {
       pie: { donut: { size: "55%" } }
     },
     dataLabels: {
@@ -316,13 +357,13 @@ export function renderTypeGroupCards(summaries) {
           </div>
           <ul class="list-group list-group-flush">
             ${group.repos
-              .map(
-                (r) => `<li class="list-group-item d-flex justify-content-between align-items-center small">
+          .map(
+            (r) => `<li class="list-group-item d-flex justify-content-between align-items-center small">
                   <span>${caseStudyLink(r.label, r.bookUrl)} v${r.version} ${doiBadge(r.doi)}</span>
                   <span>${issueBadge(r.openIssues)}</span>
                 </li>`
-              )
-              .join("")}
+          )
+          .join("")}
           </ul>
         </div>
       </div>`

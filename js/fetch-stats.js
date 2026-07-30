@@ -1,0 +1,178 @@
+const fs = require("fs");
+const jsyaml = require("js-yaml");
+const config = require("../config.json");
+
+// Helper to extract all document paths from a _toc.yml object
+function extractTocFiles(tocObj) {
+  let files = [];
+  
+  if (Array.isArray(tocObj)) {
+    for (const item of tocObj) {
+      files = files.concat(extractTocFiles(item));
+    }
+  } else if (typeof tocObj === 'object' && tocObj !== null) {
+    if (tocObj.file) files.push(tocObj.file);
+    if (tocObj.root) files.push(tocObj.root);
+    if (tocObj.chapters) files = files.concat(extractTocFiles(tocObj.chapters));
+    if (tocObj.sections) files = files.concat(extractTocFiles(tocObj.sections));
+    if (tocObj.parts) files = files.concat(extractTocFiles(tocObj.parts));
+  }
+  return files;
+}
+
+function countWords(text) {
+  let clean = text
+    .replace(/<!--[\s\S]*?-->/g, ' ')       // HTML comments
+    .replace(/```{[^}]+}/g, ' ')            // MyST blocks
+    .replace(/^:[a-zA-Z0-9_-]+:.*/gm, ' ')  // MyST attributes
+    .replace(/\]\([^\)]+\)/g, ' ')          // Markdown link URLs
+    .replace(/<[^>]+>/g, ' ');              // HTML tags
+
+  // Match sequences of letters, numbers, hyphens, and umlauts
+  let matches = clean.match(/[a-zA-ZäöüÄÖÜß0-9-]+/g) || [];
+  
+  // Filter out standalone hyphens
+  let words = matches.filter(w => w !== '-');
+  return words.length;
+}
+
+async function main() {
+  const results = {};
+
+  for (const cs of config) {
+    const owner = cs.owner;
+    const repo = cs.repo;
+    const branch = cs.branch || "main";
+    console.log(`Fetching stats for ${cs.id} (${repo})...`);
+
+      let wordCount = 0;
+      let chapterCounts = [];
+
+      try {
+        // Fetch git tree to know extensions (.md or .ipynb)
+        const treeUrl = `https://api.github.com/repos/${owner}/${repo}/git/trees/${branch}?recursive=1`;
+        const treeRes = await fetch(treeUrl, {
+          headers: process.env.GH_TOKEN ? { Authorization: `token ${process.env.GH_TOKEN}` } : {}
+        });
+        if (!treeRes.ok) {
+          console.warn(`[WARN] Could not fetch git tree for ${repo}: ${treeRes.status}`);
+          results[cs.id] = { wordCount: 0, chapterCounts: [] };
+          continue;
+        }
+        const treeData = await treeRes.json();
+        
+        // Build a map of file paths without extension to their actual full path
+        const fileMap = {};
+        for (const item of treeData.tree) {
+          if (item.type === 'blob' && (item.path.endsWith('.md') || item.path.endsWith('.ipynb'))) {
+            // e.g. "Markdown/0_Intro.md" -> "Markdown/0_Intro"
+            const noExt = item.path.replace(/\.(md|ipynb)$/, '');
+            fileMap[noExt] = item.path;
+          }
+        }
+
+        // Fetch _toc.yml
+        // Sometimes it's in the root, sometimes in Markdown/ or book/
+        let tocUrl;
+        if (fileMap['Markdown/_toc']) tocUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/Markdown/_toc.yml`;
+        else if (fileMap['_toc']) tocUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/_toc.yml`;
+        else tocUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/_toc.yml`;
+
+        let res = await fetch(tocUrl);
+        if (!res.ok) {
+          // Try fallback
+          tocUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/Markdown/_toc.yml`;
+          res = await fetch(tocUrl);
+        }
+
+        if (!res.ok) {
+          console.warn(`[WARN] Could not fetch _toc.yml for ${repo}`);
+          results[cs.id] = { wordCount: 0, chapterCounts: [] };
+          continue;
+        }
+
+        const tocText = await res.text();
+        const tocObj = jsyaml.load(tocText);
+        const docnames = extractTocFiles(tocObj);
+
+        if (docnames.length === 0) {
+          console.warn(`[WARN] No documents found in _toc.yml for ${repo}`);
+          results[cs.id] = { wordCount: 0, chapterCounts: [] };
+          continue;
+        }
+
+        // Fetch each document
+        for (let doc of docnames) {
+          // Strip extension if it was explicitly provided in toc.yml
+          const cleanDoc = doc.replace(/\.(md|ipynb)$/, '');
+          
+          // Find actual path: it might be exact, or it might be relative (so we check if any path ends with it)
+          let actualPath = fileMap[cleanDoc];
+          if (!actualPath) {
+            // Try finding a file that ends with /cleanDoc
+            const matches = Object.keys(fileMap).filter(k => k.endsWith('/' + cleanDoc) || k === cleanDoc);
+            if (matches.length > 0) {
+              actualPath = fileMap[matches[0]];
+            }
+          }
+
+          if (!actualPath) {
+            console.warn(`  [WARN] Could not find source file for toc entry: ${doc}`);
+            continue;
+          }
+
+          const pageUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${actualPath}`;
+          try {
+            const pageRes = await fetch(pageUrl);
+            if (!pageRes.ok) {
+              console.warn(`  [WARN] Failed to fetch ${actualPath}: ${pageRes.status}`);
+              continue;
+            }
+            
+            let words = 0;
+            const content = await pageRes.text();
+
+            if (actualPath.endsWith('.ipynb')) {
+              const ipynb = JSON.parse(content);
+              for (const cell of ipynb.cells || []) {
+                if (cell.cell_type === 'markdown' || cell.cell_type === 'code') {
+                  const source = Array.isArray(cell.source) ? cell.source.join('') : cell.source;
+                  words += countWords(source);
+                }
+              }
+            } else {
+              words = countWords(content);
+            }
+
+            wordCount += words;
+            chapterCounts.push({ chapter: doc, words: words });
+          } catch (err) {
+            console.warn(`  [WARN] Error processing ${actualPath}:`, err.message);
+          }
+        }
+
+        // Fetch open issues
+        const issueUrl = `https://api.github.com/repos/${owner}/${repo}`;
+        const issueRes = await fetch(issueUrl, {
+          headers: process.env.GH_TOKEN ? { Authorization: `token ${process.env.GH_TOKEN}` } : {}
+        });
+        let openIssues = null;
+        if (issueRes.ok) {
+          const issueData = await issueRes.json();
+          openIssues = issueData.open_issues_count;
+        }
+
+        console.log(`  -> Words: ${wordCount}, Issues: ${openIssues}`);
+        results[cs.id] = { wordCount, openIssues, chapterCounts };
+
+    } catch (err) {
+      console.warn(`[ERROR] Failed processing ${repo}:`, err.message);
+      results[cs.id] = { wordCount: 0 };
+    }
+  }
+
+  fs.writeFileSync("stats.json", JSON.stringify(results, null, 2));
+  console.log("Successfully wrote stats.json");
+}
+
+main();

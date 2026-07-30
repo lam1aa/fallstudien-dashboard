@@ -1,4 +1,4 @@
-import { fetchAllCaseStudies } from "./data-fetch.js";
+import { fetchAllCaseStudies } from "./data-fetch.js?v=2";
 import {
   computeOverviewKpis,
   buildWorkloadSeries,
@@ -6,20 +6,16 @@ import {
   buildBloomGlobalSeries,
   buildCompetencySeries,
   buildDataFlowSeries,
-  // buildBloomHeatmapSeries,
-  // buildCompetencyDataFlowMatrix,
   buildTypeGroupSummaries
-} from "./aggregate.js";
+} from "./aggregate.js?v=2";
 import {
   renderWorkloadChart,
   renderBloomPerCaseChart,
   renderBloomGlobalChart,
   renderCompetencyChart,
   renderDataFlowChart,
-  // renderBloomHeatmapChart,
-  // renderCompetencyDataFlowHeatmap,
   renderTypeGroupCards
-} from "./charts.js";
+} from "./charts.js?v=2";
 
 function renderBloomCharts(caseStudies, type) {
   const { categories: bCat, series: bSer } = buildBloomPerCaseSeries(caseStudies, type);
@@ -58,6 +54,38 @@ async function init() {
     const headerMetadataEl = document.getElementById("header-metadata-count");
     if (headerMetadataEl) {
       headerMetadataEl.textContent = kpis.completeRatio;
+    }
+
+    // Fetch and aggregate stats
+    try {
+      const statsRes = await fetch("stats.json?v=" + new Date().getTime());
+      if (statsRes.ok) {
+        const statsData = await statsRes.json();
+        let totalWords = 0;
+        let totalAssessments = 0;
+        
+        for (const key in statsData) {
+          const wc = statsData[key].wordCount || 0;
+          totalWords += wc;
+          
+          const cs = caseStudies.find(c => c.id === key);
+          if (cs) cs.wordCount = wc;
+          
+          if (statsData[key].chapterCounts) {
+            for (const chap of statsData[key].chapterCounts) {
+              if (chap.chapter && chap.chapter.toLowerCase().includes('assessment')) {
+                totalAssessments++;
+              }
+            }
+          }
+        }
+        
+        document.getElementById("kpi-total-words").textContent = totalWords.toLocaleString("de-DE");
+        const assessmentEl = document.getElementById("kpi-total-assessments");
+        if (assessmentEl) assessmentEl.textContent = totalAssessments;
+      }
+    } catch (e) {
+      console.warn("Could not fetch stats.json", e);
     }
 
     // Feature 2

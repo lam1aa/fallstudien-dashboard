@@ -75,17 +75,31 @@ export function buildWorkloadSeries(caseStudies) {
 
   series.push({
     name: "Gesamtzeit (keine Kapitelaufteilung)",
+    type: "column",
     data: analyzed.map((entry) => (entry.mode === "total-only" ? entry.totalMinutes : 0)),
   });
 
   for (let i = 0; i < maxChapters; i++) {
     series.push({
       name: `Kapitel ${i + 1}`,
+      type: "column",
       data: analyzed.map((entry) =>
         entry.mode === "per-chapter" ? entry.chapterMinutes[i] || 0 : 0
       ),
     });
   }
+
+  series.unshift({
+    name: "Wörter (Hintergrund)",
+    type: "area",
+    data: analyzed.map((entry) => entry.cs.wordCount || 0),
+  });
+
+  series.push({
+    name: "Wörter",
+    type: "line",
+    data: analyzed.map((entry) => entry.cs.wordCount || 0),
+  });
 
   return { categories, series };
 }

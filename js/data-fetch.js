@@ -38,9 +38,14 @@ function isMetadataComplete(meta) {
 }
 
 export async function fetchOpenIssuesMap() {
-  const res = await fetch("issues.json");
+  const res = await fetch("stats.json?v=" + new Date().getTime());
   if (!res.ok) return {};
-  return res.json();
+  const stats = await res.json();
+  const issuesMap = {};
+  for (const key in stats) {
+    issuesMap[key] = stats[key].openIssues;
+  }
+  return issuesMap;
 }
 
 export async function fetchAllCaseStudies() {
