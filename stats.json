@@ -329,7 +329,7 @@
   },
   "tabelle-03": {
     "wordCount": 22491,
-    "openIssues": 23,
+    "openIssues": 22,
     "chapterCounts": [
       {
         "chapter": "intro",
@@ -462,7 +462,7 @@
     ]
   },
   "tabelle-04": {
-    "wordCount": 9633,
+    "wordCount": 9668,
     "openIssues": 8,
     "chapterCounts": [
       {
@@ -535,7 +535,7 @@
       },
       {
         "chapter": "Kapitel4_Publikation/kommunikation",
-        "words": 217
+        "words": 252
       },
       {
         "chapter": "Kapitel4_Publikation/resumee",
@@ -961,7 +961,7 @@
   },
   "text-03": {
     "wordCount": 48292,
-    "openIssues": 39,
+    "openIssues": 44,
     "chapterCounts": [
       {
         "chapter": "front_page/intro",
