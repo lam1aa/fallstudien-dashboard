@@ -462,8 +462,8 @@
     ]
   },
   "tabelle-04": {
-    "wordCount": 9668,
-    "openIssues": 8,
+    "wordCount": 9969,
+    "openIssues": 7,
     "chapterCounts": [
       {
         "chapter": "Titelseite",
@@ -515,7 +515,7 @@
       },
       {
         "chapter": "Kapitel3_Datenmanagement/erschliessung",
-        "words": 757
+        "words": 919
       },
       {
         "chapter": "Kapitel3_Datenmanagement/resumee",
@@ -527,7 +527,7 @@
       },
       {
         "chapter": "Kapitel4_Publikation/aufbewahrung",
-        "words": 2176
+        "words": 2233
       },
       {
         "chapter": "Kapitel4_Publikation/publikation",
@@ -535,7 +535,7 @@
       },
       {
         "chapter": "Kapitel4_Publikation/kommunikation",
-        "words": 252
+        "words": 334
       },
       {
         "chapter": "Kapitel4_Publikation/resumee",
