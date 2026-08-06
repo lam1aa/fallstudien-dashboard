@@ -328,8 +328,8 @@
     ]
   },
   "tabelle-03": {
-    "wordCount": 22491,
-    "openIssues": 22,
+    "wordCount": 22558,
+    "openIssues": 16,
     "chapterCounts": [
       {
         "chapter": "intro",
@@ -341,7 +341,7 @@
       },
       {
         "chapter": "1_einstieg/1.1_lernziele",
-        "words": 176
+        "words": 192
       },
       {
         "chapter": "1_einstieg/1.2_technische-voraussetzungen",
@@ -369,7 +369,7 @@
       },
       {
         "chapter": "datenbasis/datenbasis",
-        "words": 797
+        "words": 814
       },
       {
         "chapter": "datenbasis/daten-vorbereitung",
@@ -385,7 +385,7 @@
       },
       {
         "chapter": "4_dash-prep/4.1_dashboard",
-        "words": 899
+        "words": 975
       },
       {
         "chapter": "4_dash-prep/4.2_tools",
@@ -397,7 +397,7 @@
       },
       {
         "chapter": "4_dash-prep/4.4_resumee",
-        "words": 237
+        "words": 236
       },
       {
         "chapter": "dashboard/Dashboard",
@@ -417,7 +417,7 @@
       },
       {
         "chapter": "dashboard/Übung_Bewässerungsanalyse",
-        "words": 2541
+        "words": 2500
       },
       {
         "chapter": "dashboard/Übung_Zeitverlauf",
@@ -462,7 +462,7 @@
     ]
   },
   "tabelle-04": {
-    "wordCount": 9969,
+    "wordCount": 9948,
     "openIssues": 7,
     "chapterCounts": [
       {
@@ -535,7 +535,7 @@
       },
       {
         "chapter": "Kapitel4_Publikation/kommunikation",
-        "words": 334
+        "words": 313
       },
       {
         "chapter": "Kapitel4_Publikation/resumee",
@@ -568,8 +568,8 @@
     ]
   },
   "text-01": {
-    "wordCount": 39549,
-    "openIssues": 27,
+    "wordCount": 39742,
+    "openIssues": 23,
     "chapterCounts": [
       {
         "chapter": "front_page/intro",
@@ -605,7 +605,7 @@
       },
       {
         "chapter": "research_question/research-question_assessment",
-        "words": 871
+        "words": 1035
       },
       {
         "chapter": "corpus_collection/corpus-collection_intro",
@@ -665,7 +665,7 @@
       },
       {
         "chapter": "ocr/ocr_summary",
-        "words": 147
+        "words": 172
       },
       {
         "chapter": "ocr/ocr_assessment",
@@ -717,7 +717,7 @@
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_intro",
-        "words": 279
+        "words": 283
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_analysis",
@@ -960,8 +960,8 @@
     ]
   },
   "text-03": {
-    "wordCount": 48292,
-    "openIssues": 44,
+    "wordCount": 48416,
+    "openIssues": 41,
     "chapterCounts": [
       {
         "chapter": "front_page/intro",
@@ -1029,7 +1029,7 @@
       },
       {
         "chapter": "corpus_collection/corpus-collection_assessment",
-        "words": 3801
+        "words": 3838
       },
       {
         "chapter": "corpus_processing/corpus-processing_intro",
@@ -1037,7 +1037,7 @@
       },
       {
         "chapter": "corpus_processing/corpus-processing_intro-to-nlp",
-        "words": 1515
+        "words": 1602
       },
       {
         "chapter": "corpus_processing/corpus-processing_nlp-annotation",
