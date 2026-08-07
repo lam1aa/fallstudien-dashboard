@@ -328,8 +328,8 @@
     ]
   },
   "tabelle-03": {
-    "wordCount": 22558,
-    "openIssues": 16,
+    "wordCount": 22567,
+    "openIssues": 9,
     "chapterCounts": [
       {
         "chapter": "intro",
@@ -341,7 +341,7 @@
       },
       {
         "chapter": "1_einstieg/1.1_lernziele",
-        "words": 192
+        "words": 193
       },
       {
         "chapter": "1_einstieg/1.2_technische-voraussetzungen",
@@ -361,7 +361,7 @@
       },
       {
         "chapter": "operationalisierung/resümee",
-        "words": 101
+        "words": 122
       },
       {
         "chapter": "datenbasis/3.0_datenbasis-intro",
@@ -369,7 +369,7 @@
       },
       {
         "chapter": "datenbasis/datenbasis",
-        "words": 814
+        "words": 836
       },
       {
         "chapter": "datenbasis/daten-vorbereitung",
@@ -385,7 +385,7 @@
       },
       {
         "chapter": "4_dash-prep/4.1_dashboard",
-        "words": 975
+        "words": 938
       },
       {
         "chapter": "4_dash-prep/4.2_tools",
@@ -433,7 +433,7 @@
       },
       {
         "chapter": "Zusammenfassung",
-        "words": 654
+        "words": 656
       },
       {
         "chapter": "7_abschluss/7.0_einleitung",
