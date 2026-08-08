@@ -1,0 +1,65 @@
+[
+    {
+        "Fallstudie oder Template": "Template Tabellen-Fallstudie",
+        "Art der Nutzung": "Einbindungen in Lehrveranstaltungen",
+        "Name der Institution": "Hochschule Beispielstadt",
+        "Region der Institution (Bundesland)": "Brandenburg",
+        "Beschreibung der Nutzung": "Einsatz des Templates in einem Masterseminar Datenkompetenz"
+    },
+    {
+        "Fallstudie oder Template": "Case 1",
+        "Art der Nutzung": "Einbindungen in Lehrveranstaltungen",
+        "Name der Institution": "Tech Institute",
+        "Region der Institution (Bundesland)": "Bayern",
+        "Beschreibung der Nutzung": "Used in Introduction to AI course"
+    },
+    {
+        "Fallstudie oder Template": "Case 2",
+        "Art der Nutzung": "Uebernahmen durch andere Institutionen",
+        "Name der Institution": "HU Berlin",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Beschreibung der Nutzung": "Adopted for Digital Sociology module"
+    },
+    {
+        "Fallstudie oder Template": "Case 3",
+        "Art der Nutzung": "Anfragen zur Nachnutzung",
+        "Name der Institution": "RWTH Aachen",
+        "Region der Institution (Bundesland)": "NRW",
+        "Beschreibung der Nutzung": "Requested for engineering ethics course"
+    },
+    {
+        "Fallstudie oder Template": "Template A",
+        "Art der Nutzung": "Einbindungen in Lehrveranstaltungen",
+        "Name der Institution": "Uni Frankfurt",
+        "Region der Institution (Bundesland)": "Hessen",
+        "Beschreibung der Nutzung": "Used in data literacy seminar"
+    },
+    {
+        "Fallstudie oder Template": "Case 4",
+        "Art der Nutzung": "Uebernahmen durch andere Institutionen",
+        "Name der Institution": "Leipzig University",
+        "Region der Institution (Bundesland)": "Sachsen",
+        "Beschreibung der Nutzung": "Integrated into DH master program"
+    },
+    {
+        "Fallstudie oder Template": "Case 5",
+        "Art der Nutzung": "Anfragen zur Nachnutzung",
+        "Name der Institution": "Uni Bremen",
+        "Region der Institution (Bundesland)": "Bremen",
+        "Beschreibung der Nutzung": "Interested for upcoming semester"
+    },
+    {
+        "Fallstudie oder Template": "Template B",
+        "Art der Nutzung": "Einbindungen in Lehrveranstaltungen",
+        "Name der Institution": "Uni Hamburg",
+        "Region der Institution (Bundesland)": "Hamburg",
+        "Beschreibung der Nutzung": "Used in teacher training"
+    },
+    {
+        "Fallstudie oder Template": "Case 6",
+        "Art der Nutzung": "Uebernahmen durch andere Institutionen",
+        "Name der Institution": "Heidelberg Uni",
+        "Region der Institution (Bundesland)": "BW",
+        "Beschreibung der Nutzung": "Adapted for medical informatics"
+    }
+]

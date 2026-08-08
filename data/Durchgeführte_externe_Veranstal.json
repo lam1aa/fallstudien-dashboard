@@ -1,0 +1,101 @@
+[
+    {
+        "Titel der Veranstaltung": "Workshop Datenkompetenz mit Kommune X",
+        "Datum der Veranstaltung": "2026-05-15",
+        "Typ der Veranstaltung": "Workshop",
+        "Externe Partner (Liste)": "Kommune X; Bürgerinitiative Y",
+        "Disziplin der Partner": "Verwaltungswissenschaft; Digital Humanities",
+        "Region der Partner": "Brandenburg",
+        "Region der Veranstaltung": "Brandenburg",
+        "Disziplin der Veranstaltung": "Datenkompetenz in der Verwaltung",
+        "Bezug zur Fallstudie (optional)": "Fallstudie Tabellenanalyse Verwaltung"
+    },
+    {
+        "Titel der Veranstaltung": "OER Workshop 2023",
+        "Datum der Veranstaltung": "2023-05-12",
+        "Typ der Veranstaltung": "Workshop",
+        "Externe Partner (Liste)": "Partner A (Education, Berlin)",
+        "Disziplin der Partner": "Education",
+        "Region der Partner": "Bayern",
+        "Region der Veranstaltung": "Bayern",
+        "Disziplin der Veranstaltung": "Education",
+        "Bezug zur Fallstudie (optional)": "Case 1"
+    },
+    {
+        "Titel der Veranstaltung": "Digital Learning Conference",
+        "Datum der Veranstaltung": "2023-09-20",
+        "Typ der Veranstaltung": "Conference",
+        "Externe Partner (Liste)": "Partner B (CS, Bayern)",
+        "Disziplin der Partner": "Computer Science",
+        "Region der Partner": "Berlin",
+        "Region der Veranstaltung": "Berlin",
+        "Disziplin der Veranstaltung": "Computer Science",
+        "Bezug zur Fallstudie (optional)": "Case 2"
+    },
+    {
+        "Titel der Veranstaltung": "AI in Schools Seminar",
+        "Datum der Veranstaltung": "2023-11-05",
+        "Typ der Veranstaltung": "Seminar",
+        "Externe Partner (Liste)": "Partner C (Education, NRW)",
+        "Disziplin der Partner": "Education",
+        "Region der Partner": "Nordrhein-Westfalen",
+        "Region der Veranstaltung": "Nordrhein-Westfalen",
+        "Disziplin der Veranstaltung": "Education",
+        "Bezug zur Fallstudie (optional)": "Case 3"
+    },
+    {
+        "Titel der Veranstaltung": "Data Literacy Hackathon",
+        "Datum der Veranstaltung": "2024-02-15",
+        "Typ der Veranstaltung": "Hackathon",
+        "Externe Partner (Liste)": "Partner D (Data Science, Hessen)",
+        "Disziplin der Partner": "Data Science",
+        "Region der Partner": "Sachsen",
+        "Region der Veranstaltung": "Sachsen",
+        "Disziplin der Veranstaltung": "Data Science",
+        "Bezug zur Fallstudie (optional)": "Case 4"
+    },
+    {
+        "Titel der Veranstaltung": "Open Science Meetup",
+        "Datum der Veranstaltung": "2024-04-10",
+        "Typ der Veranstaltung": "Meetup",
+        "Externe Partner (Liste)": "Partner E (Library Science, Sachsen)",
+        "Disziplin der Partner": "Library Science",
+        "Region der Partner": "Bremen",
+        "Region der Veranstaltung": "Bremen",
+        "Disziplin der Veranstaltung": "Library Science",
+        "Bezug zur Fallstudie (optional)": "Case 5"
+    },
+    {
+        "Titel der Veranstaltung": "EdTech Symposium",
+        "Datum der Veranstaltung": "2024-06-22",
+        "Typ der Veranstaltung": "Symposium",
+        "Externe Partner (Liste)": "Partner F (Engineering, BW)",
+        "Disziplin der Partner": "Engineering",
+        "Region der Partner": "Hessen",
+        "Region der Veranstaltung": "Hessen",
+        "Disziplin der Veranstaltung": "Engineering",
+        "Bezug zur Fallstudie (optional)": "Case 6"
+    },
+    {
+        "Titel der Veranstaltung": "Teacher Training Workshop",
+        "Datum der Veranstaltung": "2024-08-14",
+        "Typ der Veranstaltung": "Workshop",
+        "Externe Partner (Liste)": "Partner G (Education, Bremen)",
+        "Disziplin der Partner": "Education",
+        "Region der Partner": "Hamburg",
+        "Region der Veranstaltung": "Hamburg",
+        "Disziplin der Veranstaltung": "Education",
+        "Bezug zur Fallstudie (optional)": "Case 7"
+    },
+    {
+        "Titel der Veranstaltung": "Digital Humanities Forum",
+        "Datum der Veranstaltung": "2024-10-30",
+        "Typ der Veranstaltung": "Forum",
+        "Externe Partner (Liste)": "Partner H (Humanities, Hamburg)",
+        "Disziplin der Partner": "Humanities",
+        "Region der Partner": "Baden-Württemberg",
+        "Region der Veranstaltung": "Baden-Württemberg",
+        "Disziplin der Veranstaltung": "Humanities",
+        "Bezug zur Fallstudie (optional)": "Case 8"
+    }
+]

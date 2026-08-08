@@ -1,0 +1,101 @@
+[
+    {
+        "Titel des Lernangebots": "Einführung in QUADRIGA-Fallstudien",
+        "Art des Lernangebots": "z.B. Kurs, Workshop, Webinar etc.",
+        "Datum der Teilnahme": "2026-03-10",
+        "Name der Person oder Kennung": "Teilnehmer-101",
+        "Disziplin der Person": "Informatik",
+        "Position der Person": "z.B. Student, PhD, PostDoc",
+        "Name der Institution": "Technische Hochschule Beispielstadt",
+        "Region der Institution (Bundesland)": "Brandenburg",
+        "Beschreibung der Teilnahme (optional)": "Teilnahme im Rahmen eines Zertifikatsprogramms Datenkompetenz"
+    },
+    {
+        "Titel des Lernangebots": "AI Basics",
+        "Art des Lernangebots": "Course",
+        "Datum der Teilnahme": "2023-04-01",
+        "Name der Person oder Kennung": "John Doe",
+        "Disziplin der Person": "Engineering",
+        "Position der Person": "Student",
+        "Name der Institution": "Tech Institute",
+        "Region der Institution (Bundesland)": "Bayern",
+        "Beschreibung der Teilnahme (optional)": "Part of curriculum"
+    },
+    {
+        "Titel des Lernangebots": "OER Creation",
+        "Art des Lernangebots": "Workshop",
+        "Datum der Teilnahme": "2023-05-15",
+        "Name der Person oder Kennung": "Alice Smith",
+        "Disziplin der Person": "Education",
+        "Position der Person": "PhD",
+        "Name der Institution": "HU Berlin",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Beschreibung der Teilnahme (optional)": "Voluntary participation"
+    },
+    {
+        "Titel des Lernangebots": "Data Literacy",
+        "Art des Lernangebots": "Webinar",
+        "Datum der Teilnahme": "2023-07-20",
+        "Name der Person oder Kennung": "Bob Johnson",
+        "Disziplin der Person": "Sociology",
+        "Position der Person": "Postdoc",
+        "Name der Institution": "RWTH Aachen",
+        "Region der Institution (Bundesland)": "NRW",
+        "Beschreibung der Teilnahme (optional)": "Certificate program"
+    },
+    {
+        "Titel des Lernangebots": "Digital Methods",
+        "Art des Lernangebots": "Course",
+        "Datum der Teilnahme": "2023-09-10",
+        "Name der Person oder Kennung": "Charlie Brown",
+        "Disziplin der Person": "Humanities",
+        "Position der Person": "Professor",
+        "Name der Institution": "Uni Frankfurt",
+        "Region der Institution (Bundesland)": "Hessen",
+        "Beschreibung der Teilnahme (optional)": "Guest auditor"
+    },
+    {
+        "Titel des Lernangebots": "Open Science Basics",
+        "Art des Lernangebots": "Webinar",
+        "Datum der Teilnahme": "2023-11-05",
+        "Name der Person oder Kennung": "Diana Evans",
+        "Disziplin der Person": "Library Science",
+        "Position der Person": "Practitioner",
+        "Name der Institution": "Leipzig Uni",
+        "Region der Institution (Bundesland)": "Sachsen",
+        "Beschreibung der Teilnahme (optional)": "Professional development"
+    },
+    {
+        "Titel des Lernangebots": "Teaching with AI",
+        "Art des Lernangebots": "Workshop",
+        "Datum der Teilnahme": "2024-01-22",
+        "Name der Person oder Kennung": "Evan Davis",
+        "Disziplin der Person": "Education",
+        "Position der Person": "Practitioner",
+        "Name der Institution": "Uni Bremen",
+        "Region der Institution (Bundesland)": "Bremen",
+        "Beschreibung der Teilnahme (optional)": "Teacher training"
+    },
+    {
+        "Titel des Lernangebots": "EdTech Tools",
+        "Art des Lernangebots": "Course",
+        "Datum der Teilnahme": "2024-03-14",
+        "Name der Person oder Kennung": "Fiona White",
+        "Disziplin der Person": "Computer Science",
+        "Position der Person": "Student",
+        "Name der Institution": "Uni Hamburg",
+        "Region der Institution (Bundesland)": "Hamburg",
+        "Beschreibung der Teilnahme (optional)": "Elective course"
+    },
+    {
+        "Titel des Lernangebots": "Digital Collaboration",
+        "Art des Lernangebots": "Webinar",
+        "Datum der Teilnahme": "2024-05-30",
+        "Name der Person oder Kennung": "George Black",
+        "Disziplin der Person": "Engineering",
+        "Position der Person": "PhD",
+        "Name der Institution": "Heidelberg Uni",
+        "Region der Institution (Bundesland)": "BW",
+        "Beschreibung der Teilnahme (optional)": "Skill building"
+    }
+]

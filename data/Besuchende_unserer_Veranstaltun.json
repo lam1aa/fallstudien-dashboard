@@ -1,0 +1,74 @@
+[
+    {
+        "Titel der Veranstaltung": "Workshop Datenkompetenz mit Kommune X",
+        "Name der Person oder Kennung": "Teilnehmerin-001",
+        "Disziplin der Person": "Verwaltungswissenschaft",
+        "Position der Person (z.B. Student, PhD, PostDoc)": "PhD",
+        "Name der Institution": "Beispiel-Universität Berlin",
+        "Region der Institution (Bundesland)": "Berlin"
+    },
+    {
+        "Titel der Veranstaltung": "OER Workshop 2023",
+        "Name der Person oder Kennung": "Max Mustermann",
+        "Disziplin der Person": "Computer Science",
+        "Position der Person (z.B. Student, PhD, PostDoc)": "PhD",
+        "Name der Institution": "University of Berlin",
+        "Region der Institution (Bundesland)": "Berlin"
+    },
+    {
+        "Titel der Veranstaltung": "OER Workshop 2023",
+        "Name der Person oder Kennung": "Erika Musterfrau",
+        "Disziplin der Person": "Education",
+        "Position der Person (z.B. Student, PhD, PostDoc)": "Professor",
+        "Name der Institution": "LMU Munich",
+        "Region der Institution (Bundesland)": "Bayern"
+    },
+    {
+        "Titel der Veranstaltung": "Digital Learning Conference",
+        "Name der Person oder Kennung": "John Doe",
+        "Disziplin der Person": "Engineering",
+        "Position der Person (z.B. Student, PhD, PostDoc)": "Postdoc",
+        "Name der Institution": "RWTH Aachen",
+        "Region der Institution (Bundesland)": "NRW"
+    },
+    {
+        "Titel der Veranstaltung": "Digital Learning Conference",
+        "Name der Person oder Kennung": "Jane Smith",
+        "Disziplin der Person": "Data Science",
+        "Position der Person (z.B. Student, PhD, PostDoc)": "Student",
+        "Name der Institution": "TU Darmstadt",
+        "Region der Institution (Bundesland)": "Hessen"
+    },
+    {
+        "Titel der Veranstaltung": "AI in Schools Seminar",
+        "Name der Person oder Kennung": "Alice Johnson",
+        "Disziplin der Person": "Education",
+        "Position der Person (z.B. Student, PhD, PostDoc)": "Practitioner",
+        "Name der Institution": "School X",
+        "Region der Institution (Bundesland)": "Bremen"
+    },
+    {
+        "Titel der Veranstaltung": "AI in Schools Seminar",
+        "Name der Person oder Kennung": "Bob Brown",
+        "Disziplin der Person": "Sociology",
+        "Position der Person (z.B. Student, PhD, PostDoc)": "PhD",
+        "Name der Institution": "University of Hamburg",
+        "Region der Institution (Bundesland)": "Hamburg"
+    },
+    {
+        "Titel der Veranstaltung": "Data Literacy Hackathon",
+        "Name der Person oder Kennung": "Charlie Davis",
+        "Disziplin der Person": "Computer Science",
+        "Position der Person (z.B. Student, PhD, PostDoc)": "Student",
+        "Name der Institution": "Leipzig University",
+        "Region der Institution (Bundesland)": "Sachsen"
+    },
+    {
+        "Titel der Veranstaltung": "Data Literacy Hackathon",
+        "Name der Person oder Kennung": "Diana Evans",
+        "Disziplin der Person": "Data Science",
+        "Position der Person (z.B. Student, PhD, PostDoc)": "Postdoc",
+        "Name der Institution": "Heidelberg University",
+        "Region der Institution (Bundesland)": "BW"
+    }
+]

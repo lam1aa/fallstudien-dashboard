@@ -1,0 +1,92 @@
+[
+    {
+        "Titel des Beitrags": "Reproduzierbarkeit von Datenanalysen mit QUADRIGA",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Vortrag",
+        "Titel der externen Veranstaltung": "Fachkonferenz Datenkompetenz 2026",
+        "Veranstaltende Organisation": "Fachhochschule Potsdam",
+        "Datum der Veranstaltung": "2026-06-20",
+        "Region der Veranstaltung": "Brandenburg",
+        "Disziplin der Veranstaltung": "Informatik; Informationswissenschaft",
+        "Bezug zur Fallstudie (optional)": "Fallstudie Textanalyse Verwaltungsdokumente"
+    },
+    {
+        "Titel des Beitrags": "AI in Education",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Talk",
+        "Titel der externen Veranstaltung": "EduTech Conf by Org B",
+        "Veranstaltende Organisation": NaN,
+        "Datum der Veranstaltung": "Case 2",
+        "Region der Veranstaltung": "Bayern",
+        "Disziplin der Veranstaltung": "Education",
+        "Bezug zur Fallstudie (optional)": NaN
+    },
+    {
+        "Titel des Beitrags": "Creating OERs",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Poster",
+        "Titel der externen Veranstaltung": "Open Science Fair by Org C",
+        "Veranstaltende Organisation": NaN,
+        "Datum der Veranstaltung": "Case 1",
+        "Region der Veranstaltung": "Berlin",
+        "Disziplin der Veranstaltung": "Computer Science",
+        "Bezug zur Fallstudie (optional)": NaN
+    },
+    {
+        "Titel des Beitrags": "Digital Competencies",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Panel",
+        "Titel der externen Veranstaltung": "Future Skills Summit by Org D",
+        "Veranstaltende Organisation": NaN,
+        "Datum der Veranstaltung": "Case 3",
+        "Region der Veranstaltung": "Nordrhein-Westfalen",
+        "Disziplin der Veranstaltung": "Education",
+        "Bezug zur Fallstudie (optional)": NaN
+    },
+    {
+        "Titel des Beitrags": "Data Science for Teachers",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Talk",
+        "Titel der externen Veranstaltung": "Teacher Training Day by Org E",
+        "Veranstaltende Organisation": NaN,
+        "Datum der Veranstaltung": "Case 4",
+        "Region der Veranstaltung": "Sachsen",
+        "Disziplin der Veranstaltung": "Data Science",
+        "Bezug zur Fallstudie (optional)": NaN
+    },
+    {
+        "Titel des Beitrags": "The QUADRIGA Approach",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Talk",
+        "Titel der externen Veranstaltung": "EdTech Europe by Org F",
+        "Veranstaltende Organisation": NaN,
+        "Datum der Veranstaltung": "Case 5",
+        "Region der Veranstaltung": "Bremen",
+        "Disziplin der Veranstaltung": "Library Science",
+        "Bezug zur Fallstudie (optional)": NaN
+    },
+    {
+        "Titel des Beitrags": "Collaborative Learning",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Poster",
+        "Titel der externen Veranstaltung": "Learning Analytics Conf by Org G",
+        "Veranstaltende Organisation": NaN,
+        "Datum der Veranstaltung": "Case 6",
+        "Region der Veranstaltung": "Hessen",
+        "Disziplin der Veranstaltung": "Engineering",
+        "Bezug zur Fallstudie (optional)": NaN
+    },
+    {
+        "Titel des Beitrags": "Digital Humanities OER",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Panel",
+        "Titel der externen Veranstaltung": "DH Conference by Org H",
+        "Veranstaltende Organisation": NaN,
+        "Datum der Veranstaltung": "Case 7",
+        "Region der Veranstaltung": "Hamburg",
+        "Disziplin der Veranstaltung": "Education",
+        "Bezug zur Fallstudie (optional)": NaN
+    },
+    {
+        "Titel des Beitrags": "Future of Open Education",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Keynote",
+        "Titel der externen Veranstaltung": "OER Summit by Org I",
+        "Veranstaltende Organisation": NaN,
+        "Datum der Veranstaltung": "Case 8",
+        "Region der Veranstaltung": "Baden-Württemberg",
+        "Disziplin der Veranstaltung": "Humanities",
+        "Bezug zur Fallstudie (optional)": NaN
+    }
+]

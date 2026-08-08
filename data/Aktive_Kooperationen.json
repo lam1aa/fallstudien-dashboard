@@ -1,0 +1,65 @@
+[
+    {
+        "Name der Institution": "Beispiel-Universität Berlin",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Disziplin der Institution": "Verwaltungswissenschaft",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Gemeinsame Entwicklung und Erprobung einer Fallstudie zur Tabellenanalyse"
+    },
+    {
+        "Name der Institution": "Tech University Munich",
+        "Region der Institution (Bundesland)": "Bayern",
+        "Disziplin der Institution": "Computer Science",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Research on AI in Education"
+    },
+    {
+        "Name der Institution": "Humboldt University",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Disziplin der Institution": "Sociology",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Digital Sociology OER"
+    },
+    {
+        "Name der Institution": "RWTH Aachen",
+        "Region der Institution (Bundesland)": "Nordrhein-Westfalen",
+        "Disziplin der Institution": "Engineering",
+        "Aktiv (Ja/Nein)": "Nein",
+        "Beschreibung der Kooperation": "Past project on Digital Twins"
+    },
+    {
+        "Name der Institution": "Leipzig University",
+        "Region der Institution (Bundesland)": "Sachsen",
+        "Disziplin der Institution": "Linguistics",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "NLP Case Studies"
+    },
+    {
+        "Name der Institution": "University of Bremen",
+        "Region der Institution (Bundesland)": "Bremen",
+        "Disziplin der Institution": "Data Science",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Data literacy modules"
+    },
+    {
+        "Name der Institution": "Goethe University Frankfurt",
+        "Region der Institution (Bundesland)": "Hessen",
+        "Disziplin der Institution": "Economics",
+        "Aktiv (Ja/Nein)": "Nein",
+        "Beschreibung der Kooperation": "Workshop collaboration 2022"
+    },
+    {
+        "Name der Institution": "University of Hamburg",
+        "Region der Institution (Bundesland)": "Hamburg",
+        "Disziplin der Institution": "Education",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Teacher training OER"
+    },
+    {
+        "Name der Institution": "Heidelberg University",
+        "Region der Institution (Bundesland)": "Baden-Württemberg",
+        "Disziplin der Institution": "Medicine",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Digital Health case study"
+    }
+]

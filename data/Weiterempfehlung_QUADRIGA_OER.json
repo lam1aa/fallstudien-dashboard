@@ -1,0 +1,56 @@
+[
+    {
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "Teilnehmer-101",
+        "Fallstudie (optional)": "Fallstudie Tabellenanalyse Verwaltung",
+        "Empfehlungsscore (1–5)": 5,
+        "Kommentar (optional Begründung)": "Sehr hilfreich zur Anwendung von Datenkompetenz im eigenen Forschungsprojekt"
+    },
+    {
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User001",
+        "Fallstudie (optional)": "Case 1",
+        "Empfehlungsscore (1–5)": 5,
+        "Kommentar (optional Begründung)": "Very useful material!"
+    },
+    {
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User002",
+        "Fallstudie (optional)": "Case 2",
+        "Empfehlungsscore (1–5)": 4,
+        "Kommentar (optional Begründung)": "Good, but needs more examples."
+    },
+    {
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User003",
+        "Fallstudie (optional)": "Case 3",
+        "Empfehlungsscore (1–5)": 5,
+        "Kommentar (optional Begründung)": "Excellent resource for my students."
+    },
+    {
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User004",
+        "Fallstudie (optional)": "Case 4",
+        "Empfehlungsscore (1–5)": 3,
+        "Kommentar (optional Begründung)": "Okay, but slightly outdated."
+    },
+    {
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User005",
+        "Fallstudie (optional)": "Case 5",
+        "Empfehlungsscore (1–5)": 5,
+        "Kommentar (optional Begründung)": "Highly recommended!"
+    },
+    {
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User006",
+        "Fallstudie (optional)": "Case 6",
+        "Empfehlungsscore (1–5)": 4,
+        "Kommentar (optional Begründung)": "Well structured and easy to use."
+    },
+    {
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User007",
+        "Fallstudie (optional)": "Case 7",
+        "Empfehlungsscore (1–5)": 2,
+        "Kommentar (optional Begründung)": "Too complex for beginners."
+    },
+    {
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User008",
+        "Fallstudie (optional)": "Case 8",
+        "Empfehlungsscore (1–5)": 5,
+        "Kommentar (optional Begründung)": "Perfect for our curriculum."
+    }
+]

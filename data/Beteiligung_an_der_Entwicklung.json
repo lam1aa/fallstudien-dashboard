@@ -1,0 +1,101 @@
+[
+    {
+        "Name der Person oder Kennung": "Reviewerin-01",
+        "Disziplin der Person": "Digital Humanities",
+        "Position der Person ": "z.B. Student/PhD/PostDoc",
+        "Name der Institution": "Universität Beispielstadt",
+        "Region der Institution (Bundesland)": "Brandenburg",
+        "Bezug zur Fallstudie": "Fallstudie Textanalyse Verwaltungsdokumente",
+        "Typ der Beteiligung": "Erprobungs-Teilnahme individuell",
+        "Datum der Beteiligung (optional)": "2026-04-10",
+        "Hinweise (optional)": "Schriftliche Rückmeldung zu Struktur und Lernzielen"
+    },
+    {
+        "Name der Person oder Kennung": "Anna Schmidt",
+        "Disziplin der Person": "Education",
+        "Position der Person ": "Professor",
+        "Name der Institution": "Uni XYZ",
+        "Region der Institution (Bundesland)": "Hessen",
+        "Bezug zur Fallstudie": "Case 1",
+        "Typ der Beteiligung": "external review",
+        "Datum der Beteiligung (optional)": "2023-02-10",
+        "Hinweise (optional)": "Written feedback"
+    },
+    {
+        "Name der Person oder Kennung": "Lukas Weber",
+        "Disziplin der Person": "Computer Science",
+        "Position der Person ": "Postdoc",
+        "Name der Institution": "Tech Institute",
+        "Region der Institution (Bundesland)": "Bayern",
+        "Bezug zur Fallstudie": "Case 2",
+        "Typ der Beteiligung": "trial workshop",
+        "Datum der Beteiligung (optional)": "2023-04-15",
+        "Hinweise (optional)": "Participated actively"
+    },
+    {
+        "Name der Person oder Kennung": "Sophie Meyer",
+        "Disziplin der Person": "Sociology",
+        "Position der Person ": "PhD",
+        "Name der Institution": "HU Berlin",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Bezug zur Fallstudie": "Case 3",
+        "Typ der Beteiligung": "individual trial",
+        "Datum der Beteiligung (optional)": "2023-06-20",
+        "Hinweise (optional)": "Provided survey responses"
+    },
+    {
+        "Name der Person oder Kennung": "Leon Wagner",
+        "Disziplin der Person": "Engineering",
+        "Position der Person ": "Student",
+        "Name der Institution": "RWTH Aachen",
+        "Region der Institution (Bundesland)": "NRW",
+        "Bezug zur Fallstudie": "Case 4",
+        "Typ der Beteiligung": "trial workshop",
+        "Datum der Beteiligung (optional)": "2023-08-05",
+        "Hinweise (optional)": "Group 1"
+    },
+    {
+        "Name der Person oder Kennung": "Mia Becker",
+        "Disziplin der Person": "Data Science",
+        "Position der Person ": "Professor",
+        "Name der Institution": "Uni Bremen",
+        "Region der Institution (Bundesland)": "Bremen",
+        "Bezug zur Fallstudie": "Case 5",
+        "Typ der Beteiligung": "external review",
+        "Datum der Beteiligung (optional)": "2023-10-12",
+        "Hinweise (optional)": "Detailed feedback on methodology"
+    },
+    {
+        "Name der Person oder Kennung": "Paul Hoffmann",
+        "Disziplin der Person": "Library Science",
+        "Position der Person ": "Practitioner",
+        "Name der Institution": "Leipzig Lib",
+        "Region der Institution (Bundesland)": "Sachsen",
+        "Bezug zur Fallstudie": "Case 6",
+        "Typ der Beteiligung": "individual trial",
+        "Datum der Beteiligung (optional)": "2023-12-01",
+        "Hinweise (optional)": "Tested usability"
+    },
+    {
+        "Name der Person oder Kennung": "Julia Koch",
+        "Disziplin der Person": "Humanities",
+        "Position der Person ": "PhD",
+        "Name der Institution": "Uni Hamburg",
+        "Region der Institution (Bundesland)": "Hamburg",
+        "Bezug zur Fallstudie": "Case 7",
+        "Typ der Beteiligung": "trial workshop",
+        "Datum der Beteiligung (optional)": "2024-02-18",
+        "Hinweise (optional)": "Focus group discussion"
+    },
+    {
+        "Name der Person oder Kennung": "Felix Richter",
+        "Disziplin der Person": "Education",
+        "Position der Person ": "Postdoc",
+        "Name der Institution": "Heidelberg Uni",
+        "Region der Institution (Bundesland)": "BW",
+        "Bezug zur Fallstudie": "Case 8",
+        "Typ der Beteiligung": "external review",
+        "Datum der Beteiligung (optional)": "2024-04-25",
+        "Hinweise (optional)": "Reviewed learning outcomes"
+    }
+]
