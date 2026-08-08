@@ -14,8 +14,14 @@ import {
   renderBloomGlobalChart,
   renderCompetencyChart,
   renderDataFlowChart,
-  renderTypeGroupCards
+  renderTeilnahmenCharts
 } from "./charts.js?v=2";
+import { 
+  renderNutzung,
+  renderRecommendations,
+  renderTypeGroupCards,
+  renderTeilnahmenRegion
+} from "./ui-components.js?v=2";
 
 function renderBloomCharts(caseStudies, type) {
   const { categories: bCat, series: bSer } = buildBloomPerCaseSeries(caseStudies, type);
@@ -32,6 +38,8 @@ function renderFilteredCharts(caseStudies, type, sortMode) {
   const { categories: dfCat, values: dfVal } = buildDataFlowSeries(caseStudies, type, sortMode);
   renderDataFlowChart(dfCat, dfVal);
 }
+
+
 
 async function init() {
   const loadingEl = document.getElementById("loading");
@@ -121,6 +129,22 @@ async function init() {
 
     const groupSummaries = buildTypeGroupSummaries(caseStudies);
     renderTypeGroupCards(groupSummaries);
+
+    await renderNutzung();
+    await renderRecommendations();
+
+    let teilnahmenData = null;
+    try {
+      const res = await fetch("data/Teilnahmen_an_Lernangeboten.json?v=" + new Date().getTime());
+      if (res.ok) teilnahmenData = await res.json();
+    } catch (err) {
+      console.warn("Could not fetch Teilnahmen_an_Lernangeboten.json", err);
+    }
+
+    if (teilnahmenData) {
+      renderTeilnahmenCharts(teilnahmenData);
+      renderTeilnahmenRegion(teilnahmenData);
+    }
 
     loadingEl.classList.add("d-none");
   } catch (err) {

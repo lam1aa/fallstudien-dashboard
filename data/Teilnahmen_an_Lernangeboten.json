@@ -5,7 +5,7 @@
         "Datum der Teilnahme": "2026-03-10",
         "Name der Person oder Kennung": "Teilnehmer-101",
         "Disziplin der Person": "Informatik",
-        "Position der Person": "z.B. Student, PhD, PostDoc",
+        "Position der Person": "Student",
         "Name der Institution": "Technische Hochschule Beispielstadt",
         "Region der Institution (Bundesland)": "Brandenburg",
         "Beschreibung der Teilnahme (optional)": "Teilnahme im Rahmen eines Zertifikatsprogramms Datenkompetenz"
@@ -15,10 +15,10 @@
         "Art des Lernangebots": "Course",
         "Datum der Teilnahme": "2023-04-01",
         "Name der Person oder Kennung": "John Doe",
-        "Disziplin der Person": "Engineering",
+        "Disziplin der Person": "Education",
         "Position der Person": "Student",
         "Name der Institution": "Tech Institute",
-        "Region der Institution (Bundesland)": "Bayern",
+        "Region der Institution (Bundesland)": "Berlin",
         "Beschreibung der Teilnahme (optional)": "Part of curriculum"
     },
     {
@@ -51,7 +51,7 @@
         "Disziplin der Person": "Humanities",
         "Position der Person": "Professor",
         "Name der Institution": "Uni Frankfurt",
-        "Region der Institution (Bundesland)": "Hessen",
+        "Region der Institution (Bundesland)": "Brandenburg",
         "Beschreibung der Teilnahme (optional)": "Guest auditor"
     },
     {
@@ -59,10 +59,10 @@
         "Art des Lernangebots": "Webinar",
         "Datum der Teilnahme": "2023-11-05",
         "Name der Person oder Kennung": "Diana Evans",
-        "Disziplin der Person": "Library Science",
+        "Disziplin der Person": "Humanities",
         "Position der Person": "Practitioner",
         "Name der Institution": "Leipzig Uni",
-        "Region der Institution (Bundesland)": "Sachsen",
+        "Region der Institution (Bundesland)": "Brandenburg",
         "Beschreibung der Teilnahme (optional)": "Professional development"
     },
     {
@@ -70,7 +70,7 @@
         "Art des Lernangebots": "Workshop",
         "Datum der Teilnahme": "2024-01-22",
         "Name der Person oder Kennung": "Evan Davis",
-        "Disziplin der Person": "Education",
+        "Disziplin der Person": "Humanities",
         "Position der Person": "Practitioner",
         "Name der Institution": "Uni Bremen",
         "Region der Institution (Bundesland)": "Bremen",
@@ -81,10 +81,10 @@
         "Art des Lernangebots": "Course",
         "Datum der Teilnahme": "2024-03-14",
         "Name der Person oder Kennung": "Fiona White",
-        "Disziplin der Person": "Computer Science",
+        "Disziplin der Person": "Education",
         "Position der Person": "Student",
         "Name der Institution": "Uni Hamburg",
-        "Region der Institution (Bundesland)": "Hamburg",
+        "Region der Institution (Bundesland)": "Berlin",
         "Beschreibung der Teilnahme (optional)": "Elective course"
     },
     {
@@ -92,10 +92,10 @@
         "Art des Lernangebots": "Webinar",
         "Datum der Teilnahme": "2024-05-30",
         "Name der Person oder Kennung": "George Black",
-        "Disziplin der Person": "Engineering",
+        "Disziplin der Person": "Humanities",
         "Position der Person": "PhD",
         "Name der Institution": "Heidelberg Uni",
-        "Region der Institution (Bundesland)": "BW",
+        "Region der Institution (Bundesland)": "Berlin",
         "Beschreibung der Teilnahme (optional)": "Skill building"
     }
 ]

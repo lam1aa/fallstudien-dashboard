@@ -12,27 +12,13 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg">
-    <div class="container d-flex justify-content-between align-items-center">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="QUADRIGALogo1.png" alt="QUADRIGA Logo" height="62">
-      </a>
-      <ul class="navbar-nav flex-row gap-2">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Page2</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div id="navbar-placeholder"></div>
 
   <main class="container">
 
     <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
       <div>
-        <h2 class="mb-1 fw-bold">Dashboard</h2>
+        <h2 class="mb-1 fw-bold">OER Fallstudien</h2>
         <p class="text-secondary mb-0 small">
           Die auf dieser Seite dargestellten Daten werden dynamisch aus den Metadatendateien der Fallstudien erzeugt.
           <br>
@@ -85,10 +71,20 @@
       </div>
     </section>
 
+    <!-- Workload / time-required -->
+    <section id="workload-section" class="mb-5">
+      <h5 class="mb-3">Workload</h5>
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div id="workload-chart"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- Competency & Data-flow-->
     <section id="competency-section" class="mb-5">
       <div class="d-flex justify-content-between align-items-center mb-2">
-        <h5 class="mb-3">Kompetenz- & Datenflussabdeckung</h5>
+        <h5 class="mb-3">Competency & Dataflow</h5>
         <div class="d-flex gap-2">
           <span class="small text-muted align-self-center">Sortieren nach:</span>
           <select id="sort-filter" class="form-select form-select-sm w-auto">
@@ -126,7 +122,7 @@
     <!-- Bloom's Taxonomy -->
     <section id="bloom-section" class="mb-5">
       <div class="d-flex justify-content-between align-items-center mb-2">
-        <h5 class="mb-3">Blooms Lernzieltaxonomie</h5>
+        <h5 class="mb-3">Bloom's Taxonomy</h5>
         <select id="bloom-type-filter" class="form-select form-select-sm w-auto">
           <option value="all">Alle Typen</option>
           <option value="tabelle">Tabelle</option>
@@ -155,19 +151,105 @@
       </div>
     </section>
 
-    <!-- Workload / time-required -->
-    <section id="workload-section" class="mb-5">
-      <h5 class="mb-3">Zeitaufwand & Wörter je Fallstudie</h5>
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <div id="workload-chart"></div>
+    <!-- Feedback & Nutzung -->
+    <section id="feedback-nutzung-section" class="mb-5">
+      <div class="row g-4">
+        <!-- Left: Weiterempfehlung -->
+        <div class="col-lg-6">
+          <div class="card shadow-sm h-100" style="border-radius: 8px;">
+            <div class="card-body p-4 d-flex flex-column justify-content-center">
+              <div class="text-secondary small fw-medium mb-3">Weiterempfehlung der QUADRIGA-OER</div>
+              <div class="row align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                  <div class="display-4 fw-bold text-dark" id="rec-average" style="line-height: 1;">-</div>
+                  <div class="text-warning fs-5 my-1" id="rec-stars">
+                    ☆☆☆☆☆
+                  </div>
+                  <div class="text-muted small">
+                    n = <span id="rec-count">0</span> Rückmeldungen
+                  </div>
+                </div>
+                <div class="col-md-8" id="rec-bars">
+                  <!-- Populated by JS -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Nutzung & Verbreitung -->
+        <div class="col-lg-6">
+          <h5 class="mb-3">Nutzung & Verbreitung</h5>
+          <div class="row g-3 row-cols-2">
+            <div class="col">
+              <div class="kpi-card h-100">
+                <div class="kpi-title">Anfragen zur Nachnutzung</div>
+                <div class="kpi-value" id="kpi-anfragen">–</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="kpi-card h-100">
+                <div class="kpi-title">Einbindungen in Lehrveranstaltungen</div>
+                <div class="kpi-value" id="kpi-einbindungen">–</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="kpi-card h-100">
+                <div class="kpi-title">Übernahmen durch andere Institutionen</div>
+                <div class="kpi-value" id="kpi-uebernahmen">–</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="kpi-card h-100">
+                <div class="kpi-title">GitHub Downloads & Forks</div>
+                <div class="kpi-value" id="kpi-github">–</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- GitHub Open Issues-->
+    <!-- Teilnahmen an Lernangeboten -->
+    <section id="teilnahmen-section" class="mb-5">
+      <h5 class="mb-3">Teilnahmen an Lernangeboten</h5>
+      <div class="row g-4">
+        <!-- Radial Bar for Position -->
+        <div class="col-lg-4">
+          <div class="card shadow-sm h-100" style="border-radius: 8px;">
+            <div class="card-body">
+              <div class="text-secondary small fw-medium mb-2 text-center">Career Position</div>
+              <div id="teilnahmen-position-chart" class="d-flex justify-content-center"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Text KPI for Regions -->
+        <div class="col-lg-4">
+          <div class="card shadow-sm h-100" style="border-radius: 8px;">
+            <div class="card-body">
+              <div class="text-secondary small fw-medium mb-3">Regional Distribution</div>
+              <div id="teilnahmen-region-list" class="d-flex flex-column gap-2">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Vertical Bar for Discipline -->
+        <div class="col-lg-4">
+          <div class="card shadow-sm h-100" style="border-radius: 8px;">
+            <div class="card-body">
+              <div class="text-secondary small fw-medium mb-2">Discipline Breakdown</div>
+              <div id="teilnahmen-discipline-chart"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GitHub Open Issues and book links-->
     <section id="fallstudie-section" class="mb-5">
-      <h5 class="mb-3">Alle Fallstudien</h5>
       <div id="type-group-cards" class="row g-3 mb-4"></div>
     </section>
 
@@ -176,18 +258,13 @@
 
   </main>
 
-  <footer class="text-center py-3 mt-5 small text-muted" style="border-top: 1px solid var(--quadriga-border);">
-    © <span id="current-year">...</span> QUADRIGA Berlin-Brandenburgisches Datenkompetenzzentrum
-  </footer>
-
-  
-  <script>
-    document.getElementById("current-year").textContent = new Date().getFullYear();
-  </script>
+  <div id="footer-placeholder"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.51.0/dist/apexcharts.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="js/components.js"></script>
 
   <script type="module" src="js/main.js?v=2"></script>
 </body>

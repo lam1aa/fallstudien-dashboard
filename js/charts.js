@@ -61,6 +61,114 @@ function buildWorkloadColors(count) {
   );
 }
 
+export function renderTeilnahmenCharts(data) {
+  if (!Array.isArray(data)) return;
+
+  const total = data.length;
+  const positions = {};
+  const disciplines = {};
+  
+  data.forEach(item => {
+    const pos = item["Position der Person"];
+    const disc = item["Disziplin der Person"];
+    if (pos) positions[pos] = (positions[pos] || 0) + 1;
+    if (disc) disciplines[disc] = (disciplines[disc] || 0) + 1;
+  });
+  
+  const sortedPositions = Object.entries(positions).sort((a, b) => b[1] - a[1]);
+  const sortedDisciplines = Object.entries(disciplines).sort((a, b) => b[1] - a[1]);
+
+  const colorPalette = ["#1b4f8c", "#00b8c4", "#334155", "#85b9e0", "#a0aec0", "#475569", "#0ea5e9"];
+
+  // 1. Radial Bar Chart for Career Positions
+  const posLabels = sortedPositions.map(p => p[0]);
+  const maxCount = sortedPositions.length > 0 ? sortedPositions[0][1] : 1;
+  const posSeries = sortedPositions.map(p => Math.round((p[1] / maxCount) * 100)); // Proportional to max
+  
+  const container = document.querySelector("#teilnahmen-position-chart");
+  container.innerHTML = `<div id="teilnahmen-position-apex" class="w-100 d-flex justify-content-center"></div>`;
+
+  const radialOptions = {
+    series: posSeries,
+    chart: {
+      height: 380,
+      type: 'radialBar',
+    },
+    plotOptions: {
+      radialBar: {
+        startAngle: -135, // Centered gauge style
+        endAngle: 135,    // 270 degrees total
+        hollow: {
+          size: '40%',
+        },
+        track: {
+          background: '#f1f5f9',
+          margin: 6 
+        },
+        dataLabels: {
+          name: {
+            fontSize: '13px',
+            color: '#334155',
+            offsetY: 20
+          },
+          value: {
+            fontSize: '28px',
+            fontWeight: 'bold',
+            color: '#1b4f8c',
+            formatter: function (val) {
+              // The val is the percentage (val = (count / maxCount) * 100). 
+              // We reverse the math to show the true absolute count when hovered.
+              return Math.round((val / 100) * maxCount);
+            },
+            offsetY: -10
+          },
+          total: {
+            show: true,
+            label: 'Teilnahmen',
+            color: '#888',
+            formatter: function () {
+              return total;
+            }
+          }
+        }
+      }
+    },
+    colors: colorPalette,
+    labels: posLabels,
+    legend: {
+      show: false
+    },
+    stroke: {
+      lineCap: 'round'
+    }
+  };
+  new ApexCharts(document.querySelector("#teilnahmen-position-apex"), radialOptions).render();
+
+  // 2. Vertical Bar Chart for Disciplines
+  const discLabels = sortedDisciplines.map(d => d[0]);
+  const discSeries = sortedDisciplines.map(d => d[1]);
+  
+  const barOptions = {
+    series: [{ name: 'Anzahl', data: discSeries }],
+    chart: { type: 'bar', height: 350, toolbar: { show: false } },
+    plotOptions: {
+      bar: {
+        borderRadius: 4,
+        dataLabels: { position: 'center' }
+      }
+    },
+    dataLabels: {
+      enabled: true,
+      style: { colors: ['#fff'] }
+    },
+    xaxis: { categories: discLabels },
+    colors: ["#1b4f8c"],
+    yaxis: { show: false },
+    grid: { show: false }
+  };
+  new ApexCharts(document.querySelector("#teilnahmen-discipline-chart"), barOptions).render();
+}
+
 export function renderWorkloadChart(categories, series) {
   const options = {
     chart: { type: "line", height: 420, stacked: true, toolbar: { show: true } },
@@ -309,64 +417,5 @@ export function renderDataFlowChart(categories, values) {
 //   new ApexCharts(document.querySelector("#competency-dataflow-heatmap"), options).render();
 // }
 
-// ── Feature 7: type-group cards ──────────────────────────────────────────────
-function issueBadge(count) {
-  if (count === null || count === undefined) {
-    return `<span class="badge bg-secondary">n/a</span>`;
-  }
-  if (count === 0) return `<span class="badge bg-success">✅ 0</span>`;
-  if (count <= 10) return `<span class="badge bg-warning text-dark">🟡 ${count}</span>`;
-  return `<span class="badge bg-danger">🔴 ${count}</span>`;
-}
 
-function headerIssuesText(count) {
-  if (count === null || count === undefined) {
-    return `<span class="fst-italic text-muted">Open Issues: n/a</span>`;
-  }
-  return `<span class="fst-italic text-muted">Open Issues: <span class="fw-bold fst-normal text-dark">${count}</span></span>`;
-}
 
-function shortIndexLabel(fullLabel) {
-  const match = fullLabel.match(/(\d+)$/);
-  return match ? `FS${match[1]}:` : fullLabel;
-}
-
-function caseStudyLink(fullLabel, bookUrl) {
-  const label = shortIndexLabel(fullLabel);
-  if (!bookUrl) {
-    return `<span class="fst-italic">${label}</span>`;
-  }
-  return `<a href="${bookUrl}" target="_blank" class="fst-italic" title="Jupyter Book öffnen">📖 ${label}</a>`;
-}
-
-function doiBadge(doi) {
-  if (!doi || doi.includes("TODO")) return "";
-  const cleanDoi = doi.replace(/^https?:\/\/doi\.org\//i, "");
-  return `<a href="https://doi.org/${cleanDoi}" target="_blank" class="doi-badge"><span class="doi-label">DOI</span><span class="doi-value">${cleanDoi}</span></a>`;
-}
-
-export function renderTypeGroupCards(summaries) {
-  const container = document.getElementById("type-group-cards");
-  container.innerHTML = summaries
-    .map(
-      (group) => `<div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-header d-flex justify-content-between align-items-center">
-            <span>${group.icon} <strong>${group.label}</strong></span>
-            ${headerIssuesText(group.totalOpenIssues)}
-          </div>
-          <ul class="list-group list-group-flush">
-            ${group.repos
-          .map(
-            (r) => `<li class="list-group-item d-flex justify-content-between align-items-center small">
-                  <span>${caseStudyLink(r.label, r.bookUrl)} v${r.version} ${doiBadge(r.doi)}</span>
-                  <span>${issueBadge(r.openIssues)}</span>
-                </li>`
-          )
-          .join("")}
-          </ul>
-        </div>
-      </div>`
-    )
-    .join("");
-}
