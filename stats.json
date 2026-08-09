@@ -462,12 +462,12 @@
     ]
   },
   "tabelle-04": {
-    "wordCount": 9948,
-    "openIssues": 7,
+    "wordCount": 9830,
+    "openIssues": 6,
     "chapterCounts": [
       {
         "chapter": "Titelseite",
-        "words": 517
+        "words": 524
       },
       {
         "chapter": "Kapitel1_Einstieg/einleitung",
@@ -527,11 +527,11 @@
       },
       {
         "chapter": "Kapitel4_Publikation/aufbewahrung",
-        "words": 2233
+        "words": 2110
       },
       {
         "chapter": "Kapitel4_Publikation/publikation",
-        "words": 340
+        "words": 338
       },
       {
         "chapter": "Kapitel4_Publikation/kommunikation",
