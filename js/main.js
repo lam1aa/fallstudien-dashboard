@@ -24,7 +24,8 @@ import {
   renderNutzung,
   renderRecommendations,
   renderTypeGroupCards,
-  renderTeilnahmenRegion
+  renderTeilnahmenRegion,
+  renderDownloadsChart
 } from "./dashboard-widgets.js?v=2";
 
 /**
@@ -117,6 +118,9 @@ async function init() {
         if (assessmentEl) assessmentEl.textContent = totalAssessments;
         const zenodoEl = document.getElementById("kpi-zenodo-downloads");
         if (zenodoEl) zenodoEl.textContent = totalZenodoDownloads.toLocaleString("de-DE");
+
+        // Render downloads chart (uses statsData for both download fields)
+        renderDownloadsChart(statsData);
       }
     } catch (e) {
       console.warn("Could not fetch stats.json", e);

@@ -151,35 +151,18 @@
       </div>
     </section>
 
-    <!-- Feedback & Nutzung -->
-    <section id="feedback-nutzung-section" class="mb-5">
-      <div class="row g-4">
-        <!-- Left: Weiterempfehlung -->
-        <div class="col-lg-6">
-          <div class="card shadow-sm h-100" style="border-radius: 8px;">
-            <div class="card-body p-4 d-flex flex-column justify-content-center">
-              <div class="text-secondary small fw-medium mb-3">Weiterempfehlung der QUADRIGA-OER</div>
-              <div class="row align-items-center">
-                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-                  <div class="display-4 fw-bold text-dark" id="rec-average" style="line-height: 1;">-</div>
-                  <div class="text-warning fs-5 my-1" id="rec-stars">
-                    ☆☆☆☆☆
-                  </div>
-                  <div class="text-muted small">
-                    n = <span id="rec-count">0</span> Rückmeldungen
-                  </div>
-                </div>
-                <div class="col-md-8" id="rec-bars">
-                  <!-- Populated by JS -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- GitHub Open Issues and book links (moved here, after Bloom's) -->
+    <section id="fallstudie-section" class="mb-5">
+      <div id="type-group-cards" class="row g-3 mb-4"></div>
+    </section>
 
-        <!-- Right: Nutzung & Verbreitung -->
+    <!-- Nutzung & Verbreitung -->
+    <section id="nutzung-section" class="mb-5">
+      <h5 class="mb-3">Nutzung &amp; Verbreitung</h5>
+
+      <div class="row g-4">
+        <!-- Left half: 2x2 KPIs -->
         <div class="col-lg-6">
-          <h5 class="mb-3">Nutzung & Verbreitung</h5>
           <div class="row g-3 row-cols-2">
             <div class="col">
               <div class="kpi-card h-100">
@@ -199,12 +182,27 @@
                 <div class="kpi-value" id="kpi-uebernahmen">–</div>
               </div>
             </div>
-
             <div class="col">
               <div class="kpi-card h-100">
                 <div class="kpi-title">Zenodo Downloads</div>
                 <div class="kpi-value" id="kpi-zenodo-downloads">–</div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right half: barchart -->
+        <div class="col-lg-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <span class="text-muted small">Downloads per Fallstudie</span>
+              <select id="downloads-mode-select" class="form-select form-select-sm w-auto">
+                <option value="all">Alle Downloads</option>
+                <option value="version">Letzte Version</option>
+              </select>
+            </div>
+            <div class="card-body">
+              <div id="downloads-chart"></div>
             </div>
           </div>
         </div>
@@ -249,13 +247,28 @@
       </div>
     </section>
 
-    <!-- GitHub Open Issues and book links-->
-    <section id="fallstudie-section" class="mb-5">
-      <div id="type-group-cards" class="row g-3 mb-4"></div>
+    <!-- Weiterempfehlung (Feedback) – centered, at end of page -->
+    <section id="feedback-section" class="mb-5">
+      <div class="card shadow-sm mx-auto" style="max-width: 620px; border-radius: 8px;">
+        <div class="card-body p-4 d-flex flex-column justify-content-center">
+          <div class="text-secondary small fw-medium mb-3 text-center">Weiterempfehlung der QUADRIGA-OER</div>
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+              <div class="display-4 fw-bold text-dark" id="rec-average" style="line-height: 1;">-</div>
+              <div class="text-warning fs-5 my-1" id="rec-stars">
+                ☆☆☆☆☆
+              </div>
+              <div class="text-muted small">
+                n = <span id="rec-count">0</span> Rückmeldungen
+              </div>
+            </div>
+            <div class="col-md-8" id="rec-bars">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
-
-
 
   </main>
 

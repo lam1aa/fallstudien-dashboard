@@ -224,3 +224,148 @@ export function renderTeilnahmenRegion(data) {
     `;
   });
 }
+
+/**
+ * Renders a grouped horizontal bar chart showing Zenodo downloads per Fallstudie type.
+ * Responds to the #downloads-mode-select dropdown to toggle between
+ * "Alle Downloads" (zenodoDownloadsAll) and "Letzte Version" (zenodoDownloadsVersion).
+ * Default mode is 'version'.
+ * @param {Object} statsData - The full stats.json data object, keyed by book ID.
+ */
+let _downloadsChart = null;
+
+export function renderDownloadsChart(statsData) {
+  const container = document.getElementById("downloads-chart");
+  const select = document.getElementById("downloads-mode-select");
+  if (!container || !select) return;
+
+  // Set default to Letzte Version if not already set
+  if (!select.dataset.defaultSet) {
+    select.value = "version";
+    select.dataset.defaultSet = "true";
+  }
+
+  /**
+   * Build the bar chart data array for the given mode.
+   * @param {"all"|"version"} mode
+   */
+  function buildData(mode) {
+    const field = mode === "version" ? "zenodoDownloadsVersion" : "zenodoDownloadsAll";
+    
+    const categories = ['Tabelle', 'Text', 'Bewegtes Bild'];
+    const prefixMap = {
+      'Tabelle': 'tabelle',
+      'Text': 'text',
+      'Bewegtes Bild': 'bild'
+    };
+    
+    const series = [
+      { name: 'FS1', suffix: '01' },
+      { name: 'FS2', suffix: '02' },
+      { name: 'FS3', suffix: '03' },
+      { name: 'FS4', suffix: '04' }
+    ].map(s => ({
+      name: s.name,
+      data: categories.map(cat => {
+        const key = `${prefixMap[cat]}-${s.suffix}`;
+        return statsData[key] ? (statsData[key][field] || 0) : 0;
+      })
+    }));
+
+    return { categories, series };
+  }
+
+  /**
+   * Draw (or redraw) the chart with the given data.
+   * @param {"all"|"version"} mode
+   */
+  function draw(mode) {
+    const { categories, series } = buildData(mode);
+
+    if (_downloadsChart) {
+      _downloadsChart.destroy();
+      _downloadsChart = null;
+    }
+
+    const options = {
+      chart: {
+        type: "bar",
+        height: "80%",
+        stacked: true,
+        toolbar: { show: false },
+        animations: { enabled: true, speed: 400 },
+        parentHeightOffset: 0
+      },
+      series: series,
+      plotOptions: {
+        bar: {
+          horizontal: true,
+          borderRadius: 3,
+          dataLabels: {
+            position: 'center',
+            hideOverflowingLabels: false
+          },
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        style: {
+          fontSize: '11px',
+          fontWeight: 600,
+          colors: ['#fff']
+        },
+        formatter: function (val) {
+          return val > 0 ? val : '';
+        }
+      },
+      stroke: {
+        width: 1,
+        colors: ['#fff']
+      },
+      tooltip: {
+        shared: true,
+        intersect: false,
+        y: {
+          formatter: val => `${val} Downloads`
+        }
+      },
+      xaxis: {
+        categories: categories,
+        labels: { show: false },
+        axisBorder: { show: false },
+        axisTicks: { show: false }
+      },
+      yaxis: {
+        labels: {
+          style: {
+            fontSize: '13px',
+            fontWeight: 500,
+            colors: '#2c3e50'
+          }
+        }
+      },
+      grid: {
+        show: false,
+        padding: { top: -15, right: 10, bottom: -15, left: 10 }
+      },
+      colors: [
+        "#4A78B8", "#638ECB", "#8DB3E2", "#B1C9EF"
+      ],
+      legend: {
+        show: false
+      }
+    };
+
+    _downloadsChart = new ApexCharts(container, options);
+    _downloadsChart.render();
+  }
+
+  // Initial render
+  draw(select.value);
+
+  // Dropdown listener (attach only once)
+  if (!select.dataset.listenerAttached) {
+    select.dataset.listenerAttached = "true";
+    select.addEventListener("change", () => draw(select.value));
+  }
+}
