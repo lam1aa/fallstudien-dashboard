@@ -1,7 +1,9 @@
 name: Update Stats
+
+# Runs weekly on Sunday at 3 AM or manually via dispatch
 on:
   schedule:
-    - cron: "0 3 * * *"
+    - cron: "0 3 * * 0"
   workflow_dispatch:
 
 permissions:
@@ -12,16 +14,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
+          
       - name: Install dependencies
         run: npm install js-yaml
+        
       - name: Fetch issue counts and stats
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          node js/fetch-stats.js
+          node scripts/fetch-stats.js
 
       - name: Commit data
         run: |

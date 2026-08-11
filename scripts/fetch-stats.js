@@ -1,8 +1,16 @@
+/**
+ * @file fetch-stats.js
+ * @description Node.js script to fetch metadata, word counts, and open issues across GitHub repositories, outputting to stats.json.
+ */
 const fs = require("fs");
 const jsyaml = require("js-yaml");
 const config = require("../config.json");
 
-// Helper to extract all document paths from a _toc.yml object
+/**
+ * Recursively extracts all document paths from a _toc.yml object structure.
+ * @param {Object|Array} tocObj - The Table of Contents object from js-yaml.
+ * @returns {Array<string>} A flat list of file paths.
+ */
 function extractTocFiles(tocObj) {
   let files = [];
   
@@ -20,6 +28,11 @@ function extractTocFiles(tocObj) {
   return files;
 }
 
+/**
+ * Counts words in a text string, stripping out HTML/Markdown/MyST formatting.
+ * @param {string} text - The raw markdown or text string.
+ * @returns {number} The estimated word count.
+ */
 function countWords(text) {
   let clean = text
     .replace(/<!--[\s\S]*?-->/g, ' ')       // HTML comments
@@ -36,6 +49,9 @@ function countWords(text) {
   return words.length;
 }
 
+/**
+ * Main script execution: Iterates through configured repositories, fetches stats, and writes stats.json.
+ */
 async function main() {
   const results = {};
 
@@ -131,8 +147,37 @@ async function main() {
           openIssues = issueData.open_issues_count;
         }
 
-        console.log(`  -> Words: ${wordCount}, Issues: ${openIssues}`);
-        results[cs.id] = { wordCount, openIssues, chapterCounts };
+        // Fetch Zenodo stats
+        let zenodoDownloadsAll = 0;
+        let zenodoDownloadsVersion = 0;
+        try {
+          const metaPath = cs.metadataPath || "metadata.yml";
+          const metaUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${metaPath}`;
+          const metaRes = await fetch(metaUrl);
+          if (metaRes.ok) {
+            const metaText = await metaRes.text();
+            const metaObj = jsyaml.load(metaText);
+            if (metaObj && metaObj.identifier) {
+              const match = String(metaObj.identifier).match(/zenodo\.(\d+)/i);
+              if (match && match[1]) {
+                const zenodoId = match[1];
+                const zenodoRes = await fetch(`https://zenodo.org/api/records/${zenodoId}`);
+                if (zenodoRes.ok) {
+                  const zenodoData = await zenodoRes.json();
+                  if (zenodoData.stats) {
+                    zenodoDownloadsAll = zenodoData.stats.unique_downloads || 0;
+                    zenodoDownloadsVersion = zenodoData.stats.version_unique_downloads || 0;
+                  }
+                }
+              }
+            }
+          }
+        } catch (err) {
+          console.warn(`  [WARN] Error fetching Zenodo stats for ${repo}:`, err.message);
+        }
+
+        console.log(`  -> Words: ${wordCount}, Issues: ${openIssues}, Zenodo Downloads (Version): ${zenodoDownloadsVersion}, Zenodo Downloads (All): ${zenodoDownloadsAll}`);
+        results[cs.id] = { wordCount, openIssues, chapterCounts, zenodoDownloadsAll, zenodoDownloadsVersion };
 
     } catch (err) {
       console.warn(`[ERROR] Failed processing ${repo}:`, err.message);

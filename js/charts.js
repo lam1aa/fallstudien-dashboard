@@ -1,3 +1,8 @@
+/**
+ * @file charts.js
+ * @description Contains functions to configure and render ApexCharts visualizations for dashboard data.
+ */
+
 // ── Shared color palette ────────────────────────────────────────────────────
 const PALETTE = {
   indigo: "#638ecb",
@@ -61,6 +66,10 @@ function buildWorkloadColors(count) {
   );
 }
 
+/**
+ * Renders the Teilnahmen (participation) radial and bar charts.
+ * @param {Array} data - The raw participation JSON data.
+ */
 export function renderTeilnahmenCharts(data) {
   if (!Array.isArray(data)) return;
 
@@ -169,6 +178,11 @@ export function renderTeilnahmenCharts(data) {
   new ApexCharts(document.querySelector("#teilnahmen-discipline-chart"), barOptions).render();
 }
 
+/**
+ * Renders the workload stacked line/area chart.
+ * @param {Array} categories - The x-axis category labels (case study names).
+ * @param {Array} series - The chart series data containing workload and word counts.
+ */
 export function renderWorkloadChart(categories, series) {
   const options = {
     chart: { type: "line", height: 420, stacked: true, toolbar: { show: true } },
@@ -248,6 +262,12 @@ export function renderWorkloadChart(categories, series) {
 }
 
 // ── Feature 3a, 3b: Bloom ────────────────────────────────────────────────────
+
+/**
+ * Renders a stacked bar chart showing the distribution of Bloom taxonomy levels per case study.
+ * @param {Array} categories - The x-axis category labels.
+ * @param {Array} series - The Bloom taxonomy series data.
+ */
 export function renderBloomPerCaseChart(categories, series) {
   const options = {
     chart: { type: "bar", height: 380, stacked: true, toolbar: { show: true } },
@@ -279,6 +299,11 @@ export function renderBloomPerCaseChart(categories, series) {
   window.bloomPerCaseInstance.render();
 }
 
+/**
+ * Renders a global donut chart showing the overall distribution of Bloom taxonomy levels.
+ * @param {Array} labels - The Bloom taxonomy labels.
+ * @param {Array} values - The corresponding counts for each level.
+ */
 export function renderBloomGlobalChart(labels, values) {
   const options = {
     chart: { type: "donut", height: 340 },
@@ -315,6 +340,12 @@ export function renderBloomGlobalChart(labels, values) {
 }
 
 // ── Feature 4a: competency bar ───────────────────────────────────────────────
+
+/**
+ * Renders a horizontal bar chart showing the coverage of data competencies.
+ * @param {Array} categories - The competency labels.
+ * @param {Array} values - The corresponding counts.
+ */
 export function renderCompetencyChart(categories, values) {
   const options = {
     chart: { type: "bar", height: 460, toolbar: { show: true } },
@@ -338,6 +369,12 @@ export function renderCompetencyChart(categories, values) {
 }
 
 // ── Feature 4b: data-flow bar (sorted highest first) ─────────────────────────
+
+/**
+ * Renders a vertical bar chart showing the coverage of data-flow stages.
+ * @param {Array} categories - The data-flow stage labels.
+ * @param {Array} values - The corresponding counts.
+ */
 export function renderDataFlowChart(categories, values) {
   const options = {
     chart: { type: "bar", height: 460, toolbar: { show: false } },

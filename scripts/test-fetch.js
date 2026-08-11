@@ -1,6 +1,14 @@
+/**
+ * @file test-fetch.js
+ * @description Node.js script for testing fetch logic and generating a sample chapter breakdown markdown file.
+ */
 const fs = require('fs');
 const jsyaml = require('js-yaml');
-
+/**
+ * Recursively extracts all document paths from a _toc.yml object structure.
+ * @param {Object|Array} tocObj - The Table of Contents object.
+ * @returns {Array<string>} A flat list of file paths.
+ */
 function extractTocFiles(tocObj) {
   let files = [];
   if (Array.isArray(tocObj)) {
@@ -15,6 +23,11 @@ function extractTocFiles(tocObj) {
   return files;
 }
 
+/**
+ * Counts words in a text string, stripping out HTML/Markdown/MyST formatting.
+ * @param {string} text - The raw markdown or text string.
+ * @returns {number} The estimated word count.
+ */
 function countWords(text) {
   let clean = text
     .replace(/<!--[\s\S]*?-->/g, ' ')       // HTML comments
@@ -31,6 +44,13 @@ function countWords(text) {
   return words.length;
 }
 
+/**
+ * Fetches the GitHub tree and markdown content for a given repository to calculate word counts per chapter.
+ * @param {string} repo - The repository name.
+ * @param {string} owner - The repository owner (default: 'quadriga-dk').
+ * @param {string} branch - The branch to read from (default: 'main').
+ * @returns {Promise<string>} Markdown formatted table of word counts.
+ */
 async function getStats(repo, owner = 'quadriga-dk', branch = 'main') {
   const treeUrl = `https://api.github.com/repos/${owner}/${repo}/git/trees/${branch}?recursive=1`;
   const treeRes = await fetch(treeUrl);
@@ -101,6 +121,9 @@ async function getStats(repo, owner = 'quadriga-dk', branch = 'main') {
   return md;
 }
 
+/**
+ * Main script execution: Fetches stats for sample case studies and writes chapter_breakdown.md.
+ */
 async function main() {
   const md1 = await getStats('Tabelle-Fallstudie-1');
   const md2 = await getStats('Bewegtes-Bild-Fallstudie-1');

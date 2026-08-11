@@ -1,3 +1,11 @@
+/**
+ * @file dashboard-widgets.js
+ * @description Fetches data and renders secondary dashboard UI components such as usage statistics, recommendations, badges, and region lists.
+ */
+
+/**
+ * Fetches and renders the QUADRIGA OER usage statistics (Nutzung).
+ */
 export async function renderNutzung() {
   try {
     const res = await fetch("data/Nutzung_der_QUADRIGA_OER.json?v=" + new Date().getTime());
@@ -23,15 +31,14 @@ export async function renderNutzung() {
     if (kpiUebernahmen) kpiUebernahmen.textContent = uebernahmen;
     if (kpiAnfragen) kpiAnfragen.textContent = anfragen;
 
-    // Placeholder for GitHub stats until API integration is available
-    const kpiGithub = document.getElementById("kpi-github");
-    if (kpiGithub) kpiGithub.textContent = "15"; // e.g. 10 downloads, 5 forks
-
   } catch (err) {
     console.warn("Could not fetch Nutzung_der_QUADRIGA_OER.json", err);
   }
 }
 
+/**
+ * Fetches and renders the user recommendation statistics and visualizes the score distribution.
+ */
 export async function renderRecommendations() {
   try {
     const res = await fetch("data/Weiterempfehlung_QUADRIGA_OER.json?v=" + new Date().getTime());
@@ -86,6 +93,11 @@ export async function renderRecommendations() {
   }
 }
 
+/**
+ * Generates an HTML badge for the open issue count.
+ * @param {number|null} count - The number of open issues.
+ * @returns {string} The HTML string for the issue badge.
+ */
 function issueBadge(count) {
   if (count === null || count === undefined) {
     return `<span class="badge bg-secondary">n/a</span>`;
@@ -95,6 +107,11 @@ function issueBadge(count) {
   return `<span class="badge bg-danger">🔴 ${count}</span>`;
 }
 
+/**
+ * Generates an HTML span indicating the open issue count for card headers.
+ * @param {number|null} count - The number of open issues.
+ * @returns {string} The HTML string for the header text.
+ */
 function headerIssuesText(count) {
   if (count === null || count === undefined) {
     return `<span class="fst-italic text-muted">Open Issues: n/a</span>`;
@@ -102,11 +119,22 @@ function headerIssuesText(count) {
   return `<span class="fst-italic text-muted">Open Issues: <span class="fw-bold fst-normal text-dark">${count}</span></span>`;
 }
 
+/**
+ * Simplifies a full case study label to a shorter index prefix (e.g., "FS1:").
+ * @param {string} fullLabel - The full case study label.
+ * @returns {string} The shortened label.
+ */
 function shortIndexLabel(fullLabel) {
   const match = fullLabel.match(/(\d+)$/);
   return match ? `FS${match[1]}:` : fullLabel;
 }
 
+/**
+ * Generates an HTML link to a case study's Jupyter Book, using the short index label.
+ * @param {string} fullLabel - The full case study label.
+ * @param {string} bookUrl - The URL to the case study's Jupyter Book.
+ * @returns {string} The HTML anchor tag or span for the case study.
+ */
 function caseStudyLink(fullLabel, bookUrl) {
   const label = shortIndexLabel(fullLabel);
   if (!bookUrl) {
@@ -115,12 +143,21 @@ function caseStudyLink(fullLabel, bookUrl) {
   return `<a href="${bookUrl}" target="_blank" class="fst-italic" title="Jupyter Book öffnen">📖 ${label}</a>`;
 }
 
+/**
+ * Generates an HTML badge linking to the case study's DOI.
+ * @param {string} doi - The Digital Object Identifier string.
+ * @returns {string} The HTML string for the DOI badge.
+ */
 function doiBadge(doi) {
   if (!doi || doi.includes("TODO")) return "";
   const cleanDoi = doi.replace(/^https?:\/\/doi\.org\//i, "");
   return `<a href="https://doi.org/${cleanDoi}" target="_blank" class="doi-badge"><span class="doi-label">DOI</span><span class="doi-value">${cleanDoi}</span></a>`;
 }
 
+/**
+ * Renders the Type Group summary cards for different case study categories (Tabelle, Text, Bild).
+ * @param {Array} summaries - Array of objects containing group summary data.
+ */
 export function renderTypeGroupCards(summaries) {
   const container = document.getElementById("type-group-cards");
   container.innerHTML = summaries
@@ -147,6 +184,10 @@ export function renderTypeGroupCards(summaries) {
     .join("");
 }
 
+/**
+ * Renders a list of regions (Bundesländer) and the participant count per region based on survey data.
+ * @param {Array} data - Array of participation records containing region information.
+ */
 export function renderTeilnahmenRegion(data) {
   if (!Array.isArray(data)) return;
 

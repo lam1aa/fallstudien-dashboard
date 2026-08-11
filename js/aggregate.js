@@ -1,3 +1,13 @@
+/**
+ * @file aggregate.js
+ * @description Aggregates and transforms raw case study data into structured series formats required by the charts.
+ */
+
+/**
+ * Parses an ISO 8601 duration string into total minutes.
+ * @param {string} iso - The ISO duration string (e.g., "PT1H30M").
+ * @returns {number} The total duration in minutes.
+ */
 function parseIsoDurationToMinutes(iso) {
   if (!iso || typeof iso !== "string") return 0;
   const match = iso.match(/PT(?:(\d+)H)?(?:(\d+)M)?/);
@@ -14,6 +24,11 @@ function getShortLabel(repoName) {
     .replace(/--+/g, "-");
 }
 
+/**
+ * Computes high-level Key Performance Indicators (KPIs) across all case studies.
+ * @param {Array} caseStudies - The list of case study objects.
+ * @returns {Object} An object containing total cases, chapters, objectives, and completion ratio.
+ */
 export function computeOverviewKpis(caseStudies) {
   const complete = caseStudies.filter((cs) => cs.status === "complete");
 
@@ -35,6 +50,11 @@ export function computeOverviewKpis(caseStudies) {
   return { totalCases, totalChapters, totalObjectives, completeRatio };
 }
 
+/**
+ * Builds the data series for the workload chart (time required and word count).
+ * @param {Array} caseStudies - The list of case study objects.
+ * @returns {Object} An object containing categories and chart series.
+ */
 export function buildWorkloadSeries(caseStudies) {
   const complete = caseStudies.filter((cs) => cs.status === "complete");
 
@@ -135,6 +155,12 @@ function hasBloomData(cs) {
   return allObjectives(cs).some((o) => BLOOM_ORDER.includes(normaliseBloom(o["blooms-category"])));
 }
 
+/**
+ * Builds the data series for the Bloom taxonomy per-case chart.
+ * @param {Array} caseStudies - The list of case study objects.
+ * @param {string} type - Optional filter for case study type.
+ * @returns {Object} Categories and series for the chart.
+ */
 export function buildBloomPerCaseSeries(caseStudies, type = "all") {
   const filtered = filterByType(caseStudies, type)
     .filter((cs) => cs.status === "complete")
@@ -147,6 +173,12 @@ export function buildBloomPerCaseSeries(caseStudies, type = "all") {
   return { categories, series };
 }
 
+/**
+ * Builds the data series for the global Bloom taxonomy donut chart.
+ * @param {Array} caseStudies - The list of case study objects.
+ * @param {string} type - Optional filter for case study type.
+ * @returns {Object} Labels and values for the chart.
+ */
 export function buildBloomGlobalSeries(caseStudies, type = "all") {
   const filtered = filterByType(caseStudies, type).filter((cs) => cs.status === "complete");
   const counts = Object.fromEntries(BLOOM_ORDER.map((l) => [l, 0]));
@@ -193,6 +225,13 @@ const DATAFLOW_ORDER = [
   "5 Publikation und Nachnutzung"
 ];
 
+/**
+ * Builds the data series for the competency coverage chart.
+ * @param {Array} caseStudies - The list of case study objects.
+ * @param {string} type - Optional filter for case study type.
+ * @param {string} sortMode - How to sort the categories ("alpha" or "count").
+ * @returns {Object} Categories and values for the chart.
+ */
 export function buildCompetencySeries(caseStudies, type = "all", sortMode = "alpha") {
   const complete = filterByType(caseStudies, type).filter((cs) => cs.status === "complete");
   const counts = {};
@@ -222,6 +261,13 @@ export function buildCompetencySeries(caseStudies, type = "all", sortMode = "alp
   return { categories: sorted.map(([k]) => k), values: sorted.map(([, v]) => v) };
 }
 
+/**
+ * Builds the data series for the data-flow stages chart.
+ * @param {Array} caseStudies - The list of case study objects.
+ * @param {string} type - Optional filter for case study type.
+ * @param {string} sortMode - How to sort the categories ("alpha" or "count").
+ * @returns {Object} Categories and values for the chart.
+ */
 export function buildDataFlowSeries(caseStudies, type = "all", sortMode = "alpha") {
   const complete = filterByType(caseStudies, type).filter((cs) => cs.status === "complete");
   const counts = {};
@@ -338,6 +384,11 @@ const TYPE_GROUPS = [
   { key: "bild", label: "Bewegtes Bild", icon: "🎬", match: (repo) => /^Bewegtes-Bild-/i.test(repo) },
 ];
 
+/**
+ * Builds summary objects for the different type groups (Tabelle, Text, Bild).
+ * @param {Array} caseStudies - The list of case study objects.
+ * @returns {Array} An array of group summary objects.
+ */
 export function buildTypeGroupSummaries(caseStudies) {
   return TYPE_GROUPS.map((group) => {
     const members = caseStudies.filter((cs) => group.match(cs.repo));

@@ -1,9 +1,17 @@
+/**
+ * @file layout.js
+ * @description Handles dynamic loading of global UI components like the navigation bar and footer.
+ */
+
 // Automatically load components when the script is parsed
 document.addEventListener("DOMContentLoaded", () => {
   loadNavbar();
   loadFooter();
 });
 
+/**
+ * Injects the navigation bar HTML into the page and sets the active navigation link based on the current URL.
+ */
 function loadNavbar() {
   const navbarHTML = `
   <nav class="navbar navbar-expand-lg">
@@ -38,6 +46,9 @@ function loadNavbar() {
   }
 }
 
+/**
+ * Injects the footer HTML with the current year into the page.
+ */
 function loadFooter() {
   const year = new Date().getFullYear();
   const footerHTML = `

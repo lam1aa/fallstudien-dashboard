@@ -175,7 +175,9 @@
         "chapter": "Markdown/9_5_impressum",
         "words": 35
       }
-    ]
+    ],
+    "zenodoDownloadsAll": 98,
+    "zenodoDownloadsVersion": 8
   },
   "tabelle-02": {
     "wordCount": 25882,
@@ -325,7 +327,9 @@
         "chapter": "abschluss/impressum",
         "words": 35
       }
-    ]
+    ],
+    "zenodoDownloadsAll": 8,
+    "zenodoDownloadsVersion": 5
   },
   "tabelle-03": {
     "wordCount": 22567,
@@ -459,15 +463,17 @@
         "chapter": "7_abschluss/7.5_impressum",
         "words": 35
       }
-    ]
+    ],
+    "zenodoDownloadsAll": 0,
+    "zenodoDownloadsVersion": 0
   },
   "tabelle-04": {
-    "wordCount": 9948,
-    "openIssues": 7,
+    "wordCount": 9830,
+    "openIssues": 6,
     "chapterCounts": [
       {
         "chapter": "Titelseite",
-        "words": 517
+        "words": 524
       },
       {
         "chapter": "Kapitel1_Einstieg/einleitung",
@@ -527,11 +533,11 @@
       },
       {
         "chapter": "Kapitel4_Publikation/aufbewahrung",
-        "words": 2233
+        "words": 2110
       },
       {
         "chapter": "Kapitel4_Publikation/publikation",
-        "words": 340
+        "words": 338
       },
       {
         "chapter": "Kapitel4_Publikation/kommunikation",
@@ -565,7 +571,9 @@
         "chapter": "Kapitel5_Abschluss/impressum",
         "words": 31
       }
-    ]
+    ],
+    "zenodoDownloadsAll": 0,
+    "zenodoDownloadsVersion": 0
   },
   "text-01": {
     "wordCount": 39742,
@@ -771,7 +779,9 @@
         "chapter": "abschluss/impressum",
         "words": 31
       }
-    ]
+    ],
+    "zenodoDownloadsAll": 58,
+    "zenodoDownloadsVersion": 30
   },
   "text-02": {
     "wordCount": 31031,
@@ -957,7 +967,9 @@
         "chapter": "epilog/impressum",
         "words": 31
       }
-    ]
+    ],
+    "zenodoDownloadsAll": 0,
+    "zenodoDownloadsVersion": 0
   },
   "text-03": {
     "wordCount": 48416,
@@ -1111,7 +1123,9 @@
         "chapter": "epilog/impressum",
         "words": 31
       }
-    ]
+    ],
+    "zenodoDownloadsAll": 0,
+    "zenodoDownloadsVersion": 0
   },
   "text-04": {
     "wordCount": 0,
@@ -1321,7 +1335,9 @@
         "chapter": "Abschluss/Impressum",
         "words": 35
       }
-    ]
+    ],
+    "zenodoDownloadsAll": 58,
+    "zenodoDownloadsVersion": 3
   },
   "bild-02": {
     "wordCount": 50732,
@@ -1515,7 +1531,9 @@
         "chapter": "abschluss/impressum",
         "words": 35
       }
-    ]
+    ],
+    "zenodoDownloadsAll": 5,
+    "zenodoDownloadsVersion": 5
   },
   "bild-03": {
     "wordCount": 47574,
@@ -1741,7 +1759,9 @@
         "chapter": "epilog/impressum",
         "words": 35
       }
-    ]
+    ],
+    "zenodoDownloadsAll": 0,
+    "zenodoDownloadsVersion": 0
   },
   "bild-04": {
     "wordCount": 0,
