@@ -468,20 +468,20 @@
     "zenodoDownloadsVersion": 0
   },
   "tabelle-04": {
-    "wordCount": 9830,
+    "wordCount": 9905,
     "openIssues": 6,
     "chapterCounts": [
       {
         "chapter": "Titelseite",
-        "words": 524
+        "words": 559
       },
       {
         "chapter": "Kapitel1_Einstieg/einleitung",
-        "words": 88
+        "words": 90
       },
       {
         "chapter": "Kapitel1_Einstieg/lernziele",
-        "words": 414
+        "words": 262
       },
       {
         "chapter": "Kapitel1_Einstieg/technische_voraussetzungen",
@@ -489,7 +489,7 @@
       },
       {
         "chapter": "Kapitel1_Einstieg/nachträglich-publizieren",
-        "words": 538
+        "words": 563
       },
       {
         "chapter": "Kapitel2_Einarbeiten/einleitung",
@@ -501,15 +501,15 @@
       },
       {
         "chapter": "Kapitel2_Einarbeiten/qualitätsprüfung",
-        "words": 275
+        "words": 276
       },
       {
         "chapter": "Kapitel2_Einarbeiten/vorgaben",
-        "words": 1839
+        "words": 1785
       },
       {
         "chapter": "Kapitel2_Einarbeiten/resumee",
-        "words": 15
+        "words": 59
       },
       {
         "chapter": "Kapitel3_Datenmanagement/einleitung",
@@ -517,7 +517,7 @@
       },
       {
         "chapter": "Kapitel3_Datenmanagement/organisation",
-        "words": 593
+        "words": 630
       },
       {
         "chapter": "Kapitel3_Datenmanagement/erschliessung",
@@ -533,11 +533,11 @@
       },
       {
         "chapter": "Kapitel4_Publikation/aufbewahrung",
-        "words": 2110
+        "words": 2233
       },
       {
         "chapter": "Kapitel4_Publikation/publikation",
-        "words": 338
+        "words": 352
       },
       {
         "chapter": "Kapitel4_Publikation/kommunikation",
@@ -576,8 +576,8 @@
     "zenodoDownloadsVersion": 0
   },
   "text-01": {
-    "wordCount": 39742,
-    "openIssues": 24,
+    "wordCount": 43792,
+    "openIssues": 23,
     "chapterCounts": [
       {
         "chapter": "front_page/intro",
@@ -665,11 +665,11 @@
       },
       {
         "chapter": "ocr/ocr-quality",
-        "words": 401
+        "words": 1118
       },
       {
         "chapter": "ocr/ocr_ocr-quality",
-        "words": 583
+        "words": 1136
       },
       {
         "chapter": "ocr/ocr_summary",
@@ -685,15 +685,15 @@
       },
       {
         "chapter": "ocr_post_correction/post-correcting_ocr",
-        "words": 389
+        "words": 1090
       },
       {
         "chapter": "ocr_post_correction/post-correcting_correction",
-        "words": 868
+        "words": 1668
       },
       {
         "chapter": "ocr_post_correction/post-correcting_llm",
-        "words": 247
+        "words": 822
       },
       {
         "chapter": "ocr_post_correction/post-correcting_summary",
@@ -713,7 +713,7 @@
       },
       {
         "chapter": "corpus_processing/corpus-processing_nlp-annotation",
-        "words": 2108
+        "words": 2812
       },
       {
         "chapter": "corpus_processing/corpus-processing_resumee",
@@ -1536,7 +1536,7 @@
     "zenodoDownloadsVersion": 5
   },
   "bild-03": {
-    "wordCount": 47574,
+    "wordCount": 47715,
     "openIssues": 3,
     "chapterCounts": [
       {
@@ -1561,7 +1561,7 @@
       },
       {
         "chapter": "02_forschungsdaten_fdm/einführung_forschungsdaten",
-        "words": 400
+        "words": 433
       },
       {
         "chapter": "02_forschungsdaten_fdm/teilprojektbeschreibung",
@@ -1569,11 +1569,11 @@
       },
       {
         "chapter": "02_forschungsdaten_fdm/forschungsdaten",
-        "words": 434
+        "words": 438
       },
       {
         "chapter": "02_forschungsdaten_fdm/forschungsdaten_fiwi",
-        "words": 677
+        "words": 753
       },
       {
         "chapter": "02_forschungsdaten_fdm/erhebung_nachnutzung",
@@ -1741,7 +1741,7 @@
       },
       {
         "chapter": "epilog/literaturverzeichnis",
-        "words": 1
+        "words": 29
       },
       {
         "chapter": "epilog/nachgenutzte_materialien",
