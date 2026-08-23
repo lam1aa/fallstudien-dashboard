@@ -176,8 +176,8 @@
         "words": 35
       }
     ],
-    "zenodoDownloadsAll": 98,
-    "zenodoDownloadsVersion": 8
+    "zenodoDownloadsAll": 100,
+    "zenodoDownloadsVersion": 9
   },
   "tabelle-02": {
     "wordCount": 25882,
@@ -468,12 +468,12 @@
     "zenodoDownloadsVersion": 0
   },
   "tabelle-04": {
-    "wordCount": 9905,
+    "wordCount": 10068,
     "openIssues": 6,
     "chapterCounts": [
       {
         "chapter": "Titelseite",
-        "words": 559
+        "words": 575
       },
       {
         "chapter": "Kapitel1_Einstieg/einleitung",
@@ -497,7 +497,7 @@
       },
       {
         "chapter": "Kapitel2_Einarbeiten/einordnung",
-        "words": 367
+        "words": 477
       },
       {
         "chapter": "Kapitel2_Einarbeiten/qualitätsprüfung",
@@ -533,7 +533,7 @@
       },
       {
         "chapter": "Kapitel4_Publikation/aufbewahrung",
-        "words": 2233
+        "words": 2270
       },
       {
         "chapter": "Kapitel4_Publikation/publikation",
@@ -1536,7 +1536,7 @@
     "zenodoDownloadsVersion": 5
   },
   "bild-03": {
-    "wordCount": 47715,
+    "wordCount": 47903,
     "openIssues": 3,
     "chapterCounts": [
       {
@@ -1561,7 +1561,7 @@
       },
       {
         "chapter": "02_forschungsdaten_fdm/einführung_forschungsdaten",
-        "words": 433
+        "words": 431
       },
       {
         "chapter": "02_forschungsdaten_fdm/teilprojektbeschreibung",
@@ -1569,31 +1569,31 @@
       },
       {
         "chapter": "02_forschungsdaten_fdm/forschungsdaten",
-        "words": 438
+        "words": 436
       },
       {
         "chapter": "02_forschungsdaten_fdm/forschungsdaten_fiwi",
-        "words": 753
+        "words": 749
       },
       {
         "chapter": "02_forschungsdaten_fdm/erhebung_nachnutzung",
-        "words": 641
+        "words": 657
       },
       {
         "chapter": "02_forschungsdaten_fdm/nachnutzung_ethik",
-        "words": 534
+        "words": 554
       },
       {
         "chapter": "02_forschungsdaten_fdm/forschungsdatenmanagement",
-        "words": 631
+        "words": 660
       },
       {
         "chapter": "02_forschungsdaten_fdm/datenmanagementplan",
-        "words": 597
+        "words": 612
       },
       {
         "chapter": "02_forschungsdaten_fdm/best_practices_fiwi",
-        "words": 416
+        "words": 411
       },
       {
         "chapter": "02_forschungsdaten_fdm/resümee_02",
@@ -1609,19 +1609,19 @@
       },
       {
         "chapter": "03_metadaten/einführung_metadaten",
-        "words": 710
+        "words": 748
       },
       {
         "chapter": "03_metadaten/allgemeine_standards",
-        "words": 921
+        "words": 940
       },
       {
         "chapter": "03_metadaten/metadaten_filmwissenschaft",
-        "words": 953
+        "words": 969
       },
       {
         "chapter": "03_metadaten/diskriminierungssensible_metadaten",
-        "words": 1453
+        "words": 1482
       },
       {
         "chapter": "03_metadaten/resümee_03",
@@ -1637,7 +1637,7 @@
       },
       {
         "chapter": "04_einführung_publikation/strategien_perspektiven",
-        "words": 236
+        "words": 255
       },
       {
         "chapter": "04_einführung_publikation/publikationswege_formate",
