@@ -176,7 +176,7 @@
         "words": 35
       }
     ],
-    "zenodoDownloadsAll": 100,
+    "zenodoDownloadsAll": 104,
     "zenodoDownloadsVersion": 9
   },
   "tabelle-02": {
@@ -328,7 +328,7 @@
         "words": 35
       }
     ],
-    "zenodoDownloadsAll": 8,
+    "zenodoDownloadsAll": 10,
     "zenodoDownloadsVersion": 5
   },
   "tabelle-03": {
@@ -468,7 +468,7 @@
     "zenodoDownloadsVersion": 0
   },
   "tabelle-04": {
-    "wordCount": 10068,
+    "wordCount": 12496,
     "openIssues": 6,
     "chapterCounts": [
       {
@@ -489,7 +489,7 @@
       },
       {
         "chapter": "Kapitel1_Einstieg/nachträglich-publizieren",
-        "words": 563
+        "words": 694
       },
       {
         "chapter": "Kapitel2_Einarbeiten/einleitung",
@@ -501,7 +501,7 @@
       },
       {
         "chapter": "Kapitel2_Einarbeiten/qualitätsprüfung",
-        "words": 276
+        "words": 1968
       },
       {
         "chapter": "Kapitel2_Einarbeiten/vorgaben",
@@ -509,7 +509,7 @@
       },
       {
         "chapter": "Kapitel2_Einarbeiten/resumee",
-        "words": 59
+        "words": 241
       },
       {
         "chapter": "Kapitel3_Datenmanagement/einleitung",
@@ -533,19 +533,19 @@
       },
       {
         "chapter": "Kapitel4_Publikation/aufbewahrung",
-        "words": 2270
+        "words": 2491
       },
       {
         "chapter": "Kapitel4_Publikation/publikation",
-        "words": 352
+        "words": 382
       },
       {
         "chapter": "Kapitel4_Publikation/kommunikation",
-        "words": 313
+        "words": 459
       },
       {
         "chapter": "Kapitel4_Publikation/resumee",
-        "words": 15
+        "words": 41
       },
       {
         "chapter": "Kapitel5_Abschluss/toc",
@@ -576,12 +576,12 @@
     "zenodoDownloadsVersion": 0
   },
   "text-01": {
-    "wordCount": 43792,
-    "openIssues": 23,
+    "wordCount": 44114,
+    "openIssues": 20,
     "chapterCounts": [
       {
         "chapter": "front_page/intro",
-        "words": 393
+        "words": 416
       },
       {
         "chapter": "einstieg/einführung",
@@ -601,7 +601,7 @@
       },
       {
         "chapter": "research_question/research-question_research-question",
-        "words": 321
+        "words": 298
       },
       {
         "chapter": "research_question/research-question_operationalization",
@@ -649,7 +649,7 @@
       },
       {
         "chapter": "ocr/ocr",
-        "words": 352
+        "words": 376
       },
       {
         "chapter": "ocr/ocr_tesseract-installation",
@@ -733,11 +733,11 @@
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_diachronic-analysis",
-        "words": 2035
+        "words": 2182
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_KWIC",
-        "words": 1313
+        "words": 1460
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_resumee",
@@ -753,7 +753,7 @@
       },
       {
         "chapter": "reflection/reflection_LLM-post-correction",
-        "words": 389
+        "words": 393
       },
       {
         "chapter": "abschluss/toc",
@@ -784,8 +784,8 @@
     "zenodoDownloadsVersion": 30
   },
   "text-02": {
-    "wordCount": 31031,
-    "openIssues": 36,
+    "wordCount": 30865,
+    "openIssues": 29,
     "chapterCounts": [
       {
         "chapter": "front_page/intro",
@@ -809,11 +809,11 @@
       },
       {
         "chapter": "research_question/research-question_research-question",
-        "words": 341
+        "words": 337
       },
       {
         "chapter": "research_question/research-question_operationalization",
-        "words": 764
+        "words": 750
       },
       {
         "chapter": "research_question/research-question_summary",
@@ -829,11 +829,11 @@
       },
       {
         "chapter": "corpus_collection/corpus-collection_corpora-as-research-objects",
-        "words": 503
+        "words": 485
       },
       {
         "chapter": "corpus_collection/corpus-collection_metadata",
-        "words": 871
+        "words": 851
       },
       {
         "chapter": "corpus_collection/corpus-collection_building-our-corpus",
@@ -853,7 +853,7 @@
       },
       {
         "chapter": "html_intro/html-intro_text_as_digital_objects",
-        "words": 849
+        "words": 835
       },
       {
         "chapter": "html_intro/html-intro_html-intro",
@@ -897,7 +897,7 @@
       },
       {
         "chapter": "corpus_building/corpus_building_mass_scraping_press-releases",
-        "words": 2952
+        "words": 2934
       },
       {
         "chapter": "corpus_building/corpus-building_summary",
@@ -913,7 +913,7 @@
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_text_complexity",
-        "words": 1104
+        "words": 1062
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_analysis",
@@ -925,7 +925,7 @@
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_visualization",
-        "words": 1292
+        "words": 1256
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_resumee",
@@ -972,8 +972,8 @@
     "zenodoDownloadsVersion": 0
   },
   "text-03": {
-    "wordCount": 48416,
-    "openIssues": 41,
+    "wordCount": 48859,
+    "openIssues": 32,
     "chapterCounts": [
       {
         "chapter": "front_page/intro",
@@ -1001,7 +1001,7 @@
       },
       {
         "chapter": "research_question/research-question_operationalization",
-        "words": 570
+        "words": 625
       },
       {
         "chapter": "research_question/research-question_summary",
@@ -1017,7 +1017,7 @@
       },
       {
         "chapter": "corpus_collection/corpus-collection_corpora-as-research-objects",
-        "words": 816
+        "words": 1105
       },
       {
         "chapter": "corpus_collection/corpus-collection_text_as_digital_objects",
@@ -1049,11 +1049,11 @@
       },
       {
         "chapter": "corpus_processing/corpus-processing_intro-to-nlp",
-        "words": 1602
+        "words": 1644
       },
       {
         "chapter": "corpus_processing/corpus-processing_nlp-annotation",
-        "words": 2808
+        "words": 2838
       },
       {
         "chapter": "corpus_processing/corpus-processing_resumee",
@@ -1073,11 +1073,11 @@
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_semantic-field-analysis",
-        "words": 3847
+        "words": 3849
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_ngrams-intro",
-        "words": 481
+        "words": 506
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_syntactic-ngrams-intro",
@@ -1336,7 +1336,7 @@
         "words": 35
       }
     ],
-    "zenodoDownloadsAll": 58,
+    "zenodoDownloadsAll": 60,
     "zenodoDownloadsVersion": 3
   },
   "bild-02": {
@@ -1532,11 +1532,11 @@
         "words": 35
       }
     ],
-    "zenodoDownloadsAll": 5,
-    "zenodoDownloadsVersion": 5
+    "zenodoDownloadsAll": 6,
+    "zenodoDownloadsVersion": 6
   },
   "bild-03": {
-    "wordCount": 47903,
+    "wordCount": 47917,
     "openIssues": 3,
     "chapterCounts": [
       {
@@ -1557,7 +1557,7 @@
       },
       {
         "chapter": "02_forschungsdaten_fdm/toc_02",
-        "words": 123
+        "words": 124
       },
       {
         "chapter": "02_forschungsdaten_fdm/einführung_forschungsdaten",
@@ -1605,7 +1605,7 @@
       },
       {
         "chapter": "03_metadaten/toc_03",
-        "words": 123
+        "words": 124
       },
       {
         "chapter": "03_metadaten/einführung_metadaten",
@@ -1641,7 +1641,7 @@
       },
       {
         "chapter": "04_einführung_publikation/publikationswege_formate",
-        "words": 1678
+        "words": 1516
       },
       {
         "chapter": "04_einführung_publikation/ressourcen_entscheidungshilfen",
@@ -1657,35 +1657,35 @@
       },
       {
         "chapter": "05_aufbereitung_anreicherung/toc_05",
-        "words": 185
+        "words": 186
       },
       {
         "chapter": "05_aufbereitung_anreicherung/informationen_datenset",
-        "words": 737
+        "words": 744
       },
       {
         "chapter": "05_aufbereitung_anreicherung/moviebarcodes",
-        "words": 745
+        "words": 774
       },
       {
         "chapter": "05_aufbereitung_anreicherung/systematische_aufbereitung",
-        "words": 2619
+        "words": 2626
       },
       {
         "chapter": "05_aufbereitung_anreicherung/formatierung_anpassung",
-        "words": 1233
+        "words": 1263
       },
       {
         "chapter": "05_aufbereitung_anreicherung/konvertierung_export",
-        "words": 4191
+        "words": 4189
       },
       {
         "chapter": "05_aufbereitung_anreicherung/bereinigung_dokumentation",
-        "words": 1707
+        "words": 1711
       },
       {
         "chapter": "05_aufbereitung_anreicherung/diskriminierungssensible_überprüfung",
-        "words": 1885
+        "words": 1884
       },
       {
         "chapter": "05_aufbereitung_anreicherung/resümee_05",
@@ -1701,11 +1701,11 @@
       },
       {
         "chapter": "06_publikation_repositorien/versionierung_lizenzierung",
-        "words": 2307
+        "words": 2385
       },
       {
         "chapter": "06_publikation_repositorien/kuratierung_organisation",
-        "words": 1593
+        "words": 1635
       },
       {
         "chapter": "06_publikation_repositorien/dateninfrastrukturen",
@@ -1720,16 +1720,8 @@
         "words": 2236
       },
       {
-        "chapter": "reflexion_resümee/toc",
-        "words": 21
-      },
-      {
         "chapter": "reflexion_resümee/reflexion_zusammenfassung",
-        "words": 2
-      },
-      {
-        "chapter": "reflexion_resümee/ausblick_nachnutzung",
-        "words": 2
+        "words": 3
       },
       {
         "chapter": "epilog/toc",
@@ -1741,7 +1733,7 @@
       },
       {
         "chapter": "epilog/literaturverzeichnis",
-        "words": 29
+        "words": 30
       },
       {
         "chapter": "epilog/nachgenutzte_materialien",
