@@ -70,9 +70,12 @@ async function init() {
 
     // Feature 1
     const kpis = computeOverviewKpis(caseStudies);
-    document.getElementById("kpi-total-cases").textContent      = kpis.totalCases;
-    document.getElementById("kpi-total-chapters").textContent   = kpis.totalChapters;
-    document.getElementById("kpi-total-objectives").textContent = kpis.totalObjectives;
+    const kpiCasesEl = document.getElementById("kpi-total-cases");
+    if (kpiCasesEl) kpiCasesEl.textContent = kpis.totalCases;
+    const kpiChaptersEl = document.getElementById("kpi-total-chapters");
+    if (kpiChaptersEl) kpiChaptersEl.textContent = kpis.totalChapters;
+    const kpiObjectivesEl = document.getElementById("kpi-total-objectives");
+    if (kpiObjectivesEl) kpiObjectivesEl.textContent = kpis.totalObjectives;
     
     const completeRatioEl = document.getElementById("kpi-complete-ratio");
     if (completeRatioEl) {
@@ -113,7 +116,8 @@ async function init() {
           }
         }
         
-        document.getElementById("kpi-total-words").textContent = totalWords.toLocaleString("de-DE");
+        const kpiWordsEl = document.getElementById("kpi-total-words");
+        if (kpiWordsEl) kpiWordsEl.textContent = totalWords.toLocaleString("de-DE");
         const assessmentEl = document.getElementById("kpi-total-assessments");
         if (assessmentEl) assessmentEl.textContent = totalAssessments;
         const zenodoEl = document.getElementById("kpi-zenodo-downloads");
@@ -132,23 +136,28 @@ async function init() {
 
     // Feature 3a & 3b - Bloom's taxonomy (filterable)
     renderBloomCharts(caseStudies, "all");
-    document.getElementById("bloom-type-filter").addEventListener("change", (e) => {
-      renderBloomCharts(caseStudies, e.target.value);
-    });
+    const bloomTypeFilterEl = document.getElementById("bloom-type-filter");
+    if (bloomTypeFilterEl) {
+      bloomTypeFilterEl.addEventListener("change", (e) => {
+        renderBloomCharts(caseStudies, e.target.value);
+      });
+    }
 
     // Feature 4a & 4b – competency & data-flow (filterable & sortable)
     const typeFilterEl = document.getElementById("type-filter");
     const sortFilterEl = document.getElementById("sort-filter");
     
-    renderFilteredCharts(caseStudies, typeFilterEl.value, sortFilterEl.value);
+    if (typeFilterEl && sortFilterEl) {
+      renderFilteredCharts(caseStudies, typeFilterEl.value, sortFilterEl.value);
 
-    typeFilterEl.addEventListener("change", () => {
-      renderFilteredCharts(caseStudies, typeFilterEl.value, sortFilterEl.value);
-    });
-    
-    sortFilterEl.addEventListener("change", () => {
-      renderFilteredCharts(caseStudies, typeFilterEl.value, sortFilterEl.value);
-    });
+      typeFilterEl.addEventListener("change", () => {
+        renderFilteredCharts(caseStudies, typeFilterEl.value, sortFilterEl.value);
+      });
+      
+      sortFilterEl.addEventListener("change", () => {
+        renderFilteredCharts(caseStudies, typeFilterEl.value, sortFilterEl.value);
+      });
+    }
 
     // Feature 4c – heatmap
     // const heatSeries = buildBloomHeatmapSeries(caseStudies);

@@ -61,16 +61,22 @@ export async function renderRecommendations() {
     if (validCount === 0) return;
 
     const average = totalScore / validCount;
-    document.getElementById("rec-average").textContent = average.toLocaleString("de-DE", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
-    document.getElementById("rec-count").textContent = validCount;
+    const recAverageEl = document.getElementById("rec-average");
+    const recCountEl = document.getElementById("rec-count");
+    const recStarsEl = document.getElementById("rec-stars");
+    const barsContainer = document.getElementById("rec-bars");
+
+    if (!recAverageEl || !recCountEl || !recStarsEl || !barsContainer) return;
+
+    recAverageEl.textContent = average.toLocaleString("de-DE", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+    recCountEl.textContent = validCount;
 
     const fullStars = Math.round(average);
     let starsHtml = "";
     for (let i = 0; i < fullStars; i++) starsHtml += "★ ";
     for (let i = fullStars; i < 5; i++) starsHtml += "☆ ";
-    document.getElementById("rec-stars").textContent = starsHtml.trim();
+    recStarsEl.textContent = starsHtml.trim();
 
-    const barsContainer = document.getElementById("rec-bars");
     barsContainer.innerHTML = "";
     for (let i = 5; i >= 1; i--) {
       const count = counts[i];
@@ -160,6 +166,7 @@ function doiBadge(doi) {
  */
 export function renderTypeGroupCards(summaries) {
   const container = document.getElementById("type-group-cards");
+  if (!container) return;
   container.innerHTML = summaries
     .map(
       (group) => `<div class="col-md-4">

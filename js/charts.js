@@ -95,87 +95,93 @@ export function renderTeilnahmenCharts(data) {
   const posSeries = sortedPositions.map(p => Math.round((p[1] / maxCount) * 100)); // Proportional to max
   
   const container = document.querySelector("#teilnahmen-position-chart");
-  container.innerHTML = `<div id="teilnahmen-position-apex" class="w-100 d-flex justify-content-center"></div>`;
+  if (container) {
+    container.innerHTML = `<div id="teilnahmen-position-apex" class="w-100 d-flex justify-content-center"></div>`;
 
-  const radialOptions = {
-    series: posSeries,
-    chart: {
-      height: 380,
-      type: 'radialBar',
-    },
-    plotOptions: {
-      radialBar: {
-        startAngle: -135, // Centered gauge style
-        endAngle: 135,    // 270 degrees total
-        hollow: {
-          size: '40%',
-        },
-        track: {
-          background: '#f1f5f9',
-          margin: 6 
-        },
-        dataLabels: {
-          name: {
-            fontSize: '13px',
-            color: '#334155',
-            offsetY: 20
+    const radialOptions = {
+      series: posSeries,
+      chart: {
+        height: 380,
+        type: 'radialBar',
+      },
+      plotOptions: {
+        radialBar: {
+          startAngle: -135, // Centered gauge style
+          endAngle: 135,    // 270 degrees total
+          hollow: {
+            size: '40%',
           },
-          value: {
-            fontSize: '28px',
-            fontWeight: 'bold',
-            color: '#1b4f8c',
-            formatter: function (val) {
-              // The val is the percentage (val = (count / maxCount) * 100). 
-              // We reverse the math to show the true absolute count when hovered.
-              return Math.round((val / 100) * maxCount);
+          track: {
+            background: '#f1f5f9',
+            margin: 6 
+          },
+          dataLabels: {
+            name: {
+              fontSize: '13px',
+              color: '#334155',
+              offsetY: 20
             },
-            offsetY: -10
-          },
-          total: {
-            show: true,
-            label: 'Teilnahmen',
-            color: '#888',
-            formatter: function () {
-              return total;
+            value: {
+              fontSize: '28px',
+              fontWeight: 'bold',
+              color: '#1b4f8c',
+              formatter: function (val) {
+                // The val is the percentage (val = (count / maxCount) * 100). 
+                // We reverse the math to show the true absolute count when hovered.
+                return Math.round((val / 100) * maxCount);
+              },
+              offsetY: -10
+            },
+            total: {
+              show: true,
+              label: 'Teilnahmen',
+              color: '#888',
+              formatter: function () {
+                return total;
+              }
             }
           }
         }
+      },
+      colors: colorPalette,
+      labels: posLabels,
+      legend: {
+        show: false
+      },
+      stroke: {
+        lineCap: 'round'
       }
-    },
-    colors: colorPalette,
-    labels: posLabels,
-    legend: {
-      show: false
-    },
-    stroke: {
-      lineCap: 'round'
-    }
-  };
-  new ApexCharts(document.querySelector("#teilnahmen-position-apex"), radialOptions).render();
+    };
+    const radialEl = document.querySelector("#teilnahmen-position-apex");
+    if (radialEl) new ApexCharts(radialEl, radialOptions).render();
+  }
 
   // 2. Vertical Bar Chart for Disciplines
-  const discLabels = sortedDisciplines.map(d => d[0]);
-  const discSeries = sortedDisciplines.map(d => d[1]);
-  
-  const barOptions = {
-    series: [{ name: 'Anzahl', data: discSeries }],
-    chart: { type: 'bar', height: 350, toolbar: { show: false } },
-    plotOptions: {
-      bar: {
-        borderRadius: 4,
-        dataLabels: { position: 'center' }
-      }
-    },
-    dataLabels: {
-      enabled: true,
-      style: { colors: ['#fff'] }
-    },
-    xaxis: { categories: discLabels },
-    colors: ["#1b4f8c"],
-    yaxis: { show: false },
-    grid: { show: false }
-  };
-  new ApexCharts(document.querySelector("#teilnahmen-discipline-chart"), barOptions).render();
+  const discContainer = document.querySelector("#teilnahmen-discipline-chart");
+  if (discContainer) {
+    const discLabels = sortedDisciplines.map(d => d[0]);
+    const discSeries = sortedDisciplines.map(d => d[1]);
+    
+    const barOptions = {
+      series: [{ name: 'Anzahl', data: discSeries }],
+      chart: { type: 'bar', height: 350, toolbar: { show: false } },
+      plotOptions: {
+        bar: {
+          borderRadius: 4,
+          dataLabels: { position: 'center' }
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        style: { colors: ['#fff'] }
+      },
+      xaxis: { categories: discLabels },
+      colors: ["#1b4f8c"],
+      yaxis: { show: false },
+      grid: { show: false }
+    };
+    new ApexCharts(discContainer, barOptions).render();
+  }
 }
 
 /**
@@ -255,9 +261,10 @@ export function renderWorkloadChart(categories, series) {
     dataLabels: { enabled: false },
     colors: ["#36b9cc"].concat(buildWorkloadColors(series.length - 2)).concat(["#36b9cc"]),
   };
-  // Ensure we clear previous instance if we re-render dynamically
+  const container = document.querySelector("#workload-chart");
+  if (!container) return;
   if (window.workloadChartInstance) window.workloadChartInstance.destroy();
-  window.workloadChartInstance = new ApexCharts(document.querySelector("#workload-chart"), options);
+  window.workloadChartInstance = new ApexCharts(container, options);
   window.workloadChartInstance.render();
 }
 
@@ -269,6 +276,8 @@ export function renderWorkloadChart(categories, series) {
  * @param {Array} series - The Bloom taxonomy series data.
  */
 export function renderBloomPerCaseChart(categories, series) {
+  const container = document.querySelector("#bloom-per-case-chart");
+  if (!container) return;
   const options = {
     chart: { type: "bar", height: 380, stacked: true, toolbar: { show: true } },
     plotOptions: {
@@ -292,10 +301,7 @@ export function renderBloomPerCaseChart(categories, series) {
     tooltip: { shared: false, intersect: true },
   };
   if (window.bloomPerCaseInstance) window.bloomPerCaseInstance.destroy();
-  window.bloomPerCaseInstance = new ApexCharts(
-    document.querySelector("#bloom-per-case-chart"),
-    options
-  );
+  window.bloomPerCaseInstance = new ApexCharts(container, options);
   window.bloomPerCaseInstance.render();
 }
 
@@ -305,6 +311,8 @@ export function renderBloomPerCaseChart(categories, series) {
  * @param {Array} values - The corresponding counts for each level.
  */
 export function renderBloomGlobalChart(labels, values) {
+  const container = document.querySelector("#bloom-global-chart");
+  if (!container) return;
   const options = {
     chart: { type: "donut", height: 340 },
     labels,
@@ -332,10 +340,7 @@ export function renderBloomGlobalChart(labels, values) {
     stroke: { width: 1, colors: ["#fff"] }
   };
   if (window.bloomGlobalInstance) window.bloomGlobalInstance.destroy();
-  window.bloomGlobalInstance = new ApexCharts(
-    document.querySelector("#bloom-global-chart"),
-    options
-  );
+  window.bloomGlobalInstance = new ApexCharts(container, options);
   window.bloomGlobalInstance.render();
 }
 
@@ -347,6 +352,8 @@ export function renderBloomGlobalChart(labels, values) {
  * @param {Array} values - The corresponding counts.
  */
 export function renderCompetencyChart(categories, values) {
+  const container = document.querySelector("#competency-chart");
+  if (!container) return;
   const options = {
     chart: { type: "bar", height: 460, toolbar: { show: true } },
     plotOptions: { bar: { horizontal: true, borderRadius: 3, distributed: true } },
@@ -361,10 +368,7 @@ export function renderCompetencyChart(categories, values) {
     legend: { show: false },
   };
   if (window.competencyChartInstance) window.competencyChartInstance.destroy();
-  window.competencyChartInstance = new ApexCharts(
-    document.querySelector("#competency-chart"),
-    options
-  );
+  window.competencyChartInstance = new ApexCharts(container, options);
   window.competencyChartInstance.render();
 }
 
@@ -376,6 +380,8 @@ export function renderCompetencyChart(categories, values) {
  * @param {Array} values - The corresponding counts.
  */
 export function renderDataFlowChart(categories, values) {
+  const container = document.querySelector("#dataflow-chart");
+  if (!container) return;
   const options = {
     chart: { type: "bar", height: 460, toolbar: { show: false } },
     plotOptions: { bar: { horizontal: false, borderRadius: 3, distributed: true } },
@@ -387,10 +393,7 @@ export function renderDataFlowChart(categories, values) {
     legend: { show: false },
   };
   if (window.dataflowChartInstance) window.dataflowChartInstance.destroy();
-  window.dataflowChartInstance = new ApexCharts(
-    document.querySelector("#dataflow-chart"),
-    options
-  );
+  window.dataflowChartInstance = new ApexCharts(container, options);
   window.dataflowChartInstance.render();
 }
 
