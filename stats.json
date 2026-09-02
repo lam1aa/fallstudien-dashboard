@@ -576,12 +576,12 @@
     "zenodoDownloadsVersion": 0
   },
   "text-01": {
-    "wordCount": 44114,
-    "openIssues": 20,
+    "wordCount": 45547,
+    "openIssues": 8,
     "chapterCounts": [
       {
         "chapter": "front_page/intro",
-        "words": 416
+        "words": 440
       },
       {
         "chapter": "einstieg/einführung",
@@ -653,7 +653,7 @@
       },
       {
         "chapter": "ocr/ocr_tesseract-installation",
-        "words": 623
+        "words": 1164
       },
       {
         "chapter": "ocr/ocr_jupyter_intro",
@@ -661,7 +661,7 @@
       },
       {
         "chapter": "ocr/ocr_pytesseract_intro",
-        "words": 2175
+        "words": 2548
       },
       {
         "chapter": "ocr/ocr-quality",
@@ -669,7 +669,7 @@
       },
       {
         "chapter": "ocr/ocr_ocr-quality",
-        "words": 1136
+        "words": 1270
       },
       {
         "chapter": "ocr/ocr_summary",
@@ -689,7 +689,7 @@
       },
       {
         "chapter": "ocr_post_correction/post-correcting_correction",
-        "words": 1668
+        "words": 1876
       },
       {
         "chapter": "ocr_post_correction/post-correcting_llm",
@@ -709,11 +709,11 @@
       },
       {
         "chapter": "corpus_processing/corpus-processing_intro-to-nlp",
-        "words": 665
+        "words": 676
       },
       {
         "chapter": "corpus_processing/corpus-processing_nlp-annotation",
-        "words": 2812
+        "words": 2954
       },
       {
         "chapter": "corpus_processing/corpus-processing_resumee",
