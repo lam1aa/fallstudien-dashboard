@@ -332,12 +332,12 @@
     "zenodoDownloadsVersion": 0
   },
   "tabelle-03": {
-    "wordCount": 27662,
-    "openIssues": 10,
+    "wordCount": 27742,
+    "openIssues": 17,
     "chapterCounts": [
       {
         "chapter": "intro",
-        "words": 633
+        "words": 656
       },
       {
         "chapter": "1_einstieg/1.0_einleitung",
@@ -352,19 +352,19 @@
         "words": 564
       },
       {
-        "chapter": "operationalisierung/fragestellung-operationalisierung",
-        "words": 185
+        "chapter": "2_operationalisierung/2.0_fragestellung-operationalisierung",
+        "words": 168
       },
       {
-        "chapter": "operationalisierung/fragestellung",
-        "words": 229
+        "chapter": "2_operationalisierung/2.1_fragestellung",
+        "words": 239
       },
       {
-        "chapter": "operationalisierung/operationalisierung",
+        "chapter": "2_operationalisierung/2.2_operationalisierung",
         "words": 248
       },
       {
-        "chapter": "operationalisierung/resümee",
+        "chapter": "2_operationalisierung/2.3_resümee",
         "words": 122
       },
       {
@@ -397,11 +397,11 @@
       },
       {
         "chapter": "4_dash-prep/4.2_tools",
-        "words": 1565
+        "words": 1569
       },
       {
         "chapter": "4_dash-prep/4.3_preparation",
-        "words": 484
+        "words": 483
       },
       {
         "chapter": "4_dash-prep/4.4_resumee",
@@ -421,11 +421,11 @@
       },
       {
         "chapter": "dashboard/Übung_Startseite",
-        "words": 1079
+        "words": 1145
       },
       {
         "chapter": "dashboard/Übung_Karte",
-        "words": 2231
+        "words": 2226
       },
       {
         "chapter": "dashboard/Übung_Bewässerungsanalyse",
@@ -480,8 +480,8 @@
     "zenodoDownloadsVersion": 0
   },
   "tabelle-04": {
-    "wordCount": 12963,
-    "openIssues": 7,
+    "wordCount": 13252,
+    "openIssues": 6,
     "chapterCounts": [
       {
         "chapter": "Titelseite",
@@ -549,7 +549,7 @@
       },
       {
         "chapter": "Kapitel4_Publikation/publikation",
-        "words": 660
+        "words": 949
       },
       {
         "chapter": "Kapitel4_Publikation/kommunikation",
@@ -592,8 +592,8 @@
     "zenodoDownloadsVersion": 0
   },
   "text-01": {
-    "wordCount": 45547,
-    "openIssues": 11,
+    "wordCount": 45684,
+    "openIssues": 9,
     "chapterCounts": [
       {
         "chapter": "front_page/intro",
@@ -701,7 +701,7 @@
       },
       {
         "chapter": "ocr_post_correction/post-correcting_ocr",
-        "words": 1090
+        "words": 1127
       },
       {
         "chapter": "ocr_post_correction/post-correcting_correction",
@@ -717,7 +717,7 @@
       },
       {
         "chapter": "ocr_post_correction/post-correcting_assessment",
-        "words": 2662
+        "words": 2762
       },
       {
         "chapter": "corpus_processing/corpus-processing_intro",
@@ -988,8 +988,8 @@
     "zenodoDownloadsVersion": 0
   },
   "text-03": {
-    "wordCount": 48859,
-    "openIssues": 36,
+    "wordCount": 48864,
+    "openIssues": 45,
     "chapterCounts": [
       {
         "chapter": "front_page/intro",
@@ -1017,7 +1017,7 @@
       },
       {
         "chapter": "research_question/research-question_operationalization",
-        "words": 625
+        "words": 633
       },
       {
         "chapter": "research_question/research-question_summary",
@@ -1041,11 +1041,11 @@
       },
       {
         "chapter": "corpus_collection/corpus-collection_metadata",
-        "words": 801
+        "words": 803
       },
       {
         "chapter": "corpus_collection/corpus-collection_choosing-our-corpus-based-on-metadata",
-        "words": 2918
+        "words": 2916
       },
       {
         "chapter": "corpus_collection/corpus-collection_filtering-our-corpus",
@@ -1057,7 +1057,7 @@
       },
       {
         "chapter": "corpus_collection/corpus-collection_assessment",
-        "words": 3838
+        "words": 3839
       },
       {
         "chapter": "corpus_processing/corpus-processing_intro",
@@ -1093,7 +1093,7 @@
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_ngrams-intro",
-        "words": 506
+        "words": 507
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_syntactic-ngrams-intro",
@@ -1101,7 +1101,7 @@
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_syntactic-ngram",
-        "words": 6739
+        "words": 6734
       },
       {
         "chapter": "corpus_analysis/corpus-analysis_resumee",
