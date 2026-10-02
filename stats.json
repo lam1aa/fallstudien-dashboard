@@ -332,8 +332,8 @@
     "zenodoDownloadsVersion": 0
   },
   "tabelle-03": {
-    "wordCount": 27872,
-    "openIssues": 22,
+    "wordCount": 27882,
+    "openIssues": 17,
     "chapterCounts": [
       {
         "chapter": "intro",
@@ -393,7 +393,7 @@
       },
       {
         "chapter": "4_dash-prep/4.1_dashboard",
-        "words": 938
+        "words": 948
       },
       {
         "chapter": "4_dash-prep/4.2_tools",
@@ -480,28 +480,28 @@
     "zenodoDownloadsVersion": 0
   },
   "tabelle-04": {
-    "wordCount": 13252,
-    "openIssues": 6,
+    "wordCount": 12990,
+    "openIssues": 5,
     "chapterCounts": [
       {
         "chapter": "Titelseite",
-        "words": 575
+        "words": 550
       },
       {
         "chapter": "Kapitel1_Einstieg/einleitung",
-        "words": 90
+        "words": 88
       },
       {
         "chapter": "Kapitel1_Einstieg/lernziele",
-        "words": 262
+        "words": 251
       },
       {
         "chapter": "Kapitel1_Einstieg/technische_voraussetzungen",
-        "words": 125
+        "words": 180
       },
       {
         "chapter": "Kapitel1_Einstieg/nachträglich-publizieren",
-        "words": 694
+        "words": 690
       },
       {
         "chapter": "Kapitel2_Einarbeiten/einleitung",
@@ -533,7 +533,7 @@
       },
       {
         "chapter": "Kapitel3_Datenmanagement/erschliessung",
-        "words": 895
+        "words": 716
       },
       {
         "chapter": "Kapitel3_Datenmanagement/resumee",
@@ -545,7 +545,7 @@
       },
       {
         "chapter": "Kapitel4_Publikation/aufbewahrung",
-        "words": 2491
+        "words": 2368
       },
       {
         "chapter": "Kapitel4_Publikation/publikation",
@@ -577,7 +577,7 @@
       },
       {
         "chapter": "Kapitel5_Abschluss/authors",
-        "words": 79
+        "words": 106
       },
       {
         "chapter": "Kapitel5_Abschluss/quadriga",
@@ -1772,7 +1772,203 @@
     "zenodoDownloadsVersion": 0
   },
   "bild-04": {
-    "wordCount": 0,
-    "chapterCounts": []
+    "wordCount": 25548,
+    "openIssues": 7,
+    "chapterCounts": [
+      {
+        "chapter": "einleitung",
+        "words": 642
+      },
+      {
+        "chapter": "einstieg/einleitung.md",
+        "words": 30
+      },
+      {
+        "chapter": "einstieg/lernziele.md",
+        "words": 197
+      },
+      {
+        "chapter": "einstieg/technische-voraussetzungen.md",
+        "words": 50
+      },
+      {
+        "chapter": "einstieg/vorkenntnisse.md",
+        "words": 108
+      },
+      {
+        "chapter": "filmanalyse/einleitung.md",
+        "words": 210
+      },
+      {
+        "chapter": "filmanalyse/filmanalyse.md",
+        "words": 956
+      },
+      {
+        "chapter": "filmanalyse/annotation.md",
+        "words": 1054
+      },
+      {
+        "chapter": "filmanalyse/quantitativ.md",
+        "words": 1769
+      },
+      {
+        "chapter": "filmanalyse/fragestellungen.md",
+        "words": 938
+      },
+      {
+        "chapter": "filmanalyse/resumee_filmanalyse.md",
+        "words": 680
+      },
+      {
+        "chapter": "vision/einleitung.md",
+        "words": 217
+      },
+      {
+        "chapter": "vision/grundlagen.md",
+        "words": 699
+      },
+      {
+        "chapter": "vision/begriffe.md",
+        "words": 1527
+      },
+      {
+        "chapter": "vision/funktion.md",
+        "words": 808
+      },
+      {
+        "chapter": "vision/einsatz.md",
+        "words": 2132
+      },
+      {
+        "chapter": "vision/grenzen.md",
+        "words": 928
+      },
+      {
+        "chapter": "vision/resumee_vision.md",
+        "words": 747
+      },
+      {
+        "chapter": "annotation/einleitung.md",
+        "words": 233
+      },
+      {
+        "chapter": "annotation/intro.md",
+        "words": 1093
+      },
+      {
+        "chapter": "annotation/workflow.md",
+        "words": 3
+      },
+      {
+        "chapter": "annotation/modelle.md",
+        "words": 3
+      },
+      {
+        "chapter": "annotation/technik.md",
+        "words": 2
+      },
+      {
+        "chapter": "annotation/einstellung_intro.md",
+        "words": 2
+      },
+      {
+        "chapter": "annotation/einstellung_notebook.ipynb",
+        "words": 3951
+      },
+      {
+        "chapter": "annotation/einstellung_datensichtung.md",
+        "words": 4
+      },
+      {
+        "chapter": "annotation/figuren_intro.md",
+        "words": 2
+      },
+      {
+        "chapter": "annotation/figuren_notebook.ipynb",
+        "words": 5653
+      },
+      {
+        "chapter": "annotation/figuren_datensichtung.md",
+        "words": 4
+      },
+      {
+        "chapter": "annotation/resumee_annotation.md",
+        "words": 1
+      },
+      {
+        "chapter": "auswertung/einleitung.md",
+        "words": 206
+      },
+      {
+        "chapter": "auswertung/grundlagen.md",
+        "words": 3
+      },
+      {
+        "chapter": "auswertung/datenstruktur.md",
+        "words": 3
+      },
+      {
+        "chapter": "auswertung/visualisierung_einstellungen.md",
+        "words": 3
+      },
+      {
+        "chapter": "auswertung/visualisierung_figuren.md",
+        "words": 3
+      },
+      {
+        "chapter": "auswertung/explorative_auswertung.md",
+        "words": 4
+      },
+      {
+        "chapter": "auswertung/resumee_auswertung.md",
+        "words": 1
+      },
+      {
+        "chapter": "reflexion-und-resümee/einleitung.md",
+        "words": 26
+      },
+      {
+        "chapter": "reflexion-und-resümee/reflexion.md",
+        "words": 26
+      },
+      {
+        "chapter": "reflexion-und-resümee/abschlussassessment.md",
+        "words": 2
+      },
+      {
+        "chapter": "reflexion-und-resümee/zusammenfassung.md",
+        "words": 1
+      },
+      {
+        "chapter": "reflexion-und-resümee/resümee.md",
+        "words": 15
+      },
+      {
+        "chapter": "abschluss/toc",
+        "words": 48
+      },
+      {
+        "chapter": "abschluss/fragen-und-feedback",
+        "words": 35
+      },
+      {
+        "chapter": "abschluss/literaturverzeichnis",
+        "words": 59
+      },
+      {
+        "chapter": "abschluss/authors",
+        "words": 189
+      },
+      {
+        "chapter": "abschluss/quadriga",
+        "words": 250
+      },
+      {
+        "chapter": "abschluss/impressum",
+        "words": 31
+      }
+    ],
+    "zenodoDownloadsAll": 0,
+    "zenodoDownloadsVersion": 0
   }
 }
