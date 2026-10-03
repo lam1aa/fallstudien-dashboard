@@ -1,9 +1,9 @@
 name: Update Stats
 
-# Runs weekly on Sunday at 3 AM or manually via dispatch
+# Runs daily at 3 AM UTC or manually via dispatch
 on:
   schedule:
-    - cron: "0 3 * * 0"
+    - cron: "0 3 * * *"
   workflow_dispatch:
 
 permissions:

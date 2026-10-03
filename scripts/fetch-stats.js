@@ -147,37 +147,8 @@ async function main() {
           openIssues = issueData.open_issues_count;
         }
 
-        // Fetch Zenodo stats
-        let zenodoDownloadsAll = 0;
-        let zenodoDownloadsVersion = 0;
-        try {
-          const metaPath = cs.metadataPath || "metadata.yml";
-          const metaUrl = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${metaPath}`;
-          const metaRes = await fetch(metaUrl);
-          if (metaRes.ok) {
-            const metaText = await metaRes.text();
-            const metaObj = jsyaml.load(metaText);
-            if (metaObj && metaObj.identifier) {
-              const match = String(metaObj.identifier).match(/zenodo\.(\d+)/i);
-              if (match && match[1]) {
-                const zenodoId = match[1];
-                const zenodoRes = await fetch(`https://zenodo.org/api/records/${zenodoId}`);
-                if (zenodoRes.ok) {
-                  const zenodoData = await zenodoRes.json();
-                  if (zenodoData.stats) {
-                    zenodoDownloadsAll = zenodoData.stats.unique_downloads || 0;
-                    zenodoDownloadsVersion = zenodoData.stats.version_unique_downloads || 0;
-                  }
-                }
-              }
-            }
-          }
-        } catch (err) {
-          console.warn(`  [WARN] Error fetching Zenodo stats for ${repo}:`, err.message);
-        }
-
-        console.log(`  -> Words: ${wordCount}, Issues: ${openIssues}, Zenodo Downloads (Version): ${zenodoDownloadsVersion}, Zenodo Downloads (All): ${zenodoDownloadsAll}`);
-        results[cs.id] = { wordCount, openIssues, chapterCounts, zenodoDownloadsAll, zenodoDownloadsVersion };
+        console.log(`  -> Words: ${wordCount}, Issues: ${openIssues}`);
+        results[cs.id] = { wordCount, openIssues, chapterCounts };
 
     } catch (err) {
       console.warn(`[ERROR] Failed processing ${repo}:`, err.message);

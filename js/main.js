@@ -24,8 +24,7 @@ import {
   renderNutzung,
   renderRecommendations,
   renderTypeGroupCards,
-  renderTeilnahmenRegion,
-  renderDownloadsChart
+  renderTeilnahmenRegion
 } from "./dashboard-widgets.js?v=2";
 
 /**
@@ -94,15 +93,10 @@ async function init() {
         const statsData = await statsRes.json();
         let totalWords = 0;
         let totalAssessments = 0;
-        let totalZenodoDownloads = 0;
         
         for (const key in statsData) {
           const wc = statsData[key].wordCount || 0;
           totalWords += wc;
-          
-          if (statsData[key].zenodoDownloadsVersion) {
-            totalZenodoDownloads += statsData[key].zenodoDownloadsVersion;
-          }
           
           const cs = caseStudies.find(c => c.id === key);
           if (cs) cs.wordCount = wc;
@@ -120,11 +114,6 @@ async function init() {
         if (kpiWordsEl) kpiWordsEl.textContent = totalWords.toLocaleString("de-DE");
         const assessmentEl = document.getElementById("kpi-total-assessments");
         if (assessmentEl) assessmentEl.textContent = totalAssessments;
-        const zenodoEl = document.getElementById("kpi-zenodo-downloads");
-        if (zenodoEl) zenodoEl.textContent = totalZenodoDownloads.toLocaleString("de-DE");
-
-        // Render downloads chart (uses statsData for both download fields)
-        renderDownloadsChart(statsData);
       }
     } catch (e) {
       console.warn("Could not fetch stats.json", e);
