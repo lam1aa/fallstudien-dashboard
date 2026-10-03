@@ -1,74 +1,298 @@
 [
     {
-        "Titel der Publikation": "QUADRIGA-Fallstudien als OER für die Datenkompetenzbildung",
-        "Art der Publikation": "Beitrag ",
-        "Datum der Publikation": "2025-11-01",
-        "Disziplin des Publikationsorts (optional)": "Bildungswissenschaft",
-        "Bezug zur Fallstudie (optional)": "Fallstudie Bewegtes Bild Analyse",
-        "DOI oder URL": "https://doi.org/10.1234/quadriga.oer.beispiel"
+        "Titel der Publikation": "Vorstellung des Berlin-Brandenburgischen Datenkompetenzzentrums QUADRIGA für Digital Humanities, Verwaltungswissenschaften, Informatik und Informationswissenschaft",
+        "Art der Publikation": "videoRecording",
+        "Datum der Publikation": 2024,
+        "Disziplin des Publikationsorts (optional)": "Schimmler, Sonja; Schneider, Philipp; Seltmann, Melanie",
+        "Bezug zur Fallstudie (optional)": "Zenodo",
+        "DOI oder URL": "https://zenodo.org/records/13889204"
     },
     {
-        "Titel der Publikation": "Learning with AI",
-        "Art der Publikation": "Article",
-        "Datum der Publikation": "2023-08-15",
-        "Disziplin des Publikationsorts (optional)": "Education",
-        "Bezug zur Fallstudie (optional)": "Case 1",
-        "DOI oder URL": "10.1234/5678"
+        "Titel der Publikation": "QUADRIGA Datenkompetenzframework 2.0",
+        "Art der Publikation": "dataset",
+        "Datum der Publikation": 2024,
+        "Disziplin des Publikationsorts (optional)": "Petras, Vivien; Neuroth, Heike; Seltmann, Melanie; Schnaitter, Hannes; Walter, Paul",
+        "Bezug zur Fallstudie (optional)": "Zenodo",
+        "DOI oder URL": "https://zenodo.org/records/14760302"
     },
     {
-        "Titel der Publikation": "OER Best Practices",
-        "Art der Publikation": "Book Chapter",
-        "Datum der Publikation": "2023-10-20",
-        "Disziplin des Publikationsorts (optional)": "Library Science",
-        "Bezug zur Fallstudie (optional)": "Case 2",
-        "DOI oder URL": "10.2345/6789"
+        "Titel der Publikation": "QUADRIGA Podiumsdiskussion über Datenkompetenz",
+        "Art der Publikation": "videoRecording",
+        "Datum der Publikation": 2024,
+        "Disziplin des Publikationsorts (optional)": "Andraschke, Udo; Daikeler, Jessica; Hagener, Malte; Lucke, Ulrike; Petras, Vivien; Schimmler, Sonja; Schneider, Philipp; Seltmann, Melanie",
+        "Bezug zur Fallstudie (optional)": "Zenodo",
+        "DOI oder URL": "https://zenodo.org/records/13951240"
     },
     {
-        "Titel der Publikation": "Data Literacy in Schools",
-        "Art der Publikation": "Conference Paper",
-        "Datum der Publikation": "2024-02-10",
-        "Disziplin des Publikationsorts (optional)": "Data Science",
-        "Bezug zur Fallstudie (optional)": "Case 3",
-        "DOI oder URL": "10.3456/7890"
+        "Titel der Publikation": "QUADRIGA - Berlin-Brandenburgisches Datenkompetenzzentrum für Digital Humanities, Verwaltungswissenschaft, Informatik und Informationswissenschaft",
+        "Art der Publikation": "conferencePaper",
+        "Datum der Publikation": 2024,
+        "Disziplin des Publikationsorts (optional)": "Buchholz, Bettina; Möser, Robin",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://zenodo.org/records/14865004"
     },
     {
-        "Titel der Publikation": "Digital Humanities Methods",
-        "Art der Publikation": "Article",
-        "Datum der Publikation": "2024-04-05",
-        "Disziplin des Publikationsorts (optional)": "Humanities",
-        "Bezug zur Fallstudie (optional)": "Case 4",
-        "DOI oder URL": "10.4567/8901"
+        "Titel der Publikation": "From data to knowledge: OER-supported teaching of data literacy in administrative science",
+        "Art der Publikation": "conferencePaper",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Plomin, Jana; Walter, Paul; Schnaitter, Hannes; Schmeling, Juliane",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://dl.gi.de/handle/20.500.12116/47521"
     },
     {
-        "Titel der Publikation": "Teaching Digital Skills",
-        "Art der Publikation": "Report",
-        "Datum der Publikation": "2024-06-15",
-        "Disziplin des Publikationsorts (optional)": "Education",
-        "Bezug zur Fallstudie (optional)": "Case 5",
-        "DOI oder URL": "10.5678/9012"
+        "Titel der Publikation": "Framing Data Literacy. The Competence Centre for Data Literacy QUADRIGA. Poster",
+        "Art der Publikation": "conferencePaper",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Seltmann, Melanie; Chlastak, Maria; Buchholz, Bettina; Lucke, Ulrike; Samoilova, Evgenia; Schimmler, Sonja",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://zenodo.org/records/17129442"
     },
     {
-        "Titel der Publikation": "AI Ethics for Students",
-        "Art der Publikation": "Article",
-        "Datum der Publikation": "2024-08-22",
-        "Disziplin des Publikationsorts (optional)": "Philosophy",
-        "Bezug zur Fallstudie (optional)": "Case 6",
-        "DOI oder URL": "10.6789/0123"
+        "Titel der Publikation": "Framing Data Literacy. The Competence Centre for Data Literacy QUADRIGA",
+        "Art der Publikation": "conferencePaper",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Seltmann, Melanie; Chlastak, Maria; Buchholz, Bettina; Lucke, Ulrike; Samoilova, Evgenia; Schimmler, Sonja",
+        "Bezug zur Fallstudie (optional)": "Zenodo",
+        "DOI oder URL": "https://zenodo.org/doi/10.5281/zenodo.16813536"
     },
     {
-        "Titel der Publikation": "Open Science Toolkit",
-        "Art der Publikation": "Manual",
-        "Datum der Publikation": "2024-10-10",
-        "Disziplin des Publikationsorts (optional)": "Library Science",
-        "Bezug zur Fallstudie (optional)": "Case 7",
-        "DOI oder URL": "10.7890/1234"
+        "Titel der Publikation": "OA loves OER. Bedarfserhebung zu OER im Kontext Open Access",
+        "Art der Publikation": "conferencePaper",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Seltmann, Melanie",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://zenodo.org/records/17129582"
     },
     {
-        "Titel der Publikation": "Future of EdTech",
-        "Art der Publikation": "Article",
-        "Datum der Publikation": "2024-12-01",
-        "Disziplin des Publikationsorts (optional)": "Computer Science",
-        "Bezug zur Fallstudie (optional)": "Case 8",
-        "DOI oder URL": "10.8901/2345"
+        "Titel der Publikation": "Datenkompetenzen stärken mit QUADRIGA",
+        "Art der Publikation": "conferencePaper",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Seltmann, Melanie",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://zenodo.org/doi/10.5281/zenodo.16025220"
+    },
+    {
+        "Titel der Publikation": "OERs Under Construction. Ein Workshop zu Gestaltung und Evaluierung von Open Educational Resources für die Digital Humanities",
+        "Art der Publikation": "conferencePaper",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Schneider, Philipp; Rohe, Jonas; Seltmann, Melanie; Trilcke, Peer; Faust, Anna; Büdenbender, Stefan; Urbaum, Dorothee; Schmunk, Stefan; Skorinkin, Daniil; Hiltmann, Torsten; Helling, Patrick; Giesberg, Kim Marielle; Kababgi, Daniel; Kip, Milan; Majka, Nicole; Thiessen, Laura",
+        "Bezug zur Fallstudie (optional)": "Zenodo",
+        "DOI oder URL": "https://zenodo.org/doi/10.5281/zenodo.14943184"
+    },
+    {
+        "Titel der Publikation": "Das QUADRIGA-Datenkompetenzframework als Basis für die Entwicklung von Lehr- und Lernressourcen",
+        "Art der Publikation": "journalArticle",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Neuroth, Heike; Petras, Vivien; Schnaitter, Hannes; Seltmann, Melanie; Walter, Paul",
+        "Bezug zur Fallstudie (optional)": "Verlag Werner Hülsbusch",
+        "DOI oder URL": "https://zenodo.org/doi/10.5281/zenodo.14925620"
+    },
+    {
+        "Titel der Publikation": "Datenkompetenzzentrum QUADRIGA – Forschungsgeleitete Bildungsangebote für Verwaltungsdaten",
+        "Art der Publikation": "conferencePaper",
+        "Datum der Publikation": 2024,
+        "Disziplin des Publikationsorts (optional)": "Walter, Paul; Schneemann, Carsten; Neuroth, Heike; Plomin, Jana; Schmeling, Juliane",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://zenodo.org/records/10678822"
+    },
+    {
+        "Titel der Publikation": "Basic services to the community – facilitating the application of basic services through interactive case study textbooks",
+        "Art der Publikation": "conferencePaper",
+        "Datum der Publikation": 2024,
+        "Disziplin des Publikationsorts (optional)": "Seltmann, Melanie; Samoilova, Evgenia; Schnaitter, Hannes; Schneider, Philipp; Chlastak, Maria; Lucke, Ulrike; Schimmler, Sonja",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://zenodo.org/records/14842796"
+    },
+    {
+        "Titel der Publikation": "Forschungsgeleitete Vermittlung von Datenkompetenz: Mediendidaktische Aufbereitung von Fallstudien zu Bildungsangeboten",
+        "Art der Publikation": "conferencePaper",
+        "Datum der Publikation": 2024,
+        "Disziplin des Publikationsorts (optional)": "Samoilova, Evgenia; Sluyter-Gäthje, Henny; Skorinkin, Daniil; Schnaitter, Hannes; Trilcke, Peer; Lucke, Ulrike",
+        "Bezug zur Fallstudie (optional)": "Gesellschaft für Informatik e.V.",
+        "DOI oder URL": null
+    },
+    {
+        "Titel der Publikation": "QUADRIGA Datenkompetenzframework V 3.3",
+        "Art der Publikation": "dataset",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Petras, Vivien; Neuroth, Heike; Seltmann, Melanie; Schnaitter, Hannes; Walter, Paul",
+        "Bezug zur Fallstudie (optional)": "Zenodo",
+        "DOI oder URL": "https://zenodo.org/records/15058057"
+    },
+    {
+        "Titel der Publikation": "Proceedings of the first Base4NFDI User Conference (UC4B2024)",
+        "Art der Publikation": "journalArticle",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Altenhöner, Reinhard; Ritz, Raphael; Schimmler, Sonja; Weimer, Lukas",
+        "Bezug zur Fallstudie (optional)": "Zenodo",
+        "DOI oder URL": "https://zenodo.org/records/14842796"
+    },
+    {
+        "Titel der Publikation": "OER Workshop",
+        "Art der Publikation": "computerProgram",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Schnaitter, Hannes; Islam, Lamia; Samoilova, Evgenia",
+        "Bezug zur Fallstudie (optional)": "Zenodo",
+        "DOI oder URL": "https://zenodo.org/records/15718702"
+    },
+    {
+        "Titel der Publikation": "QUADRIGA OERs: erstellen und gestalten mit Jupyter Book. QUADRIGA Open Educational Resources: Template",
+        "Art der Publikation": "computerProgram",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Schnaitter, Hannes; Samoilova, Evgenia; Islam, Lamia",
+        "Bezug zur Fallstudie (optional)": "Zenodo",
+        "DOI oder URL": "https://zenodo.org/records/15807293"
+    },
+    {
+        "Titel der Publikation": "Quantitative Analyse der Medienwellen der Spanischen Grippe (1918/19). Eine Fallstudie",
+        "Art der Publikation": "computerProgram",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Skorinkin, Daniil; Sluyter-Gäthje, Henny; Trilcke, Peer",
+        "Bezug zur Fallstudie (optional)": "Zenodo",
+        "DOI oder URL": "https://zenodo.org/records/15703503"
+    },
+    {
+        "Titel der Publikation": "DOI-Stories: Erfolgreich Daten Publizieren in den DH.",
+        "Art der Publikation": "conferencePaper",
+        "Datum der Publikation": 2026,
+        "Disziplin des Publikationsorts (optional)": "Cremer, Fabian; Helling, Patrick; Horstmann, Jan; Seltmann, Melanie; Steyer, Timo; Söring, Sibylle",
+        "Bezug zur Fallstudie (optional)": "Zenodo",
+        "DOI oder URL": "https://zenodo.org/records/18702767"
+    },
+    {
+        "Titel der Publikation": "Community feedback on the QUADRIGA Data Literacy Framework",
+        "Art der Publikation": "presentation",
+        "Datum der Publikation": 2026,
+        "Disziplin des Publikationsorts (optional)": "Walter, Paul; Neuroth, Heike; Petras, Vivien; Schnaitter, Hannes; Seltmann, Melanie",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://zenodo.org/doi/10.5281/zenodo.18545204"
+    },
+    {
+        "Titel der Publikation": "Datenkompetenzen stärken mit QUADRIGA",
+        "Art der Publikation": "presentation",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Seltmann, Melanie",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://zenodo.org/doi/10.5281/zenodo.16025220"
+    },
+    {
+        "Titel der Publikation": "QUADRIGA-Fallstudien zur Datenkompetenz in den Humanities: Jupyter Books als \"scalable Open Educational Resources\"",
+        "Art der Publikation": "presentation",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Sluyter-Gäthje, Henny; Skorinkin, Daniil; Trilcke, Peer; Chlastak, Maria; Samoilova, Evgenia; Seltmann, Melanie; Reiter, Nils; Haider, Thomas; Kababgi, Daniel; Buschmeier, Hendrik; Helling, Patrick; Helling, Patrick; Giesberg, Kim Marielle; Kababgi, Daniel; Kip, Milan; Majka, Nicole; Thiessen, Laura",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://zenodo.org/doi/10.5281/zenodo.14944528"
+    },
+    {
+        "Titel der Publikation": "Jana Plomin: Open Data trifft Open Learning – Mit OER zur Datenkompetenz in der Verwaltungswissenschaft",
+        "Art der Publikation": "blogPost",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Mandieva, Eliza; Plomin, Jana",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://izd2m.hu-berlin.de/blog/"
+    },
+    {
+        "Titel der Publikation": "Making it Last: Factors for the Long-Term Availability of Data Literacy Resources",
+        "Art der Publikation": "presentation",
+        "Datum der Publikation": 2026,
+        "Disziplin des Publikationsorts (optional)": "Trajković-Filipović, Stefan",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://zenodo.org/doi/10.5281/zenodo.18641199"
+    },
+    {
+        "Titel der Publikation": "Fallstudie I - Tabelle. Reproduzierbarkeit von Datenanalysen",
+        "Art der Publikation": "book",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Plomin, Jana; Schmeling, Juliane; Walter, Paul; Schulze, Anton",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://zenodo.org/records/15703541"
+    },
+    {
+        "Titel der Publikation": "Research Data and Software Competencies Workshop 2025: Summary",
+        "Art der Publikation": "journalArticle",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Samoilova, Evgenia; Schimmler, Sonja",
+        "Bezug zur Fallstudie (optional)": "Gesellschaft für Informatik e.V.",
+        "DOI oder URL": "https://dl.gi.de/handle/20.500.12116/47535"
+    },
+    {
+        "Titel der Publikation": "A Jupyter Book Template for Research-Based Open Educational Resources in Data Literacy",
+        "Art der Publikation": "journalArticle",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Schnaitter, Hannes; Samoilova, Evgenia; Islam, Lamia",
+        "Bezug zur Fallstudie (optional)": "Gesellschaft für Informatik e.V.",
+        "DOI oder URL": "https://dl.gi.de/handle/20.500.12116/47544"
+    },
+    {
+        "Titel der Publikation": "Datenkompetenzerwerb mit OER: QUADRIGA — das Berlin-Brandenburgische Datenkompetenzzentrum für Digital Humanities, Verwaltungswissenschaften, Informatik und Informationswissenschaft",
+        "Art der Publikation": "journalArticle",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Seltmann, Melanie; Petras, Vivien; Schnaitter, Hannes",
+        "Bezug zur Fallstudie (optional)": "Verlag Werner Hülsbusch",
+        "DOI oder URL": "https://zenodo.org/doi/10.5281/zenodo.14925618"
+    },
+    {
+        "Titel der Publikation": "From Research Data to Research Software Competencies: Results from a Workshop",
+        "Art der Publikation": "conferencePaper",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Bernoth, Jan; Buchholz, Bettina; Hennig, Christine; Janz, Alicia; Lucke, Ulrike; Samoilova, Evgenia; Schimmler, Sonja",
+        "Bezug zur Fallstudie (optional)": "Gesellschaft für Informatik e.V.",
+        "DOI oder URL": null
+    },
+    {
+        "Titel der Publikation": "QUADRIGA Datenkompetenzframework",
+        "Art der Publikation": "dataset",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Petras, Vivien; Neuroth, Heike; Seltmann, Melanie; Schnaitter, Hannes; Walter, Paul",
+        "Bezug zur Fallstudie (optional)": "Zenodo",
+        "DOI oder URL": "https://zenodo.org/doi/10.5281/zenodo.14747822"
+    },
+    {
+        "Titel der Publikation": "Reden über geistes- & sozialwissenschaftliche Datenkompetenz. Vom Auftakt des DKZ QUADRIGA",
+        "Art der Publikation": "blogPost",
+        "Datum der Publikation": 2024,
+        "Disziplin des Publikationsorts (optional)": "Seltmann, Melanie",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://linguence.hypotheses.org/3120"
+    },
+    {
+        "Titel der Publikation": "Basic services to the community: facilitating the application of basic services through interactive case study textbooks",
+        "Art der Publikation": "presentation",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Seltmann, Melanie; Samoilova, Evgenia; Schnaitter, Hannes; Schneider, Philipp; Chlastak, Maria; Lucke, Ulrike; Schimmler, Sonja",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://zenodo.org/doi/10.5281/zenodo.14644142"
+    },
+    {
+        "Titel der Publikation": "Konzept. QUADRIGA Curriculare Empfehlungen",
+        "Art der Publikation": "document",
+        "Datum der Publikation": 2024,
+        "Disziplin des Publikationsorts (optional)": "Meisner-Dieffendahl, Julia; Plomin, Jana; Seltmann, Melanie; Schneider, Philipp",
+        "Bezug zur Fallstudie (optional)": "Zenodo",
+        "DOI oder URL": "https://zenodo.org/doi/10.5281/zenodo.14444151"
+    },
+    {
+        "Titel der Publikation": "QUADRIGA-Fallstudien zur Datenkompetenz in den Humanities: Jupyter Books als \"scalable Open Educational Resources\"",
+        "Art der Publikation": "conferencePaper",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Sluyter-Gäthje, Henny; Skorinkin, Daniil; Trilcke, Peer; Chlastak, Maria; Samoilova, Evgenia; Seltmann, Melanie; Helling, Patrick; Giesberg, Kim Marielle; Kababgi, Daniel; Kip, Milan; Majka, Nicole; Thiessen, Laura",
+        "Bezug zur Fallstudie (optional)": "Zenodo",
+        "DOI oder URL": "https://zenodo.org/doi/10.5281/zenodo.14942998"
+    },
+    {
+        "Titel der Publikation": "Umsetzungskonzept QUADRIGA: Berlin-Brandenburgisches Datenkompetenzzentrum für Digital Humanities, Verwaltungswissenschaft, Informatik und Informationswissenschaft",
+        "Art der Publikation": "journalArticle",
+        "Datum der Publikation": 2024,
+        "Disziplin des Publikationsorts (optional)": "Buchholz, Bettina; Lucke, Ulrike; Schimmler, Sonja; Bakels, Jan-Hendrik; Bernoth, Jan; Fischer, Frank; Gieseke, Lena; Grotkopp, Matthias; Hiltmann, Torsten; Krupka, Daniel; Loist, Skadi; Meisner, Julia; Mischke, Dennis; Möser, Robin; Neuroth, Heike; Petras, Vivien; Schmeling, Juliane; Söring, Sibylle; Trilcke, Peer",
+        "Bezug zur Fallstudie (optional)": "Zenodo",
+        "DOI oder URL": "https://zenodo.org/records/10805016"
+    },
+    {
+        "Titel der Publikation": "Fallstudienbasierte Open Education Resource (OER) zur quantitativen Analyse von Textdaten.",
+        "Art der Publikation": "blogPost",
+        "Datum der Publikation": 2025,
+        "Disziplin des Publikationsorts (optional)": "Mandieva, Eliza; Sluyter-Gäthje, Henny",
+        "Bezug zur Fallstudie (optional)": null,
+        "DOI oder URL": "https://www.izd2m.hu-berlin.de/blog-posts/2025/10/01/bp-Sluyter-Gaethje.html"
     }
 ]

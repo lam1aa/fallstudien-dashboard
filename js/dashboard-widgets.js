@@ -80,8 +80,7 @@ export async function renderRecommendations() {
     barsContainer.innerHTML = "";
     for (let i = 5; i >= 1; i--) {
       const count = counts[i];
-      const maxCount = Math.max(...Object.values(counts));
-      const percent = maxCount > 0 ? (count / maxCount) * 100 : 0;
+      const percent = (count / validCount) * 100;
       barsContainer.innerHTML += `
         <div class="d-flex align-items-center mb-1 rec-bar-row">
           <div class="text-muted text-end pe-2 rec-bar-label">${i}</div>

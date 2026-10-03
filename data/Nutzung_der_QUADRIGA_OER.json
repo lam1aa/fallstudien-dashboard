@@ -4,62 +4,71 @@
         "Art der Nutzung": "Einbindungen in Lehrveranstaltungen",
         "Name der Institution": "Hochschule Beispielstadt",
         "Region der Institution (Bundesland)": "Brandenburg",
-        "Beschreibung der Nutzung": "Einsatz des Templates in einem Masterseminar Datenkompetenz"
+        "Beschreibung der Nutzung": "Einsatz des Templates in einem Masterseminar Datenkompetenz",
+        "Unnamed: 6": null
     },
     {
         "Fallstudie oder Template": "Case 1",
         "Art der Nutzung": "Einbindungen in Lehrveranstaltungen",
         "Name der Institution": "Tech Institute",
         "Region der Institution (Bundesland)": "Bayern",
-        "Beschreibung der Nutzung": "Used in Introduction to AI course"
+        "Beschreibung der Nutzung": "Used in Introduction to AI course",
+        "Unnamed: 6": null
     },
     {
         "Fallstudie oder Template": "Case 2",
         "Art der Nutzung": "Uebernahmen durch andere Institutionen",
         "Name der Institution": "HU Berlin",
         "Region der Institution (Bundesland)": "Berlin",
-        "Beschreibung der Nutzung": "Adopted for Digital Sociology module"
+        "Beschreibung der Nutzung": "Adopted for Digital Sociology module",
+        "Unnamed: 6": "Einbindungen in Lehrveranstaltungen"
     },
     {
         "Fallstudie oder Template": "Case 3",
         "Art der Nutzung": "Anfragen zur Nachnutzung",
         "Name der Institution": "RWTH Aachen",
         "Region der Institution (Bundesland)": "NRW",
-        "Beschreibung der Nutzung": "Requested for engineering ethics course"
+        "Beschreibung der Nutzung": "Requested for engineering ethics course",
+        "Unnamed: 6": "Uebernahmen durch andere Institutionen"
     },
     {
         "Fallstudie oder Template": "Template A",
         "Art der Nutzung": "Einbindungen in Lehrveranstaltungen",
         "Name der Institution": "Uni Frankfurt",
         "Region der Institution (Bundesland)": "Hessen",
-        "Beschreibung der Nutzung": "Used in data literacy seminar"
+        "Beschreibung der Nutzung": "Used in data literacy seminar",
+        "Unnamed: 6": "Anfragen zur Nachnutzung"
     },
     {
         "Fallstudie oder Template": "Case 4",
         "Art der Nutzung": "Uebernahmen durch andere Institutionen",
         "Name der Institution": "Leipzig University",
         "Region der Institution (Bundesland)": "Sachsen",
-        "Beschreibung der Nutzung": "Integrated into DH master program"
+        "Beschreibung der Nutzung": "Integrated into DH master program",
+        "Unnamed: 6": null
     },
     {
         "Fallstudie oder Template": "Case 5",
         "Art der Nutzung": "Anfragen zur Nachnutzung",
         "Name der Institution": "Uni Bremen",
         "Region der Institution (Bundesland)": "Bremen",
-        "Beschreibung der Nutzung": "Interested for upcoming semester"
+        "Beschreibung der Nutzung": "Interested for upcoming semester",
+        "Unnamed: 6": null
     },
     {
         "Fallstudie oder Template": "Template B",
         "Art der Nutzung": "Einbindungen in Lehrveranstaltungen",
         "Name der Institution": "Uni Hamburg",
         "Region der Institution (Bundesland)": "Hamburg",
-        "Beschreibung der Nutzung": "Used in teacher training"
+        "Beschreibung der Nutzung": "Used in teacher training",
+        "Unnamed: 6": null
     },
     {
         "Fallstudie oder Template": "Case 6",
         "Art der Nutzung": "Uebernahmen durch andere Institutionen",
         "Name der Institution": "Heidelberg Uni",
         "Region der Institution (Bundesland)": "BW",
-        "Beschreibung der Nutzung": "Adapted for medical informatics"
+        "Beschreibung der Nutzung": "Adapted for medical informatics",
+        "Unnamed: 6": null
     }
 ]

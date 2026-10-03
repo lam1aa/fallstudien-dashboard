@@ -1,6 +1,22 @@
 import pandas as pd
 import json
 import os
+import datetime
+import math
+
+class DateTimeEncoder(json.JSONEncoder):
+    """Custom encoder that serializes Timestamps and dates to ISO strings."""
+    def default(self, obj):
+        if isinstance(obj, (pd.Timestamp, datetime.datetime, datetime.date)):
+            return obj.isoformat()
+        return super().default(obj)
+
+def clean_record(record):
+    """Replace any remaining NaN float values with None (JSON null)."""
+    return {
+        k: (None if isinstance(v, float) and math.isnan(v) else v)
+        for k, v in record.items()
+    }
 
 def excel_to_json(excel_path, output_dir):
     try:
@@ -19,8 +35,9 @@ def excel_to_json(excel_path, output_dir):
             # Replace Pandas NaN/NaT values with None so json.dump outputs 'null'
             df = df.where(pd.notnull(df), None)
             
-            # Convert the dataframe to a list of dictionaries
-            records = df.to_dict(orient='records')
+            # Convert the dataframe to a list of dictionaries,
+            # cleaning up any remaining NaN floats -> None (JSON null)
+            records = [clean_record(r) for r in df.to_dict(orient='records')]
             
             # Create a safe filename for the JSON (replace non-alphanumeric chars with underscores)
             safe_sheet_name = "".join([c if c.isalnum() else "_" for c in sheet_name]).strip("_")
@@ -32,7 +49,7 @@ def excel_to_json(excel_path, output_dir):
             json_path = os.path.join(output_dir, json_filename)
             
             with open(json_path, 'w', encoding='utf-8') as f:
-                json.dump(records, f, indent=4, ensure_ascii=False)
+                json.dump(records, f, indent=4, ensure_ascii=False, cls=DateTimeEncoder, allow_nan=False)
                 
             print(f"Successfully converted sheet '{sheet_name}' -> {json_filename}")
             

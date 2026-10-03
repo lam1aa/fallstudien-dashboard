@@ -1,56 +1,74 @@
 [
     {
         "Personenkennung (optional Verknüpfung zu Teilnahmen)": "Teilnehmer-101",
-        "Fallstudie (optional)": "Fallstudie Tabellenanalyse Verwaltung",
-        "Empfehlungsscore (1–5)": 5,
-        "Kommentar (optional Begründung)": "Sehr hilfreich zur Anwendung von Datenkompetenz im eigenen Forschungsprojekt"
-    },
-    {
-        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User001",
-        "Fallstudie (optional)": "Case 1",
-        "Empfehlungsscore (1–5)": 5,
-        "Kommentar (optional Begründung)": "Very useful material!"
-    },
-    {
-        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User002",
-        "Fallstudie (optional)": "Case 2",
+        "Fallstudie (optional)": "Text/Python",
         "Empfehlungsscore (1–5)": 4,
-        "Kommentar (optional Begründung)": "Good, but needs more examples."
+        "Kommentar (optional Begründung)": null
     },
     {
-        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User003",
-        "Fallstudie (optional)": "Case 3",
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "Teilnehmer-102",
+        "Fallstudie (optional)": "Bewegtes Bild/OpenRefine",
         "Empfehlungsscore (1–5)": 5,
-        "Kommentar (optional Begründung)": "Excellent resource for my students."
+        "Kommentar (optional Begründung)": "Super hilfreich, Danke!"
     },
     {
-        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User004",
-        "Fallstudie (optional)": "Case 4",
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "Teilnehmer-103",
+        "Fallstudie (optional)": "Bewegtes Bild/OpenRefine",
+        "Empfehlungsscore (1–5)": 5,
+        "Kommentar (optional Begründung)": null
+    },
+    {
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "Teilnehmer-104",
+        "Fallstudie (optional)": "Text/Python",
+        "Empfehlungsscore (1–5)": 1,
+        "Kommentar (optional Begründung)": "für Bibliotheksarbeit zu fachspezifisch"
+    },
+    {
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "Teilnehmer-105",
+        "Fallstudie (optional)": "Text/Python",
         "Empfehlungsscore (1–5)": 3,
-        "Kommentar (optional Begründung)": "Okay, but slightly outdated."
+        "Kommentar (optional Begründung)": null
     },
     {
-        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User005",
-        "Fallstudie (optional)": "Case 5",
-        "Empfehlungsscore (1–5)": 5,
-        "Kommentar (optional Begründung)": "Highly recommended!"
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "Teilnehmer-106",
+        "Fallstudie (optional)": "Text/Python",
+        "Empfehlungsscore (1–5)": 1,
+        "Kommentar (optional Begründung)": "gerne größe schreiben. Tolle Projekt"
     },
     {
-        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User006",
-        "Fallstudie (optional)": "Case 6",
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "Teilnehmer-107",
+        "Fallstudie (optional)": "Text/Python",
         "Empfehlungsscore (1–5)": 4,
-        "Kommentar (optional Begründung)": "Well structured and easy to use."
+        "Kommentar (optional Begründung)": "Als Angfängerin fehlte mir etwas grundverständnis für die Codes. Vielleicht könnte man noch anreißen, wie die Bibliotheken funtionieren, was genau Pandas macht"
     },
     {
-        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User007",
-        "Fallstudie (optional)": "Case 7",
-        "Empfehlungsscore (1–5)": 2,
-        "Kommentar (optional Begründung)": "Too complex for beginners."
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "Teilnehmer-108",
+        "Fallstudie (optional)": "Bewegtes Bild/OpenRefine",
+        "Empfehlungsscore (1–5)": 4,
+        "Kommentar (optional Begründung)": null
     },
     {
-        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "User008",
-        "Fallstudie (optional)": "Case 8",
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "Teilnehmer-109",
+        "Fallstudie (optional)": "Bewegtes Bild/OpenRefine",
+        "Empfehlungsscore (1–5)": 3,
+        "Kommentar (optional Begründung)": null
+    },
+    {
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "Teilnehmer-110",
+        "Fallstudie (optional)": "Tabelle/SPARQL",
+        "Empfehlungsscore (1–5)": 3,
+        "Kommentar (optional Begründung)": null
+    },
+    {
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "Teilnehmer-111",
+        "Fallstudie (optional)": "Tabelle/SPARQL",
         "Empfehlungsscore (1–5)": 5,
-        "Kommentar (optional Begründung)": "Perfect for our curriculum."
+        "Kommentar (optional Begründung)": null
+    },
+    {
+        "Personenkennung (optional Verknüpfung zu Teilnahmen)": "Teilnehmer-112",
+        "Fallstudie (optional)": "Tabelle/SPARQL",
+        "Empfehlungsscore (1–5)": 2,
+        "Kommentar (optional Begründung)": null
     }
 ]

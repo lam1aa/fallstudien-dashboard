@@ -1,65 +1,234 @@
 [
     {
-        "Name der Institution": "Beispiel-Universität Berlin",
+        "Name der Institution": "Universitaet Potsdam (UP)",
+        "Region der Institution (Bundesland)": "Brandenburg",
+        "Disziplin der Institution": "Digital Humanities; Informatik; FDM",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Verbundpartner; Verbundleitung und Koordination",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Fachhochschule Potsdam (FHP)",
+        "Region der Institution (Bundesland)": "Brandenburg",
+        "Disziplin der Institution": "Informationswissenschaft",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Verbundpartner",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Filmuniversitaet Babelsberg KONRAD WOLF",
+        "Region der Institution (Bundesland)": "Brandenburg",
+        "Disziplin der Institution": "Audiovisuelle Medien; Filmwissenschaft",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Verbundpartner, until November 2026",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Fraunhofer-Institut fuer Offene Kommunikationssysteme (FOKUS)",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Disziplin der Institution": "Digital Public Services; IT",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Verbundpartner",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Freie Universitaet Berlin (FU)",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Disziplin der Institution": "Filmwissenschaft; Digital Humanities; FDM",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Verbundpartner",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Humboldt-Universitaet zu Berlin (HU)",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Disziplin der Institution": "Informationswissenschaft; Digital History",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Verbundpartner",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Technische Universitaet Berlin (TU)",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Disziplin der Institution": "Informatik",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Verbundpartner",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Gesellschaft fuer Informatik (GI)",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Disziplin der Institution": "Informatik",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Verbundpartner, until November 2026",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Digital Humanities im deutschsprachigen Raum (DHd Verband)",
+        "Region der Institution (Bundesland)": "Hamburg",
+        "Disziplin der Institution": "Digital Humanities",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": null,
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Hochschulverband Informationswissenschaft e. V. (HI)",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Disziplin der Institution": "Informationswissenschaft",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": null,
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Nationales e-Government Kompetenzzentrum (NEGZ)",
         "Region der Institution (Bundesland)": "Berlin",
         "Disziplin der Institution": "Verwaltungswissenschaft",
         "Aktiv (Ja/Nein)": "Ja",
-        "Beschreibung der Kooperation": "Gemeinsame Entwicklung und Erprobung einer Fallstudie zur Tabellenanalyse"
+        "Beschreibung der Kooperation": null,
+        "who is managing/doing the cooperation": null
     },
     {
-        "Name der Institution": "Tech University Munich",
-        "Region der Institution (Bundesland)": "Bayern",
-        "Disziplin der Institution": "Computer Science",
-        "Aktiv (Ja/Nein)": "Ja",
-        "Beschreibung der Kooperation": "Research on AI in Education"
-    },
-    {
-        "Name der Institution": "Humboldt University",
+        "Name der Institution": "Staatsbibliothek zu Berlin",
         "Region der Institution (Bundesland)": "Berlin",
-        "Disziplin der Institution": "Sociology",
+        "Disziplin der Institution": "Textdaten",
         "Aktiv (Ja/Nein)": "Ja",
-        "Beschreibung der Kooperation": "Digital Sociology OER"
+        "Beschreibung der Kooperation": "Potentieller externer Akteur fuer Fallstudie 1 (Text)",
+        "who is managing/doing the cooperation": null
     },
     {
-        "Name der Institution": "RWTH Aachen",
+        "Name der Institution": "Berlin-Brandenburgische Akademie der Wissenschaften (BBAW)",
+        "Region der Institution (Bundesland)": "Berlin; Brandenburg",
+        "Disziplin der Institution": "Textdaten",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Potentieller externer Akteur fuer Fallstudie 1 (Text);",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": null,
+        "Region der Institution (Bundesland)": null,
+        "Disziplin der Institution": null,
+        "Aktiv (Ja/Nein)": null,
+        "Beschreibung der Kooperation": "Markus Schnöpf ist Beiratsmitglied",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Leibniz-Institut fuer Bildungsforschung und Bildungsinformation (DIPF)",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Disziplin der Institution": "Bildung",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Modellprojekt-Akteur fuer Fallstudie 1 (Tabelle)",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Technologiestiftung Berlin",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Disziplin der Institution": null,
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Akteur fuer App-Umsetzung (Fallstudie 2, Tabelle)",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "CityLab Berlin",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Disziplin der Institution": null,
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Akteur fuer App-Umsetzung (Fallstudie 2, Tabelle)",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Leibniz-Institut fuer raumbezogene Sozialforschung (IRS)",
+        "Region der Institution (Bundesland)": null,
+        "Disziplin der Institution": "Sozialforschung",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Methodische Beratung (Fallstudie 2, Tabelle)",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Hochschule fuer nachhaltige Entwicklung Eberswalde",
+        "Region der Institution (Bundesland)": "Brandenburg",
+        "Disziplin der Institution": null,
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Methodische Beratung (Fallstudie 2, Tabelle)",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Hertie School",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Disziplin der Institution": "Verwaltungswissenschaft",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Prof. Simon Munzert ist Beiratsmitglied",
+        "who is managing/doing the cooperation": "UP: Bettina/Stefan"
+    },
+    {
+        "Name der Institution": "Nationale Forschungsdateninfrastruktur (NFDI e.V.)",
+        "Region der Institution (Bundesland)": "Bundesweit",
+        "Disziplin der Institution": "Forschungsdateninfrastruktur",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Anbindung, Vernetzung und needs to be split up into multiple entries, because NFDI has many sub-organizations, with which we do have had cooperations.",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Ministerium fuer Wissenschaft, Forschung und Kultur (MWFK)",
+        "Region der Institution (Bundesland)": "Brandenburg",
+        "Disziplin der Institution": "Politik; Verwaltung",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Unterstuetzung (Letter of Intent)",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Ministerium des Inneren und fuer Kommunales (MIK)",
+        "Region der Institution (Bundesland)": "Brandenburg",
+        "Disziplin der Institution": "Politik; Verwaltung",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Unterstuetzung (Letter of Intent)",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "Berliner Senatsverwaltungen",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Disziplin der Institution": "Politik; Verwaltung",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Unterstuetzung (Letter of Intent)",
+        "who is managing/doing the cooperation": null
+    },
+    {
+        "Name der Institution": "TH Köln",
         "Region der Institution (Bundesland)": "Nordrhein-Westfalen",
-        "Disziplin der Institution": "Engineering",
-        "Aktiv (Ja/Nein)": "Nein",
-        "Beschreibung der Kooperation": "Past project on Digital Twins"
-    },
-    {
-        "Name der Institution": "Leipzig University",
-        "Region der Institution (Bundesland)": "Sachsen",
-        "Disziplin der Institution": "Linguistics",
+        "Disziplin der Institution": "Informationswissenschaft",
         "Aktiv (Ja/Nein)": "Ja",
-        "Beschreibung der Kooperation": "NLP Case Studies"
+        "Beschreibung der Kooperation": "Claudia Frick ist Beiratsmitglied",
+        "who is managing/doing the cooperation": "UP: Bettina/Stefan"
     },
     {
-        "Name der Institution": "University of Bremen",
-        "Region der Institution (Bundesland)": "Bremen",
-        "Disziplin der Institution": "Data Science",
+        "Name der Institution": "Universität Paderborn",
+        "Region der Institution (Bundesland)": "Nordrhein-Westfalen",
+        "Disziplin der Institution": "Informatik",
         "Aktiv (Ja/Nein)": "Ja",
-        "Beschreibung der Kooperation": "Data literacy modules"
+        "Beschreibung der Kooperation": "Gudrun Oevel ist Beiratsmitglied",
+        "who is managing/doing the cooperation": "UP: Bettina/Stefan"
     },
     {
-        "Name der Institution": "Goethe University Frankfurt",
+        "Name der Institution": "Universität Regensburg",
+        "Region der Institution (Bundesland)": "Bayern",
+        "Disziplin der Institution": "Informatik",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Meike Klettke ist Beiratsmitglied",
+        "who is managing/doing the cooperation": "UP: Bettina/Stefan"
+    },
+    {
+        "Name der Institution": "TU Darmstadt / NFDI4ING",
         "Region der Institution (Bundesland)": "Hessen",
-        "Disziplin der Institution": "Economics",
-        "Aktiv (Ja/Nein)": "Nein",
-        "Beschreibung der Kooperation": "Workshop collaboration 2022"
+        "Disziplin der Institution": "Digital Humanities",
+        "Aktiv (Ja/Nein)": "Ja",
+        "Beschreibung der Kooperation": "Thomas Stäcker ist Beiratsmitglied",
+        "who is managing/doing the cooperation": "UP: Bettina/Stefan"
     },
     {
-        "Name der Institution": "University of Hamburg",
-        "Region der Institution (Bundesland)": "Hamburg",
-        "Disziplin der Institution": "Education",
-        "Aktiv (Ja/Nein)": "Ja",
-        "Beschreibung der Kooperation": "Teacher training OER"
-    },
-    {
-        "Name der Institution": "Heidelberg University",
-        "Region der Institution (Bundesland)": "Baden-Württemberg",
-        "Disziplin der Institution": "Medicine",
-        "Aktiv (Ja/Nein)": "Ja",
-        "Beschreibung der Kooperation": "Digital Health case study"
+        "Name der Institution": "Project “SoNAR – Social Network Analysis and Related Research”",
+        "Region der Institution (Bundesland)": "Berlin",
+        "Disziplin der Institution": "Informationswissenschaft",
+        "Aktiv (Ja/Nein)": null,
+        "Beschreibung der Kooperation": "Review",
+        "who is managing/doing the cooperation": "UP: Bettina/Stefan"
     }
 ]

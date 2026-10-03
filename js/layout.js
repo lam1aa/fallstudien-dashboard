@@ -21,10 +21,10 @@ function loadNavbar() {
       </a>
       <ul class="navbar-nav flex-row gap-2">
         <li class="nav-item">
-          <a class="nav-link" href="index.html" id="nav-index">OER Fallstudien</a>
+          <a class="nav-link" href="index.html" id="nav-index">QUADRIGA OER</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="community.html" id="nav-community">Community & Kommunikation</a>
+          <a class="nav-link" href="community.html" id="nav-community">Veranstaltungen, Beiträge, Kooperationen</a>
         </li>
       </ul>
     </div>

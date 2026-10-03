@@ -1,92 +1,372 @@
 [
     {
-        "Titel des Beitrags": "Reproduzierbarkeit von Datenanalysen mit QUADRIGA",
+        "Titel des Beitrags": "Poster",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Poster",
+        "Titel der externen Veranstaltung": "RDA Deutschland Tagung 2024",
+        "Veranstaltende Organisation": "RDA-DE e. V.",
+        "Datum der Veranstaltung": "2024-02-20T00:00:00",
+        "Region der Veranstaltung": "Potsdam",
+        "Disziplin der Veranstaltung": "Wissenschaftskommunikation",
+        "Bezug zur Fallstudie (optional)": "AP 3.4.4 b"
+    },
+    {
+        "Titel des Beitrags": "Analyse von Werkzeugen und Datenkompetenzen anhand einer Fallstudie",
         "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Vortrag",
-        "Titel der externen Veranstaltung": "Fachkonferenz Datenkompetenz 2026",
-        "Veranstaltende Organisation": "Fachhochschule Potsdam",
-        "Datum der Veranstaltung": "2026-06-20",
-        "Region der Veranstaltung": "Brandenburg",
-        "Disziplin der Veranstaltung": "Informatik; Informationswissenschaft",
-        "Bezug zur Fallstudie (optional)": "Fallstudie Textanalyse Verwaltungsdokumente"
+        "Titel der externen Veranstaltung": "Digital Cinema Hub Marburg",
+        "Veranstaltende Organisation": "Philipps-Universitat Marburg",
+        "Datum der Veranstaltung": "2024-04-11T00:00:00",
+        "Region der Veranstaltung": "Marburg",
+        "Disziplin der Veranstaltung": "Medienwissenschaft",
+        "Bezug zur Fallstudie (optional)": "AP 3.1.4; AP 3.2.8; AP 3.3.8; AP 3.4.4"
     },
     {
-        "Titel des Beitrags": "AI in Education",
-        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Talk",
-        "Titel der externen Veranstaltung": "EduTech Conf by Org B",
-        "Veranstaltende Organisation": NaN,
-        "Datum der Veranstaltung": "Case 2",
-        "Region der Veranstaltung": "Bayern",
-        "Disziplin der Veranstaltung": "Education",
-        "Bezug zur Fallstudie (optional)": NaN
-    },
-    {
-        "Titel des Beitrags": "Creating OERs",
+        "Titel des Beitrags": "Poster",
         "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Poster",
-        "Titel der externen Veranstaltung": "Open Science Fair by Org C",
-        "Veranstaltende Organisation": NaN,
-        "Datum der Veranstaltung": "Case 1",
+        "Titel der externen Veranstaltung": "Netzwerktreffen FDM BBB",
+        "Veranstaltende Organisation": "FDM-BB",
+        "Datum der Veranstaltung": "2024-04-23T00:00:00",
+        "Region der Veranstaltung": "Potsdam",
+        "Disziplin der Veranstaltung": "Wissenschaftskommunikation",
+        "Bezug zur Fallstudie (optional)": "AP 3.4.4 b"
+    },
+    {
+        "Titel des Beitrags": "QUADRIGA Netzwerktreffen",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Highlighting-Talk",
+        "Titel der externen Veranstaltung": "Humanities, Societies and the Digital: Highlighting-Talks der Teams und Zentren",
+        "Veranstaltende Organisation": "IZ D2MCM (HU Berlin)",
+        "Datum der Veranstaltung": "2024-05-31T00:00:00",
         "Region der Veranstaltung": "Berlin",
-        "Disziplin der Veranstaltung": "Computer Science",
-        "Bezug zur Fallstudie (optional)": NaN
+        "Disziplin der Veranstaltung": "Humanities, Social Scientists, Data Scientists",
+        "Bezug zur Fallstudie (optional)": null
     },
     {
-        "Titel des Beitrags": "Digital Competencies",
-        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Panel",
-        "Titel der externen Veranstaltung": "Future Skills Summit by Org D",
-        "Veranstaltende Organisation": NaN,
-        "Datum der Veranstaltung": "Case 3",
-        "Region der Veranstaltung": "Nordrhein-Westfalen",
-        "Disziplin der Veranstaltung": "Education",
-        "Bezug zur Fallstudie (optional)": NaN
+        "Titel des Beitrags": "Data Talks Fallstudie 1",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Prasentation",
+        "Titel der externen Veranstaltung": "Data Talks Fallstudie 1",
+        "Veranstaltende Organisation": "IZ Digitalitat und digitale Methoden am Campus Mitte",
+        "Datum der Veranstaltung": "2024-09-10T00:00:00",
+        "Region der Veranstaltung": "Berlin",
+        "Disziplin der Veranstaltung": "DH",
+        "Bezug zur Fallstudie (optional)": null
     },
     {
-        "Titel des Beitrags": "Data Science for Teachers",
-        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Talk",
-        "Titel der externen Veranstaltung": "Teacher Training Day by Org E",
-        "Veranstaltende Organisation": NaN,
-        "Datum der Veranstaltung": "Case 4",
-        "Region der Veranstaltung": "Sachsen",
-        "Disziplin der Veranstaltung": "Data Science",
-        "Bezug zur Fallstudie (optional)": NaN
+        "Titel des Beitrags": "AP1 Tabelle",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Prasentation und Demo",
+        "Titel der externen Veranstaltung": "NEGZ Herbsttagung",
+        "Veranstaltende Organisation": "NEGZ",
+        "Datum der Veranstaltung": "2024-09-19T00:00:00",
+        "Region der Veranstaltung": "Berlin",
+        "Disziplin der Veranstaltung": "Verwaltungswissenschaften",
+        "Bezug zur Fallstudie (optional)": "AP 1"
     },
     {
-        "Titel des Beitrags": "The QUADRIGA Approach",
-        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Talk",
-        "Titel der externen Veranstaltung": "EdTech Europe by Org F",
-        "Veranstaltende Organisation": NaN,
-        "Datum der Veranstaltung": "Case 5",
-        "Region der Veranstaltung": "Bremen",
-        "Disziplin der Veranstaltung": "Library Science",
-        "Bezug zur Fallstudie (optional)": NaN
+        "Titel des Beitrags": "AP1 Tabelle",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Prasentation und Demo",
+        "Titel der externen Veranstaltung": "Public Data Konferenz",
+        "Veranstaltende Organisation": "Fraunhofer FOKUS",
+        "Datum der Veranstaltung": "2024-09-19T00:00:00",
+        "Region der Veranstaltung": "Berlin",
+        "Disziplin der Veranstaltung": "Verwaltungswissenschaften",
+        "Bezug zur Fallstudie (optional)": "AP 1"
     },
     {
-        "Titel des Beitrags": "Collaborative Learning",
+        "Titel des Beitrags": "Hochschule 2034",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Vortrag",
+        "Titel der externen Veranstaltung": "Hochschule 2034",
+        "Veranstaltende Organisation": "GI",
+        "Datum der Veranstaltung": "2024-09-24T00:00:00",
+        "Region der Veranstaltung": "Wiesbaden",
+        "Disziplin der Veranstaltung": "Informatik; Admin./IT",
+        "Bezug zur Fallstudie (optional)": null
+    },
+    {
+        "Titel des Beitrags": "Vorstellung QUADRIGA",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Vortrag",
+        "Titel der externen Veranstaltung": "Data Science Community Workshop",
+        "Veranstaltende Organisation": "Teil der Informatik 24-Konferenz",
+        "Datum der Veranstaltung": "2024-09-26T00:00:00",
+        "Region der Veranstaltung": "Wiesbaden",
+        "Disziplin der Veranstaltung": "Data Science-Initiativen; Datenkompetenzzentren",
+        "Bezug zur Fallstudie (optional)": null
+    },
+    {
+        "Titel des Beitrags": "Digitale Zeitreise - Studentische Filme zwischen Mauerfall und Neuland",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Vortrag",
+        "Titel der externen Veranstaltung": "Jubilumsfeier Filmuniversitat",
+        "Veranstaltende Organisation": "Filmuniversitat Babelsberg KONRAD WOLF",
+        "Datum der Veranstaltung": "2024-11-05T00:00:00",
+        "Region der Veranstaltung": "Potsdam",
+        "Disziplin der Veranstaltung": "Medienwissenschaft",
+        "Bezug zur Fallstudie (optional)": "AP 3.1.4"
+    },
+    {
+        "Titel des Beitrags": "Forschungsdaten im Fokus",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Vortrag",
+        "Titel der externen Veranstaltung": "Nights of Open Knowledge",
+        "Veranstaltende Organisation": "GI",
+        "Datum der Veranstaltung": "2024-11-08T00:00:00",
+        "Region der Veranstaltung": "Lubeck",
+        "Disziplin der Veranstaltung": "Informatik",
+        "Bezug zur Fallstudie (optional)": "AP 3"
+    },
+    {
+        "Titel des Beitrags": "Chair Panel",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Chair Panel",
+        "Titel der externen Veranstaltung": "Cultural Heritage Data & Power",
+        "Veranstaltende Organisation": "BMBF Research Group DAVIF",
+        "Datum der Veranstaltung": "2024-11-14T00:00:00",
+        "Region der Veranstaltung": "Marburg",
+        "Disziplin der Veranstaltung": "Medienwissenschaft",
+        "Bezug zur Fallstudie (optional)": "AP 3.1.4; AP 3.2.8; AP 3.3.8; AP 3.4.4"
+    },
+    {
+        "Titel des Beitrags": "Basic services to the community – facilitating the application of basic services through interactive case study textbooks",
         "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Poster",
-        "Titel der externen Veranstaltung": "Learning Analytics Conf by Org G",
-        "Veranstaltende Organisation": NaN,
-        "Datum der Veranstaltung": "Case 6",
-        "Region der Veranstaltung": "Hessen",
-        "Disziplin der Veranstaltung": "Engineering",
-        "Bezug zur Fallstudie (optional)": NaN
+        "Titel der externen Veranstaltung": "Base4NFDI User Conference",
+        "Veranstaltende Organisation": "Base4NFDI",
+        "Datum der Veranstaltung": "2024-11-20T00:00:00",
+        "Region der Veranstaltung": "Berlin",
+        "Disziplin der Veranstaltung": "Informationswissenschaft",
+        "Bezug zur Fallstudie (optional)": "AP 3.4.1, AP 3.4.4, AP 3.3.8"
     },
     {
-        "Titel des Beitrags": "Digital Humanities OER",
-        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Panel",
-        "Titel der externen Veranstaltung": "DH Conference by Org H",
-        "Veranstaltende Organisation": NaN,
-        "Datum der Veranstaltung": "Case 7",
-        "Region der Veranstaltung": "Hamburg",
-        "Disziplin der Veranstaltung": "Education",
-        "Bezug zur Fallstudie (optional)": NaN
+        "Titel des Beitrags": "Projektvorstellung Quadriga",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Projektvorstellung",
+        "Titel der externen Veranstaltung": "Launch Media Research Center Babelsberg",
+        "Veranstaltende Organisation": "Media Research Center Babelsberg",
+        "Datum der Veranstaltung": "2024-11-29T00:00:00",
+        "Region der Veranstaltung": "Potsdam",
+        "Disziplin der Veranstaltung": "Medienwissenschaft",
+        "Bezug zur Fallstudie (optional)": "AP 3.1.4; AP 3.2.8; AP 3.3.8; AP 3.4.4"
     },
     {
-        "Titel des Beitrags": "Future of Open Education",
-        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Keynote",
-        "Titel der externen Veranstaltung": "OER Summit by Org I",
-        "Veranstaltende Organisation": NaN,
-        "Datum der Veranstaltung": "Case 8",
-        "Region der Veranstaltung": "Baden-Württemberg",
-        "Disziplin der Veranstaltung": "Humanities",
-        "Bezug zur Fallstudie (optional)": NaN
+        "Titel des Beitrags": "Poster",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Poster",
+        "Titel der externen Veranstaltung": "KI Connect: Austausch und Innovation an Brandenburger Hochschulen",
+        "Veranstaltende Organisation": "MWFK Brandenburg",
+        "Datum der Veranstaltung": "2024-12-13T00:00:00",
+        "Region der Veranstaltung": "Potsdam",
+        "Disziplin der Veranstaltung": null,
+        "Bezug zur Fallstudie (optional)": null
+    },
+    {
+        "Titel des Beitrags": "Prasentation, Poster",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Prasentation, Poster",
+        "Titel der externen Veranstaltung": "RDA-DE",
+        "Veranstaltende Organisation": "RDA",
+        "Datum der Veranstaltung": "2025-02-18T00:00:00",
+        "Region der Veranstaltung": "Potsdam",
+        "Disziplin der Veranstaltung": "Wissenschaftskommunikation",
+        "Bezug zur Fallstudie (optional)": "AP 3.1 / AP 3.4"
+    },
+    {
+        "Titel des Beitrags": "Workshop zu OERs, Poster",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Workshop, Poster",
+        "Titel der externen Veranstaltung": "DHd Konferenz",
+        "Veranstaltende Organisation": "DHd",
+        "Datum der Veranstaltung": "2025-03-03T00:00:00",
+        "Region der Veranstaltung": "Bielefeld",
+        "Disziplin der Veranstaltung": "Geisteswissenschaften",
+        "Bezug zur Fallstudie (optional)": "AP 3.4.1"
+    },
+    {
+        "Titel des Beitrags": "Poster zum OER-Feedback, Paper zu DKF",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Poster, Paper",
+        "Titel der externen Veranstaltung": "ISI2025",
+        "Veranstaltende Organisation": "HI",
+        "Datum der Veranstaltung": "2025-03-18T00:00:00",
+        "Region der Veranstaltung": "Chemnitz",
+        "Disziplin der Veranstaltung": "Informationswissenschaft",
+        "Bezug zur Fallstudie (optional)": "AP 3.3.1, AP 3.3.8"
+    },
+    {
+        "Titel des Beitrags": "Die Grippe wutet weiter. Fallstudienbasierte OER zur quantitativen Analyse von Textdaten",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Data Talk",
+        "Titel der externen Veranstaltung": "Cookie Talks",
+        "Veranstaltende Organisation": "IZ D2MCM (HU Berlin)",
+        "Datum der Veranstaltung": "2025-05-20T00:00:00",
+        "Region der Veranstaltung": "Berlin",
+        "Disziplin der Veranstaltung": "Humboldt Universitat (alle Disziplinen)",
+        "Bezug zur Fallstudie (optional)": "AP 3: M 3.1.1 c / M 3.1.2 c / M 3.1.3 c / M 3.1.4 c"
+    },
+    {
+        "Titel des Beitrags": "Das QUADRIGA-Datenkompetenzframework",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Vortrag",
+        "Titel der externen Veranstaltung": "Berliner Bibliothekswissenschaftliches Kolloquium",
+        "Veranstaltende Organisation": "IBI HU",
+        "Datum der Veranstaltung": "2025-05-20T00:00:00",
+        "Region der Veranstaltung": "Berlin",
+        "Disziplin der Veranstaltung": "Informationswissenschaft",
+        "Bezug zur Fallstudie (optional)": "AP 3.4.1, AP 3.3.8"
+    },
+    {
+        "Titel des Beitrags": "Datenkompetenzen starken mit QUADRIGA",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Poster",
+        "Titel der externen Veranstaltung": "Text+ Plenary + DARIAH Annual Meeting",
+        "Veranstaltende Organisation": "Text+ / DARIAH",
+        "Datum der Veranstaltung": "2025-06-16T00:00:00",
+        "Region der Veranstaltung": "Gottingen",
+        "Disziplin der Veranstaltung": "Informationswissenschaft, Geisteswissenschaften",
+        "Bezug zur Fallstudie (optional)": "AP 3.4.4, AP 3.3.8"
+    },
+    {
+        "Titel des Beitrags": "Workshop zur Datenpublikation",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Workshop",
+        "Titel der externen Veranstaltung": "NECS 2025 Conference",
+        "Veranstaltende Organisation": "NECS",
+        "Datum der Veranstaltung": "2025-06-18T00:00:00",
+        "Region der Veranstaltung": "Lisbon",
+        "Disziplin der Veranstaltung": "Medienwissenschaft",
+        "Bezug zur Fallstudie (optional)": "AP 3.1.4; AP 3.2.8; AP 3.3.8; AP 3.4.4"
+    },
+    {
+        "Titel des Beitrags": "Vortrag mit HERMES zu bisherigen Ergebnissen",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Vortrag",
+        "Titel der externen Veranstaltung": "BiblioCon BID Kongress",
+        "Veranstaltende Organisation": "dhv",
+        "Datum der Veranstaltung": "2025-06-24T00:00:00",
+        "Region der Veranstaltung": "Bremen",
+        "Disziplin der Veranstaltung": "Informationswissenschaft",
+        "Bezug zur Fallstudie (optional)": "AP 3.4.4, AP 3.3.8"
+    },
+    {
+        "Titel des Beitrags": "Open Data trifft Open Learning Mit OER zur Datenkompetenz in der Verwaltungswissenschaft",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Vortrag",
+        "Titel der externen Veranstaltung": "Cookie Talks",
+        "Veranstaltende Organisation": "IZ D2MCM (HU Berlin)",
+        "Datum der Veranstaltung": "2025-07-01T00:00:00",
+        "Region der Veranstaltung": "Berlin",
+        "Disziplin der Veranstaltung": "Humboldt Universitat (alle Disziplinen)",
+        "Bezug zur Fallstudie (optional)": "AP 3: M 3.1.1 c / M 3.1.2 c / M 3.1.3 c / M 3.1.4 c"
+    },
+    {
+        "Titel des Beitrags": "Framing Data Literacy. The Competence Centre for Data Literacy QUADRIGA",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Poster",
+        "Titel der externen Veranstaltung": "Conference on Research Data Infrastructure (CoRDI)",
+        "Veranstaltende Organisation": "NFDI",
+        "Datum der Veranstaltung": "2025-08-26T00:00:00",
+        "Region der Veranstaltung": "Aachen",
+        "Disziplin der Veranstaltung": "NFDI",
+        "Bezug zur Fallstudie (optional)": "AP 3.4.1, AP 3.4.4, AP 3.3.8"
+    },
+    {
+        "Titel des Beitrags": "Vortrag From data to knowledge - OER-supported teaching of data literacy in administrative science",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Vortrag",
+        "Titel der externen Veranstaltung": "Informatik Festival 2025",
+        "Veranstaltende Organisation": "GI, Universitat Potsdam, Hasso Plattner Institut, FOKUS",
+        "Datum der Veranstaltung": "2025-09-16T00:00:00",
+        "Region der Veranstaltung": "Potsdam",
+        "Disziplin der Veranstaltung": "Informatik",
+        "Bezug zur Fallstudie (optional)": null
+    },
+    {
+        "Titel des Beitrags": "Prasentation Datensatze, Macht und Recht: Herausforderungen bei der Veroffentlichung von Filmarchivdaten",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Prasentation",
+        "Titel der externen Veranstaltung": "Gesellschaft fur Medienwissenschaft Jahrestagung",
+        "Veranstaltende Organisation": "GfM",
+        "Datum der Veranstaltung": "2025-09-16T00:00:00",
+        "Region der Veranstaltung": "Paderborn",
+        "Disziplin der Veranstaltung": "Medienwissenschaft",
+        "Bezug zur Fallstudie (optional)": "AP 3.1.4; AP 3.2.8; AP 3.3.8; AP 3.4.4"
+    },
+    {
+        "Titel des Beitrags": "OA <3 OER. Bedarfserhebung zu OER im Kontext Open Access",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Poster",
+        "Titel der externen Veranstaltung": "Open Access Tage 2025",
+        "Veranstaltende Organisation": "Universitat Konstanz",
+        "Datum der Veranstaltung": "2025-09-17T00:00:00",
+        "Region der Veranstaltung": "Konstanz",
+        "Disziplin der Veranstaltung": "Informationswissenschaft, Third Space",
+        "Bezug zur Fallstudie (optional)": "AP 3.1, AP 3.3.4, AP3.4.4"
+    },
+    {
+        "Titel des Beitrags": "Verprobung 2. Fallstudie, Lego Serios Play, Vortrag zu Framework (Heike)",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Prasentation, Workshop, Vortrag",
+        "Titel der externen Veranstaltung": "Public Data Konferenz",
+        "Veranstaltende Organisation": "FOKUS",
+        "Datum der Veranstaltung": "2025-09-25T00:00:00",
+        "Region der Veranstaltung": "Berlin",
+        "Disziplin der Veranstaltung": "Verwaltung",
+        "Bezug zur Fallstudie (optional)": "AP 1.4.3b, 3.2.1c"
+    },
+    {
+        "Titel des Beitrags": "Prasentation",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Prasentation",
+        "Titel der externen Veranstaltung": "Smart Country Convention",
+        "Veranstaltende Organisation": "FOKUS",
+        "Datum der Veranstaltung": "2025-09-30T00:00:00",
+        "Region der Veranstaltung": "Berlin",
+        "Disziplin der Veranstaltung": "Verwaltung",
+        "Bezug zur Fallstudie (optional)": "AP 3.1.4; 3.2.1c"
+    },
+    {
+        "Titel des Beitrags": "Impuls mit Q&A Session",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Impuls",
+        "Titel der externen Veranstaltung": "ZDT-Forum 'Digitale Hochschule Brandenburg'",
+        "Veranstaltende Organisation": "ZDT",
+        "Datum der Veranstaltung": "2025-11-06T00:00:00",
+        "Region der Veranstaltung": "online",
+        "Disziplin der Veranstaltung": "Brandenburger Hochschulen",
+        "Bezug zur Fallstudie (optional)": "AP 3.1"
+    },
+    {
+        "Titel des Beitrags": "Workshop zu Datenpublikationen",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Workshop",
+        "Titel der externen Veranstaltung": "DHd 2026",
+        "Veranstaltende Organisation": "DHd e. V.",
+        "Datum der Veranstaltung": "2026-02-23T00:00:00",
+        "Region der Veranstaltung": "Wien",
+        "Disziplin der Veranstaltung": "Geisteswissenschaften, Informationswissenschaft",
+        "Bezug zur Fallstudie (optional)": "AP 3.3.6, AP 3.4.4"
+    },
+    {
+        "Titel des Beitrags": "Poster",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Poster",
+        "Titel der externen Veranstaltung": "RDA-DE 2026",
+        "Veranstaltende Organisation": "RDA-DE",
+        "Datum der Veranstaltung": "2026-02-24T00:00:00",
+        "Region der Veranstaltung": "Potsdam",
+        "Disziplin der Veranstaltung": "Wissenschaftskommunikation",
+        "Bezug zur Fallstudie (optional)": "AP 3.4.4"
+    },
+    {
+        "Titel des Beitrags": "Prasentation",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Prasentation",
+        "Titel der externen Veranstaltung": "AI4GOV 2026 - KI in der Verwaltung",
+        "Veranstaltende Organisation": "Behordenspiegel",
+        "Datum der Veranstaltung": "2026-02-26T00:00:00",
+        "Region der Veranstaltung": "Berlin",
+        "Disziplin der Veranstaltung": "KI in der Verwaltung",
+        "Bezug zur Fallstudie (optional)": "AP 3.1.4"
+    },
+    {
+        "Titel des Beitrags": "Prasentation",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Prasentation",
+        "Titel der externen Veranstaltung": "OER.Net Jahrestagung 2026",
+        "Veranstaltende Organisation": "h_da",
+        "Datum der Veranstaltung": "2026-04-16T00:00:00",
+        "Region der Veranstaltung": "Darmstadt",
+        "Disziplin der Veranstaltung": "DKZ, NFDI",
+        "Bezug zur Fallstudie (optional)": "AP 3.4.2/ 3.4.4"
+    },
+    {
+        "Titel des Beitrags": "Datenkompetenz: QUADRIGA OERs basierend auf fachspezifisch konzipierten Forschungsprozessen",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Vortrag",
+        "Titel der externen Veranstaltung": "BiblioCon",
+        "Veranstaltende Organisation": "dhv",
+        "Datum der Veranstaltung": "2026-05-18T00:00:00",
+        "Region der Veranstaltung": "Berlin",
+        "Disziplin der Veranstaltung": "Data Stewards, Bibliothekswissenschaft, Lehrende, Dozierende",
+        "Bezug zur Fallstudie (optional)": "AP 3.1 / AP 3.3"
+    },
+    {
+        "Titel des Beitrags": "Workshop: Annotating (In)Visibility: Vocabularies, Tools and Workflows in State-of-the-Art Time-Based Audiovisual Analysis",
+        "Art des Beitrags (z.B. Vortrag, Poster, Panel)": "Workshop",
+        "Titel der externen Veranstaltung": "NECS 2026 Conference",
+        "Veranstaltende Organisation": "NECS",
+        "Datum der Veranstaltung": "2026-06-18T00:00:00",
+        "Region der Veranstaltung": "Montpellier",
+        "Disziplin der Veranstaltung": "Medienwissenschaft",
+        "Bezug zur Fallstudie (optional)": "AP 3.1.4; AP 3.2.8; AP 3.3.8; AP 3.4.4"
     }
 ]
