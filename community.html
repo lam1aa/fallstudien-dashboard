@@ -7,7 +7,9 @@
   <title>Veranstaltungen, Beiträge, Kooperationen</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/styles.css?v=2">
+
 </head>
 
 <body>
@@ -16,27 +18,229 @@
 
   <main class="container">
 
+    <!-- Page header -->
     <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
       <div>
         <h2 class="mb-1 fw-bold">Veranstaltungen, Beiträge, Kooperationen</h2>
         <p class="text-secondary mb-0 small">
-          Hier ist Platz für einen kurzen açıklamenden Text, der erläutert, welche Daten hier visualisiert werden und wie diese einzuordnen sind.
+          Externe Veranstaltungen, Beiträge, aktive Kooperationen und Publikationen des QUADRIGA-Projekts.
         </p>
       </div>
     </div>
 
-    <!-- Placeholder for new charts -->
-    <div class="alert alert-light text-center p-5 border shadow-sm rounded" style="background-color: #ffffff;">
-      <h4 class="text-muted mb-3">Work in Progress</h4>
-      <p class="text-secondary mb-0">Die Datenvisualisierungen für diesen Bereich werden hier aufgebaut.</p>
-    </div>
+    <!-- Loading -->
+    <div id="comm-loading" class="alert alert-info">Lade Daten…</div>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════ -->
+    <!-- KPI Section                                                            -->
+    <!-- ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="mb-5">
+      <div class="row g-3 flex-nowrap overflow-auto pb-2">
+
+        <div class="col">
+          <div class="kpi-card kpi-card-blue h-100">
+            <div class="kpi-card-body">
+              <div class="kpi-icon"><i class="bi bi-people"></i></div>
+              <div>
+                <div class="kpi-title">Aktive Kooperationen</div>
+                <div class="kpi-value" id="kpi-kooperationen">–</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="kpi-card kpi-card-blue h-100">
+            <div class="kpi-card-body">
+              <div class="kpi-icon"><i class="bi bi-star"></i></div>
+              <div>
+                <div class="kpi-title">Eigene Beiträge (extern)</div>
+                <div class="kpi-value" id="kpi-beitraege">–</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="kpi-card kpi-card-blue h-100">
+            <div class="kpi-card-body">
+              <div class="kpi-icon"><i class="bi bi-calendar-check"></i></div>
+              <div>
+                <div class="kpi-title">Externe Veranstaltungen</div>
+                <div class="kpi-value" id="kpi-veranstaltungen">–</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="kpi-card kpi-card-blue h-100">
+            <div class="kpi-card-body">
+              <div class="kpi-icon"><i class="bi bi-journal-text"></i></div>
+              <div>
+                <div class="kpi-title">Publikationen</div>
+                <div class="kpi-value" id="kpi-publikationen">–</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════ -->
+    <!-- Durchgeführte externe Veranstaltungen                                  -->
+    <!-- ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="mb-5">
+      <div class="section-header">
+        <h5>Durchgeführte externe Veranstaltungen</h5>
+      </div>
+
+      <div class="row g-3">
+
+        <!-- Typ der Veranstaltung – donut -->
+        <div class="col-lg-5">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="chart-label">Typ der Veranstaltung</div>
+              <div id="chart-veranstal-typ"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline + Partner -->
+        <div class="col-lg-7">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="mb-4">
+                <div class="chart-label">Veranstaltungen nach Jahr</div>
+                <div id="chart-veranstal-timeline"></div>
+              </div>
+              <div>
+                <div class="chart-label">Externe Partner</div>
+                <div id="tags-externe-partner" class="d-flex flex-wrap"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════ -->
+    <!-- Eigene Beiträge extern                                                 -->
+    <!-- ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="mb-5">
+      <div class="section-header">
+        <h5>Eigene Beiträge (extern)</h5>
+      </div>
+
+      <div class="row g-3">
+
+        <!-- Art des Beitrags – horizontal bar -->
+        <div class="col-lg-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="chart-label">Art des Beitrags</div>
+              <div id="chart-beitraege-art"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline + Organisationen -->
+        <div class="col-lg-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="mb-4">
+                <div class="chart-label">Beiträge nach Jahr</div>
+                <div id="chart-beitraege-timeline"></div>
+              </div>
+              <div>
+                <div class="chart-label">Veranstaltende Organisationen</div>
+                <div id="tags-org" class="d-flex flex-wrap"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════ -->
+    <!-- Publikationen                                                          -->
+    <!-- ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="mb-5">
+      <div class="section-header">
+        <h5>Publikationen</h5>
+      </div>
+
+      <div class="row g-3">
+
+        <!-- Art der Publikation – donut -->
+        <div class="col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="chart-label">Art der Publikation</div>
+              <div id="chart-pub-typ"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stacked bar per year -->
+        <div class="col-lg-8">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="chart-label">Publikationen nach Jahr &amp; Typ</div>
+              <div id="chart-pub-year"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════ -->
+    <!-- Aktive Kooperationen                                                   -->
+    <!-- ═══════════════════════════════════════════════════════════════════════ -->
+    <section class="mb-5">
+      <div class="section-header">
+        <h5>Aktive Kooperationen</h5>
+      </div>
+
+      <div class="row g-3">
+
+        <!-- Region -->
+        <div class="col-lg-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="chart-label">Kooperationspartner nach Region (Bundesland)</div>
+              <div id="chart-koop-region"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Disziplin -->
+        <div class="col-lg-6">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div class="chart-label">Kooperationspartner nach Disziplin</div>
+              <div id="chart-koop-disziplin"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
   </main>
 
   <div id="footer-placeholder"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.51.0/dist/apexcharts.min.js"></script>
   <script src="js/layout.js"></script>
+  <script src="js/community.js"></script>
+
 </body>
 
 </html>

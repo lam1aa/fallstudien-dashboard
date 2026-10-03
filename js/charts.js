@@ -39,19 +39,6 @@ const BLOOM_COLORS = [
   CATEGORY_DEFAULT_COLOR,
 ];
 
-const HEATMAP_SCALE_WARM = [
-  { from: 0, to: 0, color: "#f5f2ec", name: "0" },
-  { from: 1, to: 1, color: "#F0B95B" },
-  { from: 2, to: 2, color: "#F2996B" },
-  { from: 3, to: 99, color: "#ec6925" },
-];
-const HEATMAP_SCALE_COOL = [
-  { from: 0, to: 0, color: "#f5f2ec", name: "0" },
-  { from: 1, to: 4, color: "#a5a6f0", name: "1–4" },
-  { from: 5, to: 7, color: "#6C6FE0", name: "5–7" },
-  { from: 8, to: 10, color: "#494dbd", name: "8–10" },
-  { from: 11, to: 99, color: "#494c96", name: "11+ Lernziele" },
-];
 
 function formatToHours(minutes) {
   const hours = (minutes / 60).toFixed(1).replace(/\.0$/, "");
@@ -191,7 +178,7 @@ export function renderTeilnahmenCharts(data) {
  */
 export function renderWorkloadChart(categories, series) {
   const options = {
-    chart: { type: "line", height: 420, stacked: true, toolbar: { show: true } },
+    chart: { type: "line", height: 420, stacked: true, toolbar: { show: false } },
     stroke: {
       width: series.map(s => {
         if (s.type === 'line') return 3;
@@ -279,7 +266,7 @@ export function renderBloomPerCaseChart(categories, series) {
   const container = document.querySelector("#bloom-per-case-chart");
   if (!container) return;
   const options = {
-    chart: { type: "bar", height: 380, stacked: true, toolbar: { show: true } },
+    chart: { type: "bar", height: 380, stacked: true, toolbar: { show: false } },
     plotOptions: {
       bar: {
         horizontal: false,
@@ -355,7 +342,7 @@ export function renderCompetencyChart(categories, values) {
   const container = document.querySelector("#competency-chart");
   if (!container) return;
   const options = {
-    chart: { type: "bar", height: 460, toolbar: { show: true } },
+    chart: { type: "bar", height: 460, toolbar: { show: false } },
     plotOptions: { bar: { horizontal: true, borderRadius: 3, distributed: true } },
     xaxis: { title: { text: "Anzahl Lernziele" } },
     yaxis: { labels: { style: { fontSize: "12px" } } },
@@ -364,7 +351,7 @@ export function renderCompetencyChart(categories, values) {
     ],
     colors: categories.map(getColorForCategoryLabel),
     dataLabels: { enabled: true },
-    grid: { xaxis: { lines: { show: true } } },
+    grid: { xaxis: { lines: { show: true } }, padding: { top: -20 } },
     legend: { show: false },
   };
   if (window.competencyChartInstance) window.competencyChartInstance.destroy();

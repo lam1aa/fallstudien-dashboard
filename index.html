@@ -7,6 +7,7 @@
   <title>QUADRIGA Fallstudien Dashboard</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -39,33 +40,58 @@
     <section id="kpi-section" class="mb-5">
       <div class="row g-3 flex-nowrap overflow-auto pb-2">
         <div class="col">
-          <div class="kpi-card kpi-card-blue">
-            <div class="kpi-title">Fallstudien</div>
-            <div class="kpi-value" id="kpi-total-cases">–</div>
+          <div class="kpi-card kpi-card-blue h-100">
+            <div class="kpi-card-body">
+              <div class="kpi-icon"><i class="bi bi-folder2-open"></i></div>
+              <div>
+                <div class="kpi-title">Fallstudien</div>
+                <div class="kpi-value" id="kpi-total-cases">–</div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col">
-          <div class="kpi-card kpi-card-purple">
-            <div class="kpi-title">Kapitel</div>
-            <div class="kpi-value" id="kpi-total-chapters">–</div>
+          <div class="kpi-card kpi-card-blue h-100">
+            <div class="kpi-card-body">
+              <div class="kpi-icon"><i class="bi bi-book"></i></div>
+              <div>
+                <div class="kpi-title">Kapitel</div>
+                <div class="kpi-value" id="kpi-total-chapters">–</div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col">
-          <div class="kpi-card kpi-card-green">
-            <div class="kpi-title">Lernziele</div>
-            <div class="kpi-value" id="kpi-total-objectives">–</div>
+          <div class="kpi-card kpi-card-blue h-100">
+            <div class="kpi-card-body">
+              <div class="kpi-icon"><i class="bi bi-bullseye"></i></div>
+              <div>
+                <div class="kpi-title">Lernziele</div>
+                <div class="kpi-value" id="kpi-total-objectives">–</div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col">
-          <div class="kpi-card kpi-card-blue">
-            <div class="kpi-title">Selbsttests</div>
-            <div class="kpi-value" id="kpi-total-assessments">–</div>
+          <div class="kpi-card kpi-card-blue h-100">
+            <div class="kpi-card-body">
+              <div class="kpi-icon"><i class="bi bi-trophy"></i></div>
+              <div>
+                <div class="kpi-title">Selbsttests</div>
+                <div class="kpi-value" id="kpi-total-assessments">–</div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col">
-          <div class="kpi-card kpi-card-yellow">
-            <div class="kpi-title">Wörter</div>
-            <div class="kpi-value" id="kpi-total-words">–</div>
+          <div class="kpi-card kpi-card-blue h-100">
+            <div class="kpi-card-body">
+              <div class="kpi-icon"><i class="bi bi-chat-text"></i></div>
+              <div>
+                <div class="kpi-title">Wörter</div>
+                <div class="kpi-value" id="kpi-total-words">–</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -183,22 +209,6 @@
               </div>
             </div>
           </div>
-        </div>-->
-
-        <!-- Right half: barchart 
-        <div class="col-lg-6">
-          <div class="card shadow-sm h-100">
-            <div class="card-header d-flex justify-content-between align-items-center">
-              <span class="text-muted small">Downloads per Fallstudie</span>
-              <select id="downloads-mode-select" class="form-select form-select-sm w-auto">
-                <option value="all">Alle Downloads</option>
-                <option value="version">Letzte Version</option>
-              </select>
-            </div>
-            <div class="card-body">
-              <div id="downloads-chart"></div>
-            </div>
-          </div>
         </div>
       </div>
     </section>-->
@@ -245,7 +255,7 @@
     <section id="feedback-section" class="mb-5">
       <div class="card shadow-sm mx-auto" style="max-width: 620px; border-radius: 8px;">
         <div class="card-body p-4 d-flex flex-column justify-content-center">
-          <div class="text-secondary small fw-medium mb-3 text-center">Weiterempfehlung der QUADRIGA-OER</div>
+          <div class="chart-label mb-3 text-start">Weiterempfehlung der QUADRIGA-OER</div>
           <div class="row align-items-center">
             <div class="col-md-4 text-center mb-3 mb-md-0">
               <div class="display-4 fw-bold text-dark" id="rec-average" style="line-height: 1;">-</div>

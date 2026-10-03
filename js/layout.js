@@ -17,7 +17,7 @@ function loadNavbar() {
   <nav class="navbar navbar-expand-lg">
     <div class="container d-flex justify-content-between align-items-center">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="QUADRIGALogo1.png" alt="QUADRIGA Logo" height="62">
+        <img src="QUADRIGALogo.png" alt="QUADRIGA Logo" height="62">
       </a>
       <ul class="navbar-nav flex-row gap-2">
         <li class="nav-item">
